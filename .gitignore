@@ -1,0 +1,36 @@
+# === 熵隔离膜：ALS-CORE 绝对态 .gitignore ===
+
+# ---- Python 字节码（热力学废料）----
+__pycache__/
+*.py[cod]
+*.pyc
+*.pyo
+
+# ---- 仿真产物（编译废气 + 波形废料）----
+*.vvp
+*.vcd
+*.hex
+*.out
+
+# ---- 仿真输出（每次跑都变）----
+sim/als_core_out.hex
+
+# ---- NPZ 数值结果（按需保留）----
+logs/*.npz
+
+# ---- 快照图片（按需保留）----
+results/*.png
+
+# ---- macOS 系统噪声 ----
+.DS_Store
+*.swp
+*.swo
+*~
+
+# ---- Cursor IDE 噪声 ----
+.cursorrules
+.cursor/
+
+# ---- 临时上传下载目录（漂移废料）----
+.tmp.drivedownload/
+.tmp.driveupload/
