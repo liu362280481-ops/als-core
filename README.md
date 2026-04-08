@@ -567,3 +567,16 @@ als-core/
 > **法典声明**：本文档是 ALS-core 工程的唯一事实标准。所有旧有原型文件（ALS_V2_*, FPGA_HANDOFF.md 等）已全部封存。本法典的修改必须经过架构师 Review + 人类授权双确认，方可 Push 到远程仓库。
 >
 > **Git 远程锚定**：`https://github.com/liu362280481-ops/als-core`
+
+---
+
+## [Milestone 1] 硅基微架构物理验证 (v1.0.0)
+
+| 属性 | 值 |
+|------|-----|
+| 时序收敛态 | OOC 综合达成 100MHz (10ns) 闭环。Setup WNS = +3.096ns |
+| 微架构手术 | 成功实施 AXI Skid Buffer 隔离与 DSP 64-bit 乘法树三级流水线折叠 |
+| 资源坍缩率 | LUT 5978 (12.66%), FF 19552 (20.70%), DSP48E2 8 (3.33%) |
+| 综合日期 | 2026-04-09 |
+| 目标芯片 | Xilinx Zynq UltraScale+ XCZU2CG-1SFVC784E |
+| 综合工具 | Vivado 2024.1 |
