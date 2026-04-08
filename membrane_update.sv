@@ -53,10 +53,10 @@ module membrane_update #(
   logic signed [15:0] sat_inhibit_q8_8;
   logic signed [15:0] nb_inhibit_q8_8;
 
-  logic signed [31:0] mul0;
-  logic signed [31:0] mul1;
-  logic signed [31:0] mul2;
-  logic signed [31:0] mul3;
+  logic signed [31:0] mul_s_b;
+  logic signed [31:0] mul_sat_nb;
+  logic signed [63:0] mul_comb;
+  logic signed [63:0] mul_final;
   logic signed [31:0] growth_q8_8;
   logic signed [31:0] decay_mul;
   logic signed [31:0] decay_q8_8;
@@ -140,7 +140,8 @@ module membrane_update #(
 
         out_col_valid = (col_cnt != 0);
         out_row_valid = (row_cnt != 0);
-        out_col       = col_cnt - 7'd1;
+        // Architect Fix: Synchronize physical coordinates with line buffer 2-cycle latency
+        out_col       = col_cnt - 7'd2;
         out_row       = row_cnt - 7'd1;
 
         s_center = fs(mid_c);
@@ -185,12 +186,13 @@ module membrane_update #(
           nb_inhibit_q8_8 = 16'sd0;
         end
 
-        // growth = K_GROWTH * S * boundary * sat * nb
-        mul0 = $signed(K_GROWTH_Q8_8) * $signed(s_center);                    // Q16.16
-        mul1 = ($signed(mul0) >>> 8) * $signed(boundary_q8_8);                // Q16.16
-        mul2 = ($signed(mul1) >>> 8) * $signed(sat_inhibit_q8_8);             // Q16.16
-        mul3 = ($signed(mul2) >>> 8) * $signed(nb_inhibit_q8_8);              // Q16.16
-        growth_q8_8 = $signed(mul3) >>> 8;                                     // Q8.8
+        // Architect Fix: Prevent Q8.8 cascade truncation (thermal death)
+        // Balanced multiplier tree with 64-bit accumulator to preserve thermodynamics
+        mul_s_b    = $signed(s_center) * $signed(boundary_q8_8);             // Q8.8 * Q8.8 = Q16.16
+        mul_sat_nb = $signed(sat_inhibit_q8_8) * $signed(nb_inhibit_q8_8);   // Q8.8 * Q8.8 = Q16.16
+        mul_comb   = $signed(mul_s_b) * $signed(mul_sat_nb);                 // Q16.16 * Q16.16 = Q32.32
+        mul_final  = $signed(mul_comb) * $signed(K_GROWTH_Q8_8);             // Q32.32 * Q8.8 = Q40.40
+        growth_q8_8 = $signed(mul_final) >>> 32;                             // Drop 32 fractional bits -> Q8.8
 
         // decay = K_DECAY_M * M_center
         decay_mul   = $signed(K_DECAY_M_Q8_8) * $signed(m_center);            // Q16.16

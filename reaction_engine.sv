@@ -65,7 +65,8 @@ module reaction_engine (
   assign p_cur_u = s_axis_tdata[31:16];
   assign m_cur_u = s_axis_tdata[15:0];
 
-  assign hill_addr = p_cur_u[15] ? 8'd0 : p_cur_u[15:8];
+  // Architect Fix: Map fractional part [7:0] to 256-depth ROM, saturate at 1.0 (255)
+  assign hill_addr = p_cur_u[15] ? 8'd0 : (p_cur_u >= 16'd255) ? 8'd255 : p_cur_u[7:0];
   assign fire_in = s_axis_tvalid & s_axis_tready;
 
   // Backpressure-safe causality: accept new input only when output can advance.

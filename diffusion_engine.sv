@@ -141,7 +141,8 @@ module diffusion_engine (
 
         out_col_valid = (col_cnt != 0);
         out_row_valid = (row_cnt != 0);
-        out_col       = col_cnt - 7'd1;
+        // Architect Fix: Compensate for 2-cycle latency of the line buffer center (mid_c)
+        out_col       = col_cnt - 7'd2;
         out_row       = row_cnt - 7'd1;
 
         // S neighbors (Zero-padding at frame boundaries)
