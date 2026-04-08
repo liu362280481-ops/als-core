@@ -53,15 +53,23 @@ module membrane_update #(
   logic signed [15:0] sat_inhibit_q8_8;
   logic signed [15:0] nb_inhibit_q8_8;
 
-  logic signed [31:0] mul_s_b;
-  logic signed [31:0] mul_sat_nb;
-  logic signed [63:0] mul_comb;
-  logic signed [63:0] mul_final;
+  logic signed [31:0] mul_s_b_reg;
+  logic signed [31:0] mul_sat_nb_reg;
+  logic signed [63:0] mul_comb_reg;
+  logic signed [63:0] mul_final_reg;
   logic signed [31:0] growth_q8_8;
   logic signed [31:0] decay_mul;
   logic signed [31:0] decay_q8_8;
   logic signed [31:0] m_next_wide;
   logic signed [15:0] m_next_q8_8;
+
+  logic signed [15:0] s_center_d1, s_center_d2, s_center_d3;
+  logic signed [15:0] p_center_d1, p_center_d2, p_center_d3;
+  logic signed [15:0] m_center_d1, m_center_d2, m_center_d3;
+  logic signed [31:0] decay_q8_8_d1, decay_q8_8_d2, decay_q8_8_d3;
+  logic               vld_d1, vld_d2, vld_d3;
+  logic               tlast_d1, tlast_d2, tlast_d3;
+  logic               pipe_ce;
 
   logic fire_in;
 
@@ -92,7 +100,8 @@ module membrane_update #(
     fm = $signed(w[15:0]);
   endfunction
 
-  assign s_axis_tready = (~m_axis_tvalid) | m_axis_tready;
+  assign pipe_ce = (~m_axis_tvalid) | m_axis_tready;
+  assign s_axis_tready = pipe_ce;
   assign fire_in = s_axis_tvalid & s_axis_tready;
 
   always_ff @(posedge aclk) begin
@@ -110,12 +119,54 @@ module membrane_update #(
       col_cnt <= '0;
       row_cnt <= '0;
 
+      mul_s_b_reg    <= '0;
+      mul_sat_nb_reg <= '0;
+      mul_comb_reg   <= '0;
+      mul_final_reg  <= '0;
+      growth_q8_8    <= '0;
+      decay_mul      <= '0;
+      decay_q8_8     <= '0;
+
+      s_center_d1    <= '0; s_center_d2 <= '0; s_center_d3 <= '0;
+      p_center_d1    <= '0; p_center_d2 <= '0; p_center_d3 <= '0;
+      m_center_d1    <= '0; m_center_d2 <= '0; m_center_d3 <= '0;
+      decay_q8_8_d1  <= '0; decay_q8_8_d2 <= '0; decay_q8_8_d3 <= '0;
+      vld_d1         <= 1'b0; vld_d2 <= 1'b0; vld_d3 <= 1'b0;
+      tlast_d1       <= 1'b0; tlast_d2 <= 1'b0; tlast_d3 <= 1'b0;
+
       m_axis_tdata  <= '0;
       m_axis_tvalid <= 1'b0;
       m_axis_tlast  <= 1'b0;
     end else begin
-      if (m_axis_tvalid && m_axis_tready) begin
-        m_axis_tvalid <= 1'b0;
+      if (pipe_ce) begin
+        vld_d3       <= vld_d2;
+        vld_d2       <= vld_d1;
+        vld_d1       <= fire_in;
+        tlast_d3     <= tlast_d2;
+        tlast_d2     <= tlast_d1;
+        tlast_d1     <= s_axis_tlast;
+        s_center_d3  <= s_center_d2;
+        s_center_d2  <= s_center_d1;
+        p_center_d3  <= p_center_d2;
+        p_center_d2  <= p_center_d1;
+        m_center_d3  <= m_center_d2;
+        m_center_d2  <= m_center_d1;
+        decay_q8_8_d3<= decay_q8_8_d2;
+        decay_q8_8_d2<= decay_q8_8_d1;
+
+        mul_comb_reg  <= $signed(mul_s_b_reg) * $signed(mul_sat_nb_reg);            // Stage 2
+        mul_final_reg <= $signed(mul_comb_reg) * $signed(K_GROWTH_Q8_8);            // Stage 3
+        growth_q8_8   <= $signed(mul_final_reg) >>> 32;
+
+        if (vld_d3) begin
+          m_next_wide = $signed(m_center_d3) + $signed(growth_q8_8) - $signed(decay_q8_8_d3);
+          m_next_q8_8 = clip_nonneg_q8_8(m_next_wide);
+          m_axis_tdata  <= {s_center_d3[15:0], p_center_d3[15:0], m_next_q8_8[15:0]};
+          m_axis_tvalid <= 1'b1;
+          m_axis_tlast  <= tlast_d3;
+        end else begin
+          m_axis_tvalid <= 1'b0;
+        end
       end
 
       if (fire_in) begin
@@ -186,25 +237,17 @@ module membrane_update #(
           nb_inhibit_q8_8 = 16'sd0;
         end
 
-        // Architect Fix: Prevent Q8.8 cascade truncation (thermal death)
-        // Balanced multiplier tree with 64-bit accumulator to preserve thermodynamics
-        mul_s_b    = $signed(s_center) * $signed(boundary_q8_8);             // Q8.8 * Q8.8 = Q16.16
-        mul_sat_nb = $signed(sat_inhibit_q8_8) * $signed(nb_inhibit_q8_8);   // Q8.8 * Q8.8 = Q16.16
-        mul_comb   = $signed(mul_s_b) * $signed(mul_sat_nb);                 // Q16.16 * Q16.16 = Q32.32
-        mul_final  = $signed(mul_comb) * $signed(K_GROWTH_Q8_8);             // Q32.32 * Q8.8 = Q40.40
-        growth_q8_8 = $signed(mul_final) >>> 32;                             // Drop 32 fractional bits -> Q8.8
-
         // decay = K_DECAY_M * M_center
         decay_mul   = $signed(K_DECAY_M_Q8_8) * $signed(m_center);            // Q16.16
         decay_q8_8  = $signed(decay_mul) >>> 8;                                // Q8.8
 
-        // M_next = M_center + growth - decay
-        m_next_wide = $signed(m_center) + $signed(growth_q8_8) - $signed(decay_q8_8);
-        m_next_q8_8 = clip_nonneg_q8_8(m_next_wide);
-
-        m_axis_tdata  <= {s_center[15:0], p_center[15:0], m_next_q8_8[15:0]};
-        m_axis_tvalid <= 1'b1;
-        m_axis_tlast  <= s_axis_tlast;
+        // Stage 1: register products and aligned center fields for 3-cycle pipeline
+        mul_s_b_reg     <= $signed(s_center) * $signed(boundary_q8_8);              // Q16.16
+        mul_sat_nb_reg  <= $signed(sat_inhibit_q8_8) * $signed(nb_inhibit_q8_8);    // Q16.16
+        s_center_d1     <= s_center;
+        p_center_d1     <= p_center;
+        m_center_d1     <= m_center;
+        decay_q8_8_d1   <= decay_q8_8;
 
         if (col_cnt == GRID_W-1) begin
           col_cnt <= 7'd0;

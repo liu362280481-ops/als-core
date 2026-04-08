@@ -24,12 +24,20 @@ module als_core_top (
   logic        diff_m_axis_tvalid;
   logic        diff_m_axis_tready;
   logic        diff_m_axis_tlast;
+  logic [47:0] diff2react_tdata;
+  logic        diff2react_tvalid;
+  logic        diff2react_tready;
+  logic        diff2react_tlast;
 
   // ===== Reaction → Membrane 中间互联 =====
   logic [47:0] react_m_axis_tdata;
   logic        react_m_axis_tvalid;
   logic        react_m_axis_tready;
   logic        react_m_axis_tlast;
+  logic [47:0] react2memb_tdata;
+  logic        react2memb_tvalid;
+  logic        react2memb_tready;
+  logic        react2memb_tlast;
 
   // ===== Stage 1: Diffusion Engine =====
   diffusion_engine u_diffusion (
@@ -45,28 +53,54 @@ module als_core_top (
     .m_axis_tlast   (diff_m_axis_tlast)
   );
 
-  // ===== Stage 2: Reaction Engine =====
-  reaction_engine u_reaction (
+  axis_skid_buffer u_skid_diff2react (
     .aclk           (aclk),
     .aresetn        (aresetn),
     .s_axis_tdata   (diff_m_axis_tdata),
     .s_axis_tvalid  (diff_m_axis_tvalid),
     .s_axis_tready  (diff_m_axis_tready),
     .s_axis_tlast   (diff_m_axis_tlast),
+    .m_axis_tdata   (diff2react_tdata),
+    .m_axis_tvalid  (diff2react_tvalid),
+    .m_axis_tready  (diff2react_tready),
+    .m_axis_tlast   (diff2react_tlast)
+  );
+
+  // ===== Stage 2: Reaction Engine =====
+  reaction_engine u_reaction (
+    .aclk           (aclk),
+    .aresetn        (aresetn),
+    .s_axis_tdata   (diff2react_tdata),
+    .s_axis_tvalid  (diff2react_tvalid),
+    .s_axis_tready  (diff2react_tready),
+    .s_axis_tlast   (diff2react_tlast),
     .m_axis_tdata   (react_m_axis_tdata),
     .m_axis_tvalid  (react_m_axis_tvalid),
     .m_axis_tready  (react_m_axis_tready),
     .m_axis_tlast   (react_m_axis_tlast)
   );
 
-  // ===== Stage 3: Membrane Update Engine =====
-  membrane_update u_membrane (
+  axis_skid_buffer u_skid_react2memb (
     .aclk           (aclk),
     .aresetn        (aresetn),
     .s_axis_tdata   (react_m_axis_tdata),
     .s_axis_tvalid  (react_m_axis_tvalid),
     .s_axis_tready  (react_m_axis_tready),
     .s_axis_tlast   (react_m_axis_tlast),
+    .m_axis_tdata   (react2memb_tdata),
+    .m_axis_tvalid  (react2memb_tvalid),
+    .m_axis_tready  (react2memb_tready),
+    .m_axis_tlast   (react2memb_tlast)
+  );
+
+  // ===== Stage 3: Membrane Update Engine =====
+  membrane_update u_membrane (
+    .aclk           (aclk),
+    .aresetn        (aresetn),
+    .s_axis_tdata   (react2memb_tdata),
+    .s_axis_tvalid  (react2memb_tvalid),
+    .s_axis_tready  (react2memb_tready),
+    .s_axis_tlast   (react2memb_tlast),
     .m_axis_tdata   (m_axis_tdata),
     .m_axis_tvalid  (m_axis_tvalid),
     .m_axis_tready  (m_axis_tready),
