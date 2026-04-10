@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<Runs Version="1" Minor="0">
+	<Run Id="als_system_als_core_0_0_synth_1" LaunchDir="/home/liujiawei/ALS_Silicon_Workspace/als-core/als_sys_project/als_sys_project.runs/als_system_als_core_0_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="als_system_auto_pc_0_synth_1" LaunchDir="/home/liujiawei/ALS_Silicon_Workspace/als-core/als_sys_project/als_sys_project.runs/als_system_auto_pc_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="als_system_axi_dma_0_0_synth_1" LaunchDir="/home/liujiawei/ALS_Silicon_Workspace/als-core/als_sys_project/als_sys_project.runs/als_system_axi_dma_0_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="als_system_axi_smc_0_synth_1" LaunchDir="/home/liujiawei/ALS_Silicon_Workspace/als-core/als_sys_project/als_sys_project.runs/als_system_axi_smc_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="als_system_axis_subset_converter_0_0_synth_1" LaunchDir="/home/liujiawei/ALS_Silicon_Workspace/als-core/als_sys_project/als_sys_project.runs/als_system_axis_subset_converter_0_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="als_system_axis_subset_converter_1_0_synth_1" LaunchDir="/home/liujiawei/ALS_Silicon_Workspace/als-core/als_sys_project/als_sys_project.runs/als_system_axis_subset_converter_1_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="als_system_rst_ps8_0_99M_0_synth_1" LaunchDir="/home/liujiawei/ALS_Silicon_Workspace/als-core/als_sys_project/als_sys_project.runs/als_system_rst_ps8_0_99M_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="als_system_zynq_ultra_ps_e_0_0_synth_1" LaunchDir="/home/liujiawei/ALS_Silicon_Workspace/als-core/als_sys_project/als_sys_project.runs/als_system_zynq_ultra_ps_e_0_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Parameters>
+		<Parameter Name="runs.monitorLSFJobs" Val="true" Type="bool"/>
+		<Parameter Name="runs.enableClusterConf" Val="true" Type="bool"/>
+		<Parameter Name="general.ignorePathLengthChecks" Val="true" Type="bool"/>
+		<Parameter Name="general.shortenLongPath" Val="true" Type="bool"/>
+	</Parameters>
+	<ProductInfo Name="vivado"/>
+</Runs>
+

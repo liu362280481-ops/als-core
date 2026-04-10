@@ -1,0 +1,160 @@
+03:21:22 INFO  : updated workspace path: /home/liujiawei/ALS_Silicon_Workspace/als-core
+03:21:22 ERROR : Cannot save peer list
+java.io.FileNotFoundException: /home/liujiawei/ALS_Silicon_Workspace/als-core/.wsdata/.peers.ini (No such file or directory)
+	at java.io.FileOutputStream.open0(Native Method) ~[?:?]
+	at java.io.FileOutputStream.open(FileOutputStream.java:298) ~[?:?]
+	at java.io.FileOutputStream.<init>(FileOutputStream.java:237) ~[?:?]
+	at java.io.FileOutputStream.<init>(FileOutputStream.java:187) ~[?:?]
+	at com.xilinx.rigel.debug.tcf.targets.TCFUserDefPeer.savePeers(TCFUserDefPeer.java:151) [rigel_server-1.0.0-161.jar:?]
+	at com.xilinx.rigel.debug.tcf.targets.PeerUtil.createPeerWithAttrs(PeerUtil.java:247) [rigel_server-1.0.0-161.jar:?]
+	at com.xilinx.rigel.debug.tcf.targets.PeerUtil.createPeerWithAttrs(PeerUtil.java:241) [rigel_server-1.0.0-161.jar:?]
+	at com.xilinx.rigel.debug.tcf.targets.PeerUtil.createDefaultPeers(PeerUtil.java:175) [rigel_server-1.0.0-161.jar:?]
+	at com.xilinx.rigel.debug.tcf.targets.TCFUserDefPeer.loadPeers(TCFUserDefPeer.java:116) [rigel_server-1.0.0-161.jar:?]
+	at com.xilinx.rigel.services.debugger.DebuggerService$4.run(DebuggerService.java:371) [rigel_server-1.0.0-161.jar:?]
+	at org.eclipse.tcf.init.EventQueue.run(EventQueue.java:68) [rigel_server-1.0.0-161.jar:?]
+	at java.lang.Thread.run(Thread.java:829) [?:?]
+03:21:22 ERROR : Cannot save peer list
+java.io.FileNotFoundException: /home/liujiawei/ALS_Silicon_Workspace/als-core/.wsdata/.peers.ini (No such file or directory)
+	at java.io.FileOutputStream.open0(Native Method) ~[?:?]
+	at java.io.FileOutputStream.open(FileOutputStream.java:298) ~[?:?]
+	at java.io.FileOutputStream.<init>(FileOutputStream.java:237) ~[?:?]
+	at java.io.FileOutputStream.<init>(FileOutputStream.java:187) ~[?:?]
+	at com.xilinx.rigel.debug.tcf.targets.TCFUserDefPeer.savePeers(TCFUserDefPeer.java:151) [rigel_server-1.0.0-161.jar:?]
+	at com.xilinx.rigel.debug.tcf.targets.PeerUtil.createPeerWithAttrs(PeerUtil.java:247) [rigel_server-1.0.0-161.jar:?]
+	at com.xilinx.rigel.debug.tcf.targets.PeerUtil.createPeerWithAttrs(PeerUtil.java:241) [rigel_server-1.0.0-161.jar:?]
+	at com.xilinx.rigel.debug.tcf.targets.PeerUtil.createDefaultPeers(PeerUtil.java:181) [rigel_server-1.0.0-161.jar:?]
+	at com.xilinx.rigel.debug.tcf.targets.TCFUserDefPeer.loadPeers(TCFUserDefPeer.java:116) [rigel_server-1.0.0-161.jar:?]
+	at com.xilinx.rigel.services.debugger.DebuggerService$4.run(DebuggerService.java:371) [rigel_server-1.0.0-161.jar:?]
+	at org.eclipse.tcf.init.EventQueue.run(EventQueue.java:68) [rigel_server-1.0.0-161.jar:?]
+	at java.lang.Thread.run(Thread.java:829) [?:?]
+03:21:22 ERROR : Cannot save peer list
+java.io.FileNotFoundException: /home/liujiawei/ALS_Silicon_Workspace/als-core/.wsdata/.peers.ini (No such file or directory)
+	at java.io.FileOutputStream.open0(Native Method) ~[?:?]
+	at java.io.FileOutputStream.open(FileOutputStream.java:298) ~[?:?]
+	at java.io.FileOutputStream.<init>(FileOutputStream.java:237) ~[?:?]
+	at java.io.FileOutputStream.<init>(FileOutputStream.java:187) ~[?:?]
+	at com.xilinx.rigel.debug.tcf.targets.TCFUserDefPeer.savePeers(TCFUserDefPeer.java:151) [rigel_server-1.0.0-161.jar:?]
+	at com.xilinx.rigel.debug.tcf.targets.PeerUtil.createPeerWithAttrs(PeerUtil.java:247) [rigel_server-1.0.0-161.jar:?]
+	at com.xilinx.rigel.debug.tcf.targets.PeerUtil.createPeerWithAttrs(PeerUtil.java:241) [rigel_server-1.0.0-161.jar:?]
+	at com.xilinx.rigel.debug.tcf.targets.PeerUtil.createDefaultPeers(PeerUtil.java:187) [rigel_server-1.0.0-161.jar:?]
+	at com.xilinx.rigel.debug.tcf.targets.TCFUserDefPeer.loadPeers(TCFUserDefPeer.java:116) [rigel_server-1.0.0-161.jar:?]
+	at com.xilinx.rigel.services.debugger.DebuggerService$4.run(DebuggerService.java:371) [rigel_server-1.0.0-161.jar:?]
+	at org.eclipse.tcf.init.EventQueue.run(EventQueue.java:68) [rigel_server-1.0.0-161.jar:?]
+	at java.lang.Thread.run(Thread.java:829) [?:?]
+03:21:22 ERROR : Cannot save peer list
+java.io.FileNotFoundException: /home/liujiawei/ALS_Silicon_Workspace/als-core/.wsdata/.peers.ini (No such file or directory)
+	at java.io.FileOutputStream.open0(Native Method) ~[?:?]
+	at java.io.FileOutputStream.open(FileOutputStream.java:298) ~[?:?]
+	at java.io.FileOutputStream.<init>(FileOutputStream.java:237) ~[?:?]
+	at java.io.FileOutputStream.<init>(FileOutputStream.java:187) ~[?:?]
+	at com.xilinx.rigel.debug.tcf.targets.TCFUserDefPeer.savePeers(TCFUserDefPeer.java:151) [rigel_server-1.0.0-161.jar:?]
+	at com.xilinx.rigel.debug.tcf.targets.PeerUtil.createPeerWithAttrs(PeerUtil.java:247) [rigel_server-1.0.0-161.jar:?]
+	at com.xilinx.rigel.debug.tcf.targets.PeerUtil.createPeerWithAttrs(PeerUtil.java:241) [rigel_server-1.0.0-161.jar:?]
+	at com.xilinx.rigel.debug.tcf.targets.PeerUtil.createDefaultPeers(PeerUtil.java:193) [rigel_server-1.0.0-161.jar:?]
+	at com.xilinx.rigel.debug.tcf.targets.TCFUserDefPeer.loadPeers(TCFUserDefPeer.java:116) [rigel_server-1.0.0-161.jar:?]
+	at com.xilinx.rigel.services.debugger.DebuggerService$4.run(DebuggerService.java:371) [rigel_server-1.0.0-161.jar:?]
+	at org.eclipse.tcf.init.EventQueue.run(EventQueue.java:68) [rigel_server-1.0.0-161.jar:?]
+	at java.lang.Thread.run(Thread.java:829) [?:?]
+03:21:22 ERROR : Cannot save peer list
+java.io.FileNotFoundException: /home/liujiawei/ALS_Silicon_Workspace/als-core/.wsdata/.peers.ini (No such file or directory)
+	at java.io.FileOutputStream.open0(Native Method) ~[?:?]
+	at java.io.FileOutputStream.open(FileOutputStream.java:298) ~[?:?]
+	at java.io.FileOutputStream.<init>(FileOutputStream.java:237) ~[?:?]
+	at java.io.FileOutputStream.<init>(FileOutputStream.java:187) ~[?:?]
+	at com.xilinx.rigel.debug.tcf.targets.TCFUserDefPeer.savePeers(TCFUserDefPeer.java:151) [rigel_server-1.0.0-161.jar:?]
+	at com.xilinx.rigel.debug.tcf.targets.PeerUtil.createPeerWithAttrs(PeerUtil.java:247) [rigel_server-1.0.0-161.jar:?]
+	at com.xilinx.rigel.debug.tcf.targets.PeerUtil.createPeerWithAttrs(PeerUtil.java:241) [rigel_server-1.0.0-161.jar:?]
+	at com.xilinx.rigel.debug.tcf.targets.PeerUtil.createDefaultPeers(PeerUtil.java:199) [rigel_server-1.0.0-161.jar:?]
+	at com.xilinx.rigel.debug.tcf.targets.TCFUserDefPeer.loadPeers(TCFUserDefPeer.java:116) [rigel_server-1.0.0-161.jar:?]
+	at com.xilinx.rigel.services.debugger.DebuggerService$4.run(DebuggerService.java:371) [rigel_server-1.0.0-161.jar:?]
+	at org.eclipse.tcf.init.EventQueue.run(EventQueue.java:68) [rigel_server-1.0.0-161.jar:?]
+	at java.lang.Thread.run(Thread.java:829) [?:?]
+03:21:22 ERROR : Cannot save peer list
+java.io.FileNotFoundException: /home/liujiawei/ALS_Silicon_Workspace/als-core/.wsdata/.peers.ini (No such file or directory)
+	at java.io.FileOutputStream.open0(Native Method) ~[?:?]
+	at java.io.FileOutputStream.open(FileOutputStream.java:298) ~[?:?]
+	at java.io.FileOutputStream.<init>(FileOutputStream.java:237) ~[?:?]
+	at java.io.FileOutputStream.<init>(FileOutputStream.java:187) ~[?:?]
+	at com.xilinx.rigel.debug.tcf.targets.TCFUserDefPeer.savePeers(TCFUserDefPeer.java:151) ~[rigel_server-1.0.0-161.jar:?]
+	at com.xilinx.rigel.debug.tcf.targets.TCFUserDefPeer.lambda$modifyPeer$1(TCFUserDefPeer.java:68) ~[rigel_server-1.0.0-161.jar:?]
+	at org.eclipse.tcf.protocol.Protocol.invokeAndWait(Protocol.java:220) [rigel_server-1.0.0-161.jar:?]
+	at com.xilinx.rigel.debug.tcf.targets.TCFUserDefPeer.modifyPeer(TCFUserDefPeer.java:70) [rigel_server-1.0.0-161.jar:?]
+	at com.xilinx.rigel.debug.tcf.targets.PeerUtil.createDefaultPeers(PeerUtil.java:205) [rigel_server-1.0.0-161.jar:?]
+	at com.xilinx.rigel.debug.tcf.targets.TCFUserDefPeer.loadPeers(TCFUserDefPeer.java:116) [rigel_server-1.0.0-161.jar:?]
+	at com.xilinx.rigel.services.debugger.DebuggerService$4.run(DebuggerService.java:371) [rigel_server-1.0.0-161.jar:?]
+	at org.eclipse.tcf.init.EventQueue.run(EventQueue.java:68) [rigel_server-1.0.0-161.jar:?]
+	at java.lang.Thread.run(Thread.java:829) [?:?]
+03:21:22 INFO  : Marking the target connection as default Local
+03:21:22 ERROR : Cannot save peer list
+java.io.FileNotFoundException: /home/liujiawei/ALS_Silicon_Workspace/als-core/.wsdata/.peers.ini (No such file or directory)
+	at java.io.FileOutputStream.open0(Native Method) ~[?:?]
+	at java.io.FileOutputStream.open(FileOutputStream.java:298) ~[?:?]
+	at java.io.FileOutputStream.<init>(FileOutputStream.java:237) ~[?:?]
+	at java.io.FileOutputStream.<init>(FileOutputStream.java:187) ~[?:?]
+	at com.xilinx.rigel.debug.tcf.targets.TCFUserDefPeer.savePeers(TCFUserDefPeer.java:151) ~[rigel_server-1.0.0-161.jar:?]
+	at com.xilinx.rigel.debug.tcf.targets.TCFUserDefPeer.lambda$modifyPeer$1(TCFUserDefPeer.java:68) ~[rigel_server-1.0.0-161.jar:?]
+	at org.eclipse.tcf.protocol.Protocol.invokeAndWait(Protocol.java:220) [rigel_server-1.0.0-161.jar:?]
+	at com.xilinx.rigel.debug.tcf.targets.TCFUserDefPeer.modifyPeer(TCFUserDefPeer.java:70) [rigel_server-1.0.0-161.jar:?]
+	at com.xilinx.rigel.debug.tcf.targets.PeerUtil.createDefaultPeers(PeerUtil.java:206) [rigel_server-1.0.0-161.jar:?]
+	at com.xilinx.rigel.debug.tcf.targets.TCFUserDefPeer.loadPeers(TCFUserDefPeer.java:116) [rigel_server-1.0.0-161.jar:?]
+	at com.xilinx.rigel.services.debugger.DebuggerService$4.run(DebuggerService.java:371) [rigel_server-1.0.0-161.jar:?]
+	at org.eclipse.tcf.init.EventQueue.run(EventQueue.java:68) [rigel_server-1.0.0-161.jar:?]
+	at java.lang.Thread.run(Thread.java:829) [?:?]
+03:21:22 INFO  : Marking the target connection as default Linux Agent
+03:21:22 ERROR : Cannot save peer list
+java.io.FileNotFoundException: /home/liujiawei/ALS_Silicon_Workspace/als-core/.wsdata/.peers.ini (No such file or directory)
+	at java.io.FileOutputStream.open0(Native Method) ~[?:?]
+	at java.io.FileOutputStream.open(FileOutputStream.java:298) ~[?:?]
+	at java.io.FileOutputStream.<init>(FileOutputStream.java:237) ~[?:?]
+	at java.io.FileOutputStream.<init>(FileOutputStream.java:187) ~[?:?]
+	at com.xilinx.rigel.debug.tcf.targets.TCFUserDefPeer.savePeers(TCFUserDefPeer.java:151) ~[rigel_server-1.0.0-161.jar:?]
+	at com.xilinx.rigel.debug.tcf.targets.TCFUserDefPeer.lambda$modifyPeer$1(TCFUserDefPeer.java:68) ~[rigel_server-1.0.0-161.jar:?]
+	at org.eclipse.tcf.protocol.Protocol.invokeAndWait(Protocol.java:220) [rigel_server-1.0.0-161.jar:?]
+	at com.xilinx.rigel.debug.tcf.targets.TCFUserDefPeer.modifyPeer(TCFUserDefPeer.java:70) [rigel_server-1.0.0-161.jar:?]
+	at com.xilinx.rigel.debug.tcf.targets.PeerUtil.createDefaultPeers(PeerUtil.java:207) [rigel_server-1.0.0-161.jar:?]
+	at com.xilinx.rigel.debug.tcf.targets.TCFUserDefPeer.loadPeers(TCFUserDefPeer.java:116) [rigel_server-1.0.0-161.jar:?]
+	at com.xilinx.rigel.services.debugger.DebuggerService$4.run(DebuggerService.java:371) [rigel_server-1.0.0-161.jar:?]
+	at org.eclipse.tcf.init.EventQueue.run(EventQueue.java:68) [rigel_server-1.0.0-161.jar:?]
+	at java.lang.Thread.run(Thread.java:829) [?:?]
+03:21:22 INFO  : Marking the target connection as default XRTServer
+03:21:22 ERROR : Cannot save peer list
+java.io.FileNotFoundException: /home/liujiawei/ALS_Silicon_Workspace/als-core/.wsdata/.peers.ini (No such file or directory)
+	at java.io.FileOutputStream.open0(Native Method) ~[?:?]
+	at java.io.FileOutputStream.open(FileOutputStream.java:298) ~[?:?]
+	at java.io.FileOutputStream.<init>(FileOutputStream.java:237) ~[?:?]
+	at java.io.FileOutputStream.<init>(FileOutputStream.java:187) ~[?:?]
+	at com.xilinx.rigel.debug.tcf.targets.TCFUserDefPeer.savePeers(TCFUserDefPeer.java:151) ~[rigel_server-1.0.0-161.jar:?]
+	at com.xilinx.rigel.debug.tcf.targets.TCFUserDefPeer.lambda$modifyPeer$1(TCFUserDefPeer.java:68) ~[rigel_server-1.0.0-161.jar:?]
+	at org.eclipse.tcf.protocol.Protocol.invokeAndWait(Protocol.java:220) [rigel_server-1.0.0-161.jar:?]
+	at com.xilinx.rigel.debug.tcf.targets.TCFUserDefPeer.modifyPeer(TCFUserDefPeer.java:70) [rigel_server-1.0.0-161.jar:?]
+	at com.xilinx.rigel.debug.tcf.targets.PeerUtil.createDefaultPeers(PeerUtil.java:209) [rigel_server-1.0.0-161.jar:?]
+	at com.xilinx.rigel.debug.tcf.targets.TCFUserDefPeer.loadPeers(TCFUserDefPeer.java:116) [rigel_server-1.0.0-161.jar:?]
+	at com.xilinx.rigel.services.debugger.DebuggerService$4.run(DebuggerService.java:371) [rigel_server-1.0.0-161.jar:?]
+	at org.eclipse.tcf.init.EventQueue.run(EventQueue.java:68) [rigel_server-1.0.0-161.jar:?]
+	at java.lang.Thread.run(Thread.java:829) [?:?]
+03:21:22 INFO  : Marking the target connection as default LinuxEmulation
+03:21:22 ERROR : Cannot save peer list
+java.io.FileNotFoundException: /home/liujiawei/ALS_Silicon_Workspace/als-core/.wsdata/.peers.ini (No such file or directory)
+	at java.io.FileOutputStream.open0(Native Method) ~[?:?]
+	at java.io.FileOutputStream.open(FileOutputStream.java:298) ~[?:?]
+	at java.io.FileOutputStream.<init>(FileOutputStream.java:237) ~[?:?]
+	at java.io.FileOutputStream.<init>(FileOutputStream.java:187) ~[?:?]
+	at com.xilinx.rigel.debug.tcf.targets.TCFUserDefPeer.savePeers(TCFUserDefPeer.java:151) ~[rigel_server-1.0.0-161.jar:?]
+	at com.xilinx.rigel.debug.tcf.targets.TCFUserDefPeer.lambda$modifyPeer$1(TCFUserDefPeer.java:68) ~[rigel_server-1.0.0-161.jar:?]
+	at org.eclipse.tcf.protocol.Protocol.invokeAndWait(Protocol.java:220) [rigel_server-1.0.0-161.jar:?]
+	at com.xilinx.rigel.debug.tcf.targets.TCFUserDefPeer.modifyPeer(TCFUserDefPeer.java:70) [rigel_server-1.0.0-161.jar:?]
+	at com.xilinx.rigel.debug.tcf.targets.PeerUtil.createDefaultPeers(PeerUtil.java:211) [rigel_server-1.0.0-161.jar:?]
+	at com.xilinx.rigel.debug.tcf.targets.TCFUserDefPeer.loadPeers(TCFUserDefPeer.java:116) [rigel_server-1.0.0-161.jar:?]
+	at com.xilinx.rigel.services.debugger.DebuggerService$4.run(DebuggerService.java:371) [rigel_server-1.0.0-161.jar:?]
+	at org.eclipse.tcf.init.EventQueue.run(EventQueue.java:68) [rigel_server-1.0.0-161.jar:?]
+	at java.lang.Thread.run(Thread.java:829) [?:?]
+03:21:22 INFO  : Marking the target connection as default QEMU
+03:21:24 INFO  : Successfully created repository data at /tmp/rigel_lopper_liujiawei17842333135267323783
+03:21:24 INFO  : bash, -c, source /home/liujiawei/fpga_projects/tools/vivado/2024.1/Vitis/2024.1/tps/lnx64/lopper-1.1.0/env/bin/activate && python /home/liujiawei/fpga_projects/tools/vivado/2024.1/Vitis/2024.1/data/embeddedsw/scripts/pyesw//get_template_data.py -d /tmp/rigel_lopper_liujiawei5544363313454889535 -r /tmp/rigel_lopper_liujiawei17842333135267323783/.repo.yaml && deactivate
+03:21:25 INFO  : Embedded Template List generated successfully
+03:21:25 INFO  : bash, -c, source /home/liujiawei/fpga_projects/tools/vivado/2024.1/Vitis/2024.1/tps/lnx64/lopper-1.1.0/env/bin/activate && python /home/liujiawei/fpga_projects/tools/vivado/2024.1/Vitis/2024.1/data/embeddedsw/scripts/pyesw//repo.py -st   /home/liujiawei/fpga_projects/tools/vivado/2024.1/Vitis/2024.1/data/embeddedsw && deactivate
+03:21:27 INFO  : Successfully created repository data at /home/liujiawei/ALS_Silicon_Workspace/als-core/.wsdata
+03:21:27 INFO  : bash, -c, source /home/liujiawei/fpga_projects/tools/vivado/2024.1/Vitis/2024.1/tps/lnx64/lopper-1.1.0/env/bin/activate && python /home/liujiawei/fpga_projects/tools/vivado/2024.1/Vitis/2024.1/data/embeddedsw/scripts/pyesw//get_template_data.py -d /tmp/rigel_lopper_liujiawei11782096453431249845 -r /home/liujiawei/ALS_Silicon_Workspace/als-core/.wsdata/.repo.yaml && deactivate
+03:21:28 INFO  : Embedded Template List generated successfully
+03:22:16 INFO  : Terminating Vitis C++ Server
+03:22:16 INFO  : Vitis C++ Server terminated

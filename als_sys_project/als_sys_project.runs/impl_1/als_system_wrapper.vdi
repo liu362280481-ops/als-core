@@ -1,0 +1,1039 @@
+#-----------------------------------------------------------
+# Vivado v2024.1 (64-bit)
+# SW Build 5076996 on Wed May 22 18:36:09 MDT 2024
+# IP Build 5075265 on Wed May 22 21:45:21 MDT 2024
+# SharedData Build 5076995 on Wed May 22 18:29:18 MDT 2024
+# Start of session at: Fri Apr 10 13:11:13 2026
+# Process ID: 138148
+# Current directory: /home/liujiawei/ALS_Silicon_Workspace/als-core/als_sys_project/als_sys_project.runs/impl_1
+# Command line: vivado -log als_system_wrapper.vdi -applog -product Vivado -messageDb vivado.pb -mode batch -source als_system_wrapper.tcl -notrace
+# Log file: /home/liujiawei/ALS_Silicon_Workspace/als-core/als_sys_project/als_sys_project.runs/impl_1/als_system_wrapper.vdi
+# Journal file: /home/liujiawei/ALS_Silicon_Workspace/als-core/als_sys_project/als_sys_project.runs/impl_1/vivado.jou
+# Running On        :liujiawei-ubuntu
+# Platform          :Ubuntu
+# Operating System  :Ubuntu 22.04.5 LTS
+# Processor Detail  :Intel(R) Core(TM) i5-3470 CPU @ 3.20GHz
+# CPU Frequency     :1918.588 MHz
+# CPU Physical cores:4
+# CPU Logical cores :4
+# Host memory       :25143 MB
+# Swap memory       :2147 MB
+# Total Virtual     :27291 MB
+# Available Virtual :14764 MB
+#-----------------------------------------------------------
+source als_system_wrapper.tcl -notrace
+create_project: Time (s): cpu = 00:00:10 ; elapsed = 00:00:10 . Memory (MB): peak = 1413.613 ; gain = 0.023 ; free physical = 4516 ; free virtual = 13739
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/liujiawei/ALS_Silicon_Workspace/als-core/als_core_ip'.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/home/liujiawei/fpga_projects/tools/vivado/2024.1/Vivado/2024.1/data/ip'.
+Command: link_design -top als_system_wrapper -part xczu2cg-sfvc784-1-e
+Design is defaulting to srcset: sources_1
+Design is defaulting to constrset: constrs_1
+INFO: [Device 21-403] Loading part xczu2cg-sfvc784-1-e
+INFO: [Project 1-454] Reading design checkpoint '/home/liujiawei/ALS_Silicon_Workspace/als-core/als_sys_project/als_sys_project.gen/sources_1/bd/als_system/ip/als_system_als_core_0_0/als_system_als_core_0_0.dcp' for cell 'als_system_i/als_core_0'
+INFO: [Project 1-454] Reading design checkpoint '/home/liujiawei/ALS_Silicon_Workspace/als-core/als_sys_project/als_sys_project.gen/sources_1/bd/als_system/ip/als_system_axi_dma_0_0/als_system_axi_dma_0_0.dcp' for cell 'als_system_i/axi_dma_0'
+INFO: [Project 1-454] Reading design checkpoint '/home/liujiawei/ALS_Silicon_Workspace/als-core/als_sys_project/als_sys_project.gen/sources_1/bd/als_system/ip/als_system_axi_smc_0/als_system_axi_smc_0.dcp' for cell 'als_system_i/axi_smc'
+INFO: [Project 1-454] Reading design checkpoint '/home/liujiawei/ALS_Silicon_Workspace/als-core/als_sys_project/als_sys_project.gen/sources_1/bd/als_system/ip/als_system_axis_subset_converter_0_0/als_system_axis_subset_converter_0_0.dcp' for cell 'als_system_i/axis_subset_converter_0'
+INFO: [Project 1-454] Reading design checkpoint '/home/liujiawei/ALS_Silicon_Workspace/als-core/als_sys_project/als_sys_project.gen/sources_1/bd/als_system/ip/als_system_axis_subset_converter_1_0/als_system_axis_subset_converter_1_0.dcp' for cell 'als_system_i/axis_subset_converter_1'
+INFO: [Project 1-454] Reading design checkpoint '/home/liujiawei/ALS_Silicon_Workspace/als-core/als_sys_project/als_sys_project.gen/sources_1/bd/als_system/ip/als_system_rst_ps8_0_99M_0/als_system_rst_ps8_0_99M_0.dcp' for cell 'als_system_i/rst_ps8_0_99M'
+INFO: [Project 1-454] Reading design checkpoint '/home/liujiawei/ALS_Silicon_Workspace/als-core/als_sys_project/als_sys_project.gen/sources_1/bd/als_system/ip/als_system_zynq_ultra_ps_e_0_0/als_system_zynq_ultra_ps_e_0_0.dcp' for cell 'als_system_i/zynq_ultra_ps_e_0'
+INFO: [Project 1-454] Reading design checkpoint '/home/liujiawei/ALS_Silicon_Workspace/als-core/als_sys_project/als_sys_project.gen/sources_1/bd/als_system/ip/als_system_auto_pc_0/als_system_auto_pc_0.dcp' for cell 'als_system_i/ps8_0_axi_periph/s00_couplers/auto_pc'
+Netlist sorting complete. Time (s): cpu = 00:00:00.52 ; elapsed = 00:00:00.52 . Memory (MB): peak = 2300.605 ; gain = 0.000 ; free physical = 3635 ; free virtual = 12858
+INFO: [Netlist 29-17] Analyzing 3840 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2024.1
+INFO: [Project 1-570] Preparing netlist for logic optimization
+Parsing XDC File [/home/liujiawei/ALS_Silicon_Workspace/als-core/als_sys_project/als_sys_project.gen/sources_1/bd/als_system/ip/als_system_axi_smc_0/bd_0/ip/ip_24/bd_1939_sarn_1_clocks.xdc] for cell 'als_system_i/axi_smc/inst/s02_nodes/s02_ar_node/inst'
+WARNING: [Vivado_Tcl 4-921] Waiver ID 'CDC-1' -to list should not be empty. [/home/liujiawei/ALS_Silicon_Workspace/als-core/als_sys_project/als_sys_project.gen/sources_1/bd/als_system/ip/als_system_axi_smc_0/bd_0/ip/ip_24/bd_1939_sarn_1_clocks.xdc:49]
+WARNING: [Vivado_Tcl 4-921] Waiver ID 'CDC-1' -to list should not be empty. [/home/liujiawei/ALS_Silicon_Workspace/als-core/als_sys_project/als_sys_project.gen/sources_1/bd/als_system/ip/als_system_axi_smc_0/bd_0/ip/ip_24/bd_1939_sarn_1_clocks.xdc:52]
+WARNING: [Vivado_Tcl 4-921] Waiver ID 'CDC-1' -to list should not be empty. [/home/liujiawei/ALS_Silicon_Workspace/als-core/als_sys_project/als_sys_project.gen/sources_1/bd/als_system/ip/als_system_axi_smc_0/bd_0/ip/ip_24/bd_1939_sarn_1_clocks.xdc:55]
+WARNING: [Vivado_Tcl 4-921] Waiver ID 'CDC-1' -to list should not be empty. [/home/liujiawei/ALS_Silicon_Workspace/als-core/als_sys_project/als_sys_project.gen/sources_1/bd/als_system/ip/als_system_axi_smc_0/bd_0/ip/ip_24/bd_1939_sarn_1_clocks.xdc:59]
+WARNING: [Vivado_Tcl 4-921] Waiver ID 'CDC-1' -to list should not be empty. [/home/liujiawei/ALS_Silicon_Workspace/als-core/als_sys_project/als_sys_project.gen/sources_1/bd/als_system/ip/als_system_axi_smc_0/bd_0/ip/ip_24/bd_1939_sarn_1_clocks.xdc:63]
+WARNING: [Vivado_Tcl 4-921] Waiver ID 'CDC-1' -to list should not be empty. [/home/liujiawei/ALS_Silicon_Workspace/als-core/als_sys_project/als_sys_project.gen/sources_1/bd/als_system/ip/als_system_axi_smc_0/bd_0/ip/ip_24/bd_1939_sarn_1_clocks.xdc:66]
+WARNING: [Vivado_Tcl 4-921] Waiver ID 'CDC-1' -to list should not be empty. [/home/liujiawei/ALS_Silicon_Workspace/als-core/als_sys_project/als_sys_project.gen/sources_1/bd/als_system/ip/als_system_axi_smc_0/bd_0/ip/ip_24/bd_1939_sarn_1_clocks.xdc:70]
+WARNING: [Vivado_Tcl 4-921] Waiver ID 'CDC-1' -to list should not be empty. [/home/liujiawei/ALS_Silicon_Workspace/als-core/als_sys_project/als_sys_project.gen/sources_1/bd/als_system/ip/als_system_axi_smc_0/bd_0/ip/ip_24/bd_1939_sarn_1_clocks.xdc:73]
+WARNING: [Vivado_Tcl 4-921] Waiver ID 'CDC-1' -to list should not be empty. [/home/liujiawei/ALS_Silicon_Workspace/als-core/als_sys_project/als_sys_project.gen/sources_1/bd/als_system/ip/als_system_axi_smc_0/bd_0/ip/ip_24/bd_1939_sarn_1_clocks.xdc:76]
+WARNING: [Vivado_Tcl 4-921] Waiver ID 'CDC-1' -to list should not be empty. [/home/liujiawei/ALS_Silicon_Workspace/als-core/als_sys_project/als_sys_project.gen/sources_1/bd/als_system/ip/als_system_axi_smc_0/bd_0/ip/ip_24/bd_1939_sarn_1_clocks.xdc:79]
+WARNING: [Vivado_Tcl 4-921] Waiver ID 'CDC-1' -to list should not be empty. [/home/liujiawei/ALS_Silicon_Workspace/als-core/als_sys_project/als_sys_project.gen/sources_1/bd/als_system/ip/als_system_axi_smc_0/bd_0/ip/ip_24/bd_1939_sarn_1_clocks.xdc:82]
+WARNING: [Vivado_Tcl 4-921] Waiver ID 'CDC-4' -to list should not be empty. [/home/liujiawei/ALS_Silicon_Workspace/als-core/als_sys_project/als_sys_project.gen/sources_1/bd/als_system/ip/als_system_axi_smc_0/bd_0/ip/ip_24/bd_1939_sarn_1_clocks.xdc:85]
+WARNING: [Vivado_Tcl 4-921] Waiver ID 'CDC-4' -to list should not be empty. [/home/liujiawei/ALS_Silicon_Workspace/als-core/als_sys_project/als_sys_project.gen/sources_1/bd/als_system/ip/als_system_axi_smc_0/bd_0/ip/ip_24/bd_1939_sarn_1_clocks.xdc:88]
+WARNING: [Vivado_Tcl 4-921] Waiver ID 'CDC-2' -to list should not be empty. [/home/liujiawei/ALS_Silicon_Workspace/als-core/als_sys_project/als_sys_project.gen/sources_1/bd/als_system/ip/als_system_axi_smc_0/bd_0/ip/ip_24/bd_1939_sarn_1_clocks.xdc:91]
+WARNING: [Vivado_Tcl 4-921] Waiver ID 'CDC-2' -to list should not be empty. [/home/liujiawei/ALS_Silicon_Workspace/als-core/als_sys_project/als_sys_project.gen/sources_1/bd/als_system/ip/als_system_axi_smc_0/bd_0/ip/ip_24/bd_1939_sarn_1_clocks.xdc:94]
+WARNING: [Vivado_Tcl 4-921] Waiver ID 'CDC-2' -to list should not be empty. [/home/liujiawei/ALS_Silicon_Workspace/als-core/als_sys_project/als_sys_project.gen/sources_1/bd/als_system/ip/als_system_axi_smc_0/bd_0/ip/ip_24/bd_1939_sarn_1_clocks.xdc:97]
+WARNING: [Vivado_Tcl 4-921] Waiver ID 'CDC-2' -to list should not be empty. [/home/liujiawei/ALS_Silicon_Workspace/als-core/als_sys_project/als_sys_project.gen/sources_1/bd/als_system/ip/als_system_axi_smc_0/bd_0/ip/ip_24/bd_1939_sarn_1_clocks.xdc:100]
+WARNING: [Vivado_Tcl 4-921] Waiver ID 'CDC-1' -to list should not be empty. [/home/liujiawei/ALS_Silicon_Workspace/als-core/als_sys_project/als_sys_project.gen/sources_1/bd/als_system/ip/als_system_axi_smc_0/bd_0/ip/ip_24/bd_1939_sarn_1_clocks.xdc:104]
+WARNING: [Vivado_Tcl 4-921] Waiver ID 'CDC-10' -to list should not be empty. [/home/liujiawei/ALS_Silicon_Workspace/als-core/als_sys_project/als_sys_project.gen/sources_1/bd/als_system/ip/als_system_axi_smc_0/bd_0/ip/ip_24/bd_1939_sarn_1_clocks.xdc:107]
+WARNING: [Vivado_Tcl 4-921] Waiver ID 'CDC-10' -to list should not be empty. [/home/liujiawei/ALS_Silicon_Workspace/als-core/als_sys_project/als_sys_project.gen/sources_1/bd/als_system/ip/als_system_axi_smc_0/bd_0/ip/ip_24/bd_1939_sarn_1_clocks.xdc:110]
+WARNING: [Vivado_Tcl 4-921] Waiver ID 'CDC-1' -to list should not be empty. [/home/liujiawei/ALS_Silicon_Workspace/als-core/als_sys_project/als_sys_project.gen/sources_1/bd/als_system/ip/als_system_axi_smc_0/bd_0/ip/ip_24/bd_1939_sarn_1_clocks.xdc:113]
+WARNING: [Vivado_Tcl 4-921] Waiver ID 'CDC-1' -to list should not be empty. [/home/liujiawei/ALS_Silicon_Workspace/als-core/als_sys_project/als_sys_project.gen/sources_1/bd/als_system/ip/als_system_axi_smc_0/bd_0/ip/ip_24/bd_1939_sarn_1_clocks.xdc:116]
+WARNING: [Vivado_Tcl 4-921] Waiver ID 'CDC-1' -to list should not be empty. [/home/liujiawei/ALS_Silicon_Workspace/als-core/als_sys_project/als_sys_project.gen/sources_1/bd/als_system/ip/als_system_axi_smc_0/bd_0/ip/ip_24/bd_1939_sarn_1_clocks.xdc:119]
+WARNING: [Vivado_Tcl 4-921] Waiver ID 'CDC-13' -to list should not be empty. [/home/liujiawei/ALS_Silicon_Workspace/als-core/als_sys_project/als_sys_project.gen/sources_1/bd/als_system/ip/als_system_axi_smc_0/bd_0/ip/ip_24/bd_1939_sarn_1_clocks.xdc:122]
+WARNING: [Vivado_Tcl 4-921] Waiver ID 'CDC-1' -to list should not be empty. [/home/liujiawei/ALS_Silicon_Workspace/als-core/als_sys_project/als_sys_project.gen/sources_1/bd/als_system/ip/als_system_axi_smc_0/bd_0/ip/ip_24/bd_1939_sarn_1_clocks.xdc:125]
+WARNING: [Vivado_Tcl 4-921] Waiver ID 'CDC-1' -to list should not be empty. [/home/liujiawei/ALS_Silicon_Workspace/als-core/als_sys_project/als_sys_project.gen/sources_1/bd/als_system/ip/als_system_axi_smc_0/bd_0/ip/ip_24/bd_1939_sarn_1_clocks.xdc:128]
+WARNING: [Vivado_Tcl 4-921] Waiver ID 'CDC-13' -to list should not be empty. [/home/liujiawei/ALS_Silicon_Workspace/als-core/als_sys_project/als_sys_project.gen/sources_1/bd/als_system/ip/als_system_axi_smc_0/bd_0/ip/ip_24/bd_1939_sarn_1_clocks.xdc:131]
+WARNING: [Vivado_Tcl 4-921] Waiver ID 'CDC-1' -to list should not be empty. [/home/liujiawei/ALS_Silicon_Workspace/als-core/als_sys_project/als_sys_project.gen/sources_1/bd/als_system/ip/als_system_axi_smc_0/bd_0/ip/ip_24/bd_1939_sarn_1_clocks.xdc:134]
+WARNING: [Vivado_Tcl 4-921] Waiver ID 'CDC-10' -to list should not be empty. [/home/liujiawei/ALS_Silicon_Workspace/als-core/als_sys_project/als_sys_project.gen/sources_1/bd/als_system/ip/als_system_axi_smc_0/bd_0/ip/ip_24/bd_1939_sarn_1_clocks.xdc:137]
+WARNING: [Vivado_Tcl 4-921] Waiver ID 'CDC-1' -to list should not be empty. [/home/liujiawei/ALS_Silicon_Workspace/als-core/als_sys_project/als_sys_project.gen/sources_1/bd/als_system/ip/als_system_axi_smc_0/bd_0/ip/ip_24/bd_1939_sarn_1_clocks.xdc:140]
+WARNING: [Vivado_Tcl 4-921] Waiver ID 'CDC-1' -to list should not be empty. [/home/liujiawei/ALS_Silicon_Workspace/als-core/als_sys_project/als_sys_project.gen/sources_1/bd/als_system/ip/als_system_axi_smc_0/bd_0/ip/ip_24/bd_1939_sarn_1_clocks.xdc:143]
+WARNING: [Vivado_Tcl 4-921] Waiver ID 'CDC-1' -to list should not be empty. [/home/liujiawei/ALS_Silicon_Workspace/als-core/als_sys_project/als_sys_project.gen/sources_1/bd/als_system/ip/als_system_axi_smc_0/bd_0/ip/ip_24/bd_1939_sarn_1_clocks.xdc:146]
+WARNING: [Vivado_Tcl 4-921] Waiver ID 'CDC-2' -to list should not be empty. [/home/liujiawei/ALS_Silicon_Workspace/als-core/als_sys_project/als_sys_project.gen/sources_1/bd/als_system/ip/als_system_axi_smc_0/bd_0/ip/ip_24/bd_1939_sarn_1_clocks.xdc:149]
+WARNING: [Vivado_Tcl 4-921] Waiver ID 'CDC-1' -to list should not be empty. [/home/liujiawei/ALS_Silicon_Workspace/als-core/als_sys_project/als_sys_project.gen/sources_1/bd/als_system/ip/als_system_axi_smc_0/bd_0/ip/ip_24/bd_1939_sarn_1_clocks.xdc:152]
+WARNING: [Vivado_Tcl 4-921] Waiver ID 'CDC-1' -to list should not be empty. [/home/liujiawei/ALS_Silicon_Workspace/als-core/als_sys_project/als_sys_project.gen/sources_1/bd/als_system/ip/als_system_axi_smc_0/bd_0/ip/ip_24/bd_1939_sarn_1_clocks.xdc:155]
+WARNING: [Vivado_Tcl 4-921] Waiver ID 'CDC-10' -to list should not be empty. [/home/liujiawei/ALS_Silicon_Workspace/als-core/als_sys_project/als_sys_project.gen/sources_1/bd/als_system/ip/als_system_axi_smc_0/bd_0/ip/ip_24/bd_1939_sarn_1_clocks.xdc:161]
+WARNING: [Vivado_Tcl 4-921] Waiver ID 'CDC-4' -to list should not be empty. [/home/liujiawei/ALS_Silicon_Workspace/als-core/als_sys_project/als_sys_project.gen/sources_1/bd/als_system/ip/als_system_axi_smc_0/bd_0/ip/ip_24/bd_1939_sarn_1_clocks.xdc:164]
+WARNING: [Vivado_Tcl 4-921] Waiver ID 'CDC-4' -to list should not be empty. [/home/liujiawei/ALS_Silicon_Workspace/als-core/als_sys_project/als_sys_project.gen/sources_1/bd/als_system/ip/als_system_axi_smc_0/bd_0/ip/ip_24/bd_1939_sarn_1_clocks.xdc:167]
+WARNING: [Vivado_Tcl 4-921] Waiver ID 'CDC-4' -to list should not be empty. [/home/liujiawei/ALS_Silicon_Workspace/als-core/als_sys_project/als_sys_project.gen/sources_1/bd/als_system/ip/als_system_axi_smc_0/bd_0/ip/ip_24/bd_1939_sarn_1_clocks.xdc:171]
+WARNING: [Vivado_Tcl 4-921] Waiver ID 'CDC-4' -to list should not be empty. [/home/liujiawei/ALS_Silicon_Workspace/als-core/als_sys_project/als_sys_project.gen/sources_1/bd/als_system/ip/als_system_axi_smc_0/bd_0/ip/ip_24/bd_1939_sarn_1_clocks.xdc:174]
+WARNING: [Vivado_Tcl 4-921] Waiver ID 'CDC-1' -to list should not be empty. [/home/liujiawei/ALS_Silicon_Workspace/als-core/als_sys_project/als_sys_project.gen/sources_1/bd/als_system/ip/als_system_axi_smc_0/bd_0/ip/ip_24/bd_1939_sarn_1_clocks.xdc:178]
+WARNING: [Vivado_Tcl 4-921] Waiver ID 'CDC-1' -to list should not be empty. [/home/liujiawei/ALS_Silicon_Workspace/als-core/als_sys_project/als_sys_project.gen/sources_1/bd/als_system/ip/als_system_axi_smc_0/bd_0/ip/ip_24/bd_1939_sarn_1_clocks.xdc:181]
+WARNING: [Vivado_Tcl 4-921] Waiver ID 'CDC-13' -to list should not be empty. [/home/liujiawei/ALS_Silicon_Workspace/als-core/als_sys_project/als_sys_project.gen/sources_1/bd/als_system/ip/als_system_axi_smc_0/bd_0/ip/ip_24/bd_1939_sarn_1_clocks.xdc:184]
+Finished Parsing XDC File [/home/liujiawei/ALS_Silicon_Workspace/als-core/als_sys_project/als_sys_project.gen/sources_1/bd/als_system/ip/als_system_axi_smc_0/bd_0/ip/ip_24/bd_1939_sarn_1_clocks.xdc] for cell 'als_system_i/axi_smc/inst/s02_nodes/s02_ar_node/inst'
+Parsing XDC File [/home/liujiawei/ALS_Silicon_Workspace/als-core/als_sys_project/als_sys_project.gen/sources_1/bd/als_system/ip/als_system_axi_smc_0/smartconnect.xdc] for cell 'als_system_i/axi_smc/inst'
+WARNING: [Vivado_Tcl 4-919] Waiver ID 'CDC-1' -from list should not be empty. [/home/liujiawei/ALS_Silicon_Workspace/als-core/als_sys_project/als_sys_project.gen/sources_1/bd/als_system/ip/als_system_axi_smc_0/smartconnect.xdc:1]
+WARNING: [Vivado_Tcl 4-921] Waiver ID 'CDC-1' -to list should not be empty. [/home/liujiawei/ALS_Silicon_Workspace/als-core/als_sys_project/als_sys_project.gen/sources_1/bd/als_system/ip/als_system_axi_smc_0/smartconnect.xdc:2]
+WARNING: [Vivado_Tcl 4-921] Waiver ID 'CDC-1' -to list should not be empty. [/home/liujiawei/ALS_Silicon_Workspace/als-core/als_sys_project/als_sys_project.gen/sources_1/bd/als_system/ip/als_system_axi_smc_0/smartconnect.xdc:3]
+WARNING: [Vivado_Tcl 4-921] Waiver ID 'CDC-1' -to list should not be empty. [/home/liujiawei/ALS_Silicon_Workspace/als-core/als_sys_project/als_sys_project.gen/sources_1/bd/als_system/ip/als_system_axi_smc_0/smartconnect.xdc:4]
+WARNING: [Vivado_Tcl 4-921] Waiver ID 'CDC-1' -to list should not be empty. [/home/liujiawei/ALS_Silicon_Workspace/als-core/als_sys_project/als_sys_project.gen/sources_1/bd/als_system/ip/als_system_axi_smc_0/smartconnect.xdc:5]
+WARNING: [Vivado_Tcl 4-921] Waiver ID 'CDC-1' -to list should not be empty. [/home/liujiawei/ALS_Silicon_Workspace/als-core/als_sys_project/als_sys_project.gen/sources_1/bd/als_system/ip/als_system_axi_smc_0/smartconnect.xdc:6]
+WARNING: [Vivado_Tcl 4-921] Waiver ID 'CDC-1' -to list should not be empty. [/home/liujiawei/ALS_Silicon_Workspace/als-core/als_sys_project/als_sys_project.gen/sources_1/bd/als_system/ip/als_system_axi_smc_0/smartconnect.xdc:7]
+WARNING: [Vivado_Tcl 4-921] Waiver ID 'CDC-1' -to list should not be empty. [/home/liujiawei/ALS_Silicon_Workspace/als-core/als_sys_project/als_sys_project.gen/sources_1/bd/als_system/ip/als_system_axi_smc_0/smartconnect.xdc:8]
+WARNING: [Vivado_Tcl 4-921] Waiver ID 'CDC-1' -to list should not be empty. [/home/liujiawei/ALS_Silicon_Workspace/als-core/als_sys_project/als_sys_project.gen/sources_1/bd/als_system/ip/als_system_axi_smc_0/smartconnect.xdc:9]
+WARNING: [Vivado_Tcl 4-921] Waiver ID 'CDC-1' -to list should not be empty. [/home/liujiawei/ALS_Silicon_Workspace/als-core/als_sys_project/als_sys_project.gen/sources_1/bd/als_system/ip/als_system_axi_smc_0/smartconnect.xdc:10]
+Finished Parsing XDC File [/home/liujiawei/ALS_Silicon_Workspace/als-core/als_sys_project/als_sys_project.gen/sources_1/bd/als_system/ip/als_system_axi_smc_0/smartconnect.xdc] for cell 'als_system_i/axi_smc/inst'
+Parsing XDC File [/home/liujiawei/ALS_Silicon_Workspace/als-core/als_sys_project/als_sys_project.gen/sources_1/bd/als_system/ip/als_system_axi_smc_0/bd_0/ip/ip_34/bd_1939_m00bn_0_clocks.xdc] for cell 'als_system_i/axi_smc/inst/m00_nodes/m00_b_node/inst'
+WARNING: [Vivado_Tcl 4-921] Waiver ID 'CDC-1' -to list should not be empty. [/home/liujiawei/ALS_Silicon_Workspace/als-core/als_sys_project/als_sys_project.gen/sources_1/bd/als_system/ip/als_system_axi_smc_0/bd_0/ip/ip_34/bd_1939_m00bn_0_clocks.xdc:49]
+WARNING: [Vivado_Tcl 4-921] Waiver ID 'CDC-1' -to list should not be empty. [/home/liujiawei/ALS_Silicon_Workspace/als-core/als_sys_project/als_sys_project.gen/sources_1/bd/als_system/ip/als_system_axi_smc_0/bd_0/ip/ip_34/bd_1939_m00bn_0_clocks.xdc:52]
+WARNING: [Vivado_Tcl 4-921] Waiver ID 'CDC-1' -to list should not be empty. [/home/liujiawei/ALS_Silicon_Workspace/als-core/als_sys_project/als_sys_project.gen/sources_1/bd/als_system/ip/als_system_axi_smc_0/bd_0/ip/ip_34/bd_1939_m00bn_0_clocks.xdc:55]
+WARNING: [Vivado_Tcl 4-921] Waiver ID 'CDC-1' -to list should not be empty. [/home/liujiawei/ALS_Silicon_Workspace/als-core/als_sys_project/als_sys_project.gen/sources_1/bd/als_system/ip/als_system_axi_smc_0/bd_0/ip/ip_34/bd_1939_m00bn_0_clocks.xdc:59]
+WARNING: [Vivado_Tcl 4-921] Waiver ID 'CDC-1' -to list should not be empty. [/home/liujiawei/ALS_Silicon_Workspace/als-core/als_sys_project/als_sys_project.gen/sources_1/bd/als_system/ip/als_system_axi_smc_0/bd_0/ip/ip_34/bd_1939_m00bn_0_clocks.xdc:63]
+WARNING: [Vivado_Tcl 4-921] Waiver ID 'CDC-1' -to list should not be empty. [/home/liujiawei/ALS_Silicon_Workspace/als-core/als_sys_project/als_sys_project.gen/sources_1/bd/als_system/ip/als_system_axi_smc_0/bd_0/ip/ip_34/bd_1939_m00bn_0_clocks.xdc:66]
+WARNING: [Vivado_Tcl 4-921] Waiver ID 'CDC-1' -to list should not be empty. [/home/liujiawei/ALS_Silicon_Workspace/als-core/als_sys_project/als_sys_project.gen/sources_1/bd/als_system/ip/als_system_axi_smc_0/bd_0/ip/ip_34/bd_1939_m00bn_0_clocks.xdc:70]
+WARNING: [Vivado_Tcl 4-921] Waiver ID 'CDC-1' -to list should not be empty. [/home/liujiawei/ALS_Silicon_Workspace/als-core/als_sys_project/als_sys_project.gen/sources_1/bd/als_system/ip/als_system_axi_smc_0/bd_0/ip/ip_34/bd_1939_m00bn_0_clocks.xdc:73]
+WARNING: [Vivado_Tcl 4-921] Waiver ID 'CDC-1' -to list should not be empty. [/home/liujiawei/ALS_Silicon_Workspace/als-core/als_sys_project/als_sys_project.gen/sources_1/bd/als_system/ip/als_system_axi_smc_0/bd_0/ip/ip_34/bd_1939_m00bn_0_clocks.xdc:76]
+WARNING: [Vivado_Tcl 4-921] Waiver ID 'CDC-1' -to list should not be empty. [/home/liujiawei/ALS_Silicon_Workspace/als-core/als_sys_project/als_sys_project.gen/sources_1/bd/als_system/ip/als_system_axi_smc_0/bd_0/ip/ip_34/bd_1939_m00bn_0_clocks.xdc:79]
+WARNING: [Vivado_Tcl 4-921] Waiver ID 'CDC-4' -to list should not be empty. [/home/liujiawei/ALS_Silicon_Workspace/als-core/als_sys_project/als_sys_project.gen/sources_1/bd/als_system/ip/als_system_axi_smc_0/bd_0/ip/ip_34/bd_1939_m00bn_0_clocks.xdc:85]
+WARNING: [Vivado_Tcl 4-921] Waiver ID 'CDC-4' -to list should not be empty. [/home/liujiawei/ALS_Silicon_Workspace/als-core/als_sys_project/als_sys_project.gen/sources_1/bd/als_system/ip/als_system_axi_smc_0/bd_0/ip/ip_34/bd_1939_m00bn_0_clocks.xdc:88]
+WARNING: [Vivado_Tcl 4-921] Waiver ID 'CDC-2' -to list should not be empty. [/home/liujiawei/ALS_Silicon_Workspace/als-core/als_sys_project/als_sys_project.gen/sources_1/bd/als_system/ip/als_system_axi_smc_0/bd_0/ip/ip_34/bd_1939_m00bn_0_clocks.xdc:91]
+WARNING: [Vivado_Tcl 4-921] Waiver ID 'CDC-2' -to list should not be empty. [/home/liujiawei/ALS_Silicon_Workspace/als-core/als_sys_project/als_sys_project.gen/sources_1/bd/als_system/ip/als_system_axi_smc_0/bd_0/ip/ip_34/bd_1939_m00bn_0_clocks.xdc:94]
+WARNING: [Vivado_Tcl 4-921] Waiver ID 'CDC-2' -to list should not be empty. [/home/liujiawei/ALS_Silicon_Workspace/als-core/als_sys_project/als_sys_project.gen/sources_1/bd/als_system/ip/als_system_axi_smc_0/bd_0/ip/ip_34/bd_1939_m00bn_0_clocks.xdc:97]
+WARNING: [Vivado_Tcl 4-921] Waiver ID 'CDC-2' -to list should not be empty. [/home/liujiawei/ALS_Silicon_Workspace/als-core/als_sys_project/als_sys_project.gen/sources_1/bd/als_system/ip/als_system_axi_smc_0/bd_0/ip/ip_34/bd_1939_m00bn_0_clocks.xdc:100]
+WARNING: [Vivado_Tcl 4-921] Waiver ID 'CDC-1' -to list should not be empty. [/home/liujiawei/ALS_Silicon_Workspace/als-core/als_sys_project/als_sys_project.gen/sources_1/bd/als_system/ip/als_system_axi_smc_0/bd_0/ip/ip_34/bd_1939_m00bn_0_clocks.xdc:104]
+WARNING: [Vivado_Tcl 4-921] Waiver ID 'CDC-10' -to list should not be empty. [/home/liujiawei/ALS_Silicon_Workspace/als-core/als_sys_project/als_sys_project.gen/sources_1/bd/als_system/ip/als_system_axi_smc_0/bd_0/ip/ip_34/bd_1939_m00bn_0_clocks.xdc:107]
+WARNING: [Vivado_Tcl 4-921] Waiver ID 'CDC-10' -to list should not be empty. [/home/liujiawei/ALS_Silicon_Workspace/als-core/als_sys_project/als_sys_project.gen/sources_1/bd/als_system/ip/als_system_axi_smc_0/bd_0/ip/ip_34/bd_1939_m00bn_0_clocks.xdc:110]
+WARNING: [Vivado_Tcl 4-921] Waiver ID 'CDC-1' -to list should not be empty. [/home/liujiawei/ALS_Silicon_Workspace/als-core/als_sys_project/als_sys_project.gen/sources_1/bd/als_system/ip/als_system_axi_smc_0/bd_0/ip/ip_34/bd_1939_m00bn_0_clocks.xdc:113]
+WARNING: [Vivado_Tcl 4-921] Waiver ID 'CDC-1' -to list should not be empty. [/home/liujiawei/ALS_Silicon_Workspace/als-core/als_sys_project/als_sys_project.gen/sources_1/bd/als_system/ip/als_system_axi_smc_0/bd_0/ip/ip_34/bd_1939_m00bn_0_clocks.xdc:116]
+WARNING: [Vivado_Tcl 4-921] Waiver ID 'CDC-1' -to list should not be empty. [/home/liujiawei/ALS_Silicon_Workspace/als-core/als_sys_project/als_sys_project.gen/sources_1/bd/als_system/ip/als_system_axi_smc_0/bd_0/ip/ip_34/bd_1939_m00bn_0_clocks.xdc:119]
+WARNING: [Vivado_Tcl 4-921] Waiver ID 'CDC-13' -to list should not be empty. [/home/liujiawei/ALS_Silicon_Workspace/als-core/als_sys_project/als_sys_project.gen/sources_1/bd/als_system/ip/als_system_axi_smc_0/bd_0/ip/ip_34/bd_1939_m00bn_0_clocks.xdc:122]
+WARNING: [Vivado_Tcl 4-921] Waiver ID 'CDC-1' -to list should not be empty. [/home/liujiawei/ALS_Silicon_Workspace/als-core/als_sys_project/als_sys_project.gen/sources_1/bd/als_system/ip/als_system_axi_smc_0/bd_0/ip/ip_34/bd_1939_m00bn_0_clocks.xdc:125]
+WARNING: [Vivado_Tcl 4-921] Waiver ID 'CDC-1' -to list should not be empty. [/home/liujiawei/ALS_Silicon_Workspace/als-core/als_sys_project/als_sys_project.gen/sources_1/bd/als_system/ip/als_system_axi_smc_0/bd_0/ip/ip_34/bd_1939_m00bn_0_clocks.xdc:128]
+WARNING: [Vivado_Tcl 4-921] Waiver ID 'CDC-13' -to list should not be empty. [/home/liujiawei/ALS_Silicon_Workspace/als-core/als_sys_project/als_sys_project.gen/sources_1/bd/als_system/ip/als_system_axi_smc_0/bd_0/ip/ip_34/bd_1939_m00bn_0_clocks.xdc:131]
+WARNING: [Vivado_Tcl 4-921] Waiver ID 'CDC-1' -to list should not be empty. [/home/liujiawei/ALS_Silicon_Workspace/als-core/als_sys_project/als_sys_project.gen/sources_1/bd/als_system/ip/als_system_axi_smc_0/bd_0/ip/ip_34/bd_1939_m00bn_0_clocks.xdc:134]
+WARNING: [Vivado_Tcl 4-921] Waiver ID 'CDC-10' -to list should not be empty. [/home/liujiawei/ALS_Silicon_Workspace/als-core/als_sys_project/als_sys_project.gen/sources_1/bd/als_system/ip/als_system_axi_smc_0/bd_0/ip/ip_34/bd_1939_m00bn_0_clocks.xdc:137]
+WARNING: [Vivado_Tcl 4-921] Waiver ID 'CDC-1' -to list should not be empty. [/home/liujiawei/ALS_Silicon_Workspace/als-core/als_sys_project/als_sys_project.gen/sources_1/bd/als_system/ip/als_system_axi_smc_0/bd_0/ip/ip_34/bd_1939_m00bn_0_clocks.xdc:140]
+WARNING: [Vivado_Tcl 4-921] Waiver ID 'CDC-1' -to list should not be empty. [/home/liujiawei/ALS_Silicon_Workspace/als-core/als_sys_project/als_sys_project.gen/sources_1/bd/als_system/ip/als_system_axi_smc_0/bd_0/ip/ip_34/bd_1939_m00bn_0_clocks.xdc:143]
+WARNING: [Vivado_Tcl 4-921] Waiver ID 'CDC-1' -to list should not be empty. [/home/liujiawei/ALS_Silicon_Workspace/als-core/als_sys_project/als_sys_project.gen/sources_1/bd/als_system/ip/als_system_axi_smc_0/bd_0/ip/ip_34/bd_1939_m00bn_0_clocks.xdc:146]
+WARNING: [Vivado_Tcl 4-921] Waiver ID 'CDC-2' -to list should not be empty. [/home/liujiawei/ALS_Silicon_Workspace/als-core/als_sys_project/als_sys_project.gen/sources_1/bd/als_system/ip/als_system_axi_smc_0/bd_0/ip/ip_34/bd_1939_m00bn_0_clocks.xdc:149]
+WARNING: [Vivado_Tcl 4-921] Waiver ID 'CDC-1' -to list should not be empty. [/home/liujiawei/ALS_Silicon_Workspace/als-core/als_sys_project/als_sys_project.gen/sources_1/bd/als_system/ip/als_system_axi_smc_0/bd_0/ip/ip_34/bd_1939_m00bn_0_clocks.xdc:152]
+WARNING: [Vivado_Tcl 4-921] Waiver ID 'CDC-1' -to list should not be empty. [/home/liujiawei/ALS_Silicon_Workspace/als-core/als_sys_project/als_sys_project.gen/sources_1/bd/als_system/ip/als_system_axi_smc_0/bd_0/ip/ip_34/bd_1939_m00bn_0_clocks.xdc:155]
+WARNING: [Vivado_Tcl 4-921] Waiver ID 'CDC-10' -to list should not be empty. [/home/liujiawei/ALS_Silicon_Workspace/als-core/als_sys_project/als_sys_project.gen/sources_1/bd/als_system/ip/als_system_axi_smc_0/bd_0/ip/ip_34/bd_1939_m00bn_0_clocks.xdc:161]
+WARNING: [Vivado_Tcl 4-921] Waiver ID 'CDC-4' -to list should not be empty. [/home/liujiawei/ALS_Silicon_Workspace/als-core/als_sys_project/als_sys_project.gen/sources_1/bd/als_system/ip/als_system_axi_smc_0/bd_0/ip/ip_34/bd_1939_m00bn_0_clocks.xdc:164]
+WARNING: [Vivado_Tcl 4-921] Waiver ID 'CDC-4' -to list should not be empty. [/home/liujiawei/ALS_Silicon_Workspace/als-core/als_sys_project/als_sys_project.gen/sources_1/bd/als_system/ip/als_system_axi_smc_0/bd_0/ip/ip_34/bd_1939_m00bn_0_clocks.xdc:167]
+WARNING: [Vivado_Tcl 4-921] Waiver ID 'CDC-4' -to list should not be empty. [/home/liujiawei/ALS_Silicon_Workspace/als-core/als_sys_project/als_sys_project.gen/sources_1/bd/als_system/ip/als_system_axi_smc_0/bd_0/ip/ip_34/bd_1939_m00bn_0_clocks.xdc:171]
+WARNING: [Vivado_Tcl 4-921] Waiver ID 'CDC-4' -to list should not be empty. [/home/liujiawei/ALS_Silicon_Workspace/als-core/als_sys_project/als_sys_project.gen/sources_1/bd/als_system/ip/als_system_axi_smc_0/bd_0/ip/ip_34/bd_1939_m00bn_0_clocks.xdc:174]
+INFO: [Common 17-14] Message 'Vivado 12-180' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings. [/home/liujiawei/ALS_Silicon_Workspace/als-core/als_sys_project/als_sys_project.gen/sources_1/bd/als_system/ip/als_system_axi_smc_0/bd_0/ip/ip_34/bd_1939_m00bn_0_clocks.xdc:178]
+WARNING: [Vivado_Tcl 4-921] Waiver ID 'CDC-1' -to list should not be empty. [/home/liujiawei/ALS_Silicon_Workspace/als-core/als_sys_project/als_sys_project.gen/sources_1/bd/als_system/ip/als_system_axi_smc_0/bd_0/ip/ip_34/bd_1939_m00bn_0_clocks.xdc:178]
+WARNING: [Vivado_Tcl 4-921] Waiver ID 'CDC-1' -to list should not be empty. [/home/liujiawei/ALS_Silicon_Workspace/als-core/als_sys_project/als_sys_project.gen/sources_1/bd/als_system/ip/als_system_axi_smc_0/bd_0/ip/ip_34/bd_1939_m00bn_0_clocks.xdc:181]
+WARNING: [Vivado_Tcl 4-921] Waiver ID 'CDC-13' -to list should not be empty. [/home/liujiawei/ALS_Silicon_Workspace/als-core/als_sys_project/als_sys_project.gen/sources_1/bd/als_system/ip/als_system_axi_smc_0/bd_0/ip/ip_34/bd_1939_m00bn_0_clocks.xdc:184]
+Finished Parsing XDC File [/home/liujiawei/ALS_Silicon_Workspace/als-core/als_sys_project/als_sys_project.gen/sources_1/bd/als_system/ip/als_system_axi_smc_0/bd_0/ip/ip_34/bd_1939_m00bn_0_clocks.xdc] for cell 'als_system_i/axi_smc/inst/m00_nodes/m00_b_node/inst'
+Parsing XDC File [/home/liujiawei/ALS_Silicon_Workspace/als-core/als_sys_project/als_sys_project.gen/sources_1/bd/als_system/ip/als_system_axi_smc_0/bd_0/ip/ip_33/bd_1939_m00wn_0_clocks.xdc] for cell 'als_system_i/axi_smc/inst/m00_nodes/m00_w_node/inst'
+WARNING: [Vivado_Tcl 4-921] Waiver ID 'CDC-1' -to list should not be empty. [/home/liujiawei/ALS_Silicon_Workspace/als-core/als_sys_project/als_sys_project.gen/sources_1/bd/als_system/ip/als_system_axi_smc_0/bd_0/ip/ip_33/bd_1939_m00wn_0_clocks.xdc:49]
+WARNING: [Vivado_Tcl 4-921] Waiver ID 'CDC-1' -to list should not be empty. [/home/liujiawei/ALS_Silicon_Workspace/als-core/als_sys_project/als_sys_project.gen/sources_1/bd/als_system/ip/als_system_axi_smc_0/bd_0/ip/ip_33/bd_1939_m00wn_0_clocks.xdc:52]
+WARNING: [Vivado_Tcl 4-921] Waiver ID 'CDC-1' -to list should not be empty. [/home/liujiawei/ALS_Silicon_Workspace/als-core/als_sys_project/als_sys_project.gen/sources_1/bd/als_system/ip/als_system_axi_smc_0/bd_0/ip/ip_33/bd_1939_m00wn_0_clocks.xdc:55]
+WARNING: [Vivado_Tcl 4-921] Waiver ID 'CDC-1' -to list should not be empty. [/home/liujiawei/ALS_Silicon_Workspace/als-core/als_sys_project/als_sys_project.gen/sources_1/bd/als_system/ip/als_system_axi_smc_0/bd_0/ip/ip_33/bd_1939_m00wn_0_clocks.xdc:59]
+WARNING: [Vivado_Tcl 4-921] Waiver ID 'CDC-1' -to list should not be empty. [/home/liujiawei/ALS_Silicon_Workspace/als-core/als_sys_project/als_sys_project.gen/sources_1/bd/als_system/ip/als_system_axi_smc_0/bd_0/ip/ip_33/bd_1939_m00wn_0_clocks.xdc:63]
+WARNING: [Vivado_Tcl 4-921] Waiver ID 'CDC-1' -to list should not be empty. [/home/liujiawei/ALS_Silicon_Workspace/als-core/als_sys_project/als_sys_project.gen/sources_1/bd/als_system/ip/als_system_axi_smc_0/bd_0/ip/ip_33/bd_1939_m00wn_0_clocks.xdc:66]
+INFO: [Common 17-14] Message 'Vivado_Tcl 4-921' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings. [/home/liujiawei/ALS_Silicon_Workspace/als-core/als_sys_project/als_sys_project.gen/sources_1/bd/als_system/ip/als_system_axi_smc_0/bd_0/ip/ip_33/bd_1939_m00wn_0_clocks.xdc:66]
+Finished Parsing XDC File [/home/liujiawei/ALS_Silicon_Workspace/als-core/als_sys_project/als_sys_project.gen/sources_1/bd/als_system/ip/als_system_axi_smc_0/bd_0/ip/ip_33/bd_1939_m00wn_0_clocks.xdc] for cell 'als_system_i/axi_smc/inst/m00_nodes/m00_w_node/inst'
+Parsing XDC File [/home/liujiawei/ALS_Silicon_Workspace/als-core/als_sys_project/als_sys_project.gen/sources_1/bd/als_system/ip/als_system_axi_smc_0/bd_0/ip/ip_32/bd_1939_m00awn_0_clocks.xdc] for cell 'als_system_i/axi_smc/inst/m00_nodes/m00_aw_node/inst'
+Finished Parsing XDC File [/home/liujiawei/ALS_Silicon_Workspace/als-core/als_sys_project/als_sys_project.gen/sources_1/bd/als_system/ip/als_system_axi_smc_0/bd_0/ip/ip_32/bd_1939_m00awn_0_clocks.xdc] for cell 'als_system_i/axi_smc/inst/m00_nodes/m00_aw_node/inst'
+Parsing XDC File [/home/liujiawei/ALS_Silicon_Workspace/als-core/als_sys_project/als_sys_project.gen/sources_1/bd/als_system/ip/als_system_axi_smc_0/bd_0/ip/ip_31/bd_1939_m00rn_0_clocks.xdc] for cell 'als_system_i/axi_smc/inst/m00_nodes/m00_r_node/inst'
+Finished Parsing XDC File [/home/liujiawei/ALS_Silicon_Workspace/als-core/als_sys_project/als_sys_project.gen/sources_1/bd/als_system/ip/als_system_axi_smc_0/bd_0/ip/ip_31/bd_1939_m00rn_0_clocks.xdc] for cell 'als_system_i/axi_smc/inst/m00_nodes/m00_r_node/inst'
+Parsing XDC File [/home/liujiawei/ALS_Silicon_Workspace/als-core/als_sys_project/als_sys_project.gen/sources_1/bd/als_system/ip/als_system_axi_smc_0/bd_0/ip/ip_30/bd_1939_m00arn_0_clocks.xdc] for cell 'als_system_i/axi_smc/inst/m00_nodes/m00_ar_node/inst'
+Finished Parsing XDC File [/home/liujiawei/ALS_Silicon_Workspace/als-core/als_sys_project/als_sys_project.gen/sources_1/bd/als_system/ip/als_system_axi_smc_0/bd_0/ip/ip_30/bd_1939_m00arn_0_clocks.xdc] for cell 'als_system_i/axi_smc/inst/m00_nodes/m00_ar_node/inst'
+Parsing XDC File [/home/liujiawei/ALS_Silicon_Workspace/als-core/als_sys_project/als_sys_project.gen/sources_1/bd/als_system/ip/als_system_axi_smc_0/bd_0/ip/ip_28/bd_1939_sbn_1_clocks.xdc] for cell 'als_system_i/axi_smc/inst/s02_nodes/s02_b_node/inst'
+Finished Parsing XDC File [/home/liujiawei/ALS_Silicon_Workspace/als-core/als_sys_project/als_sys_project.gen/sources_1/bd/als_system/ip/als_system_axi_smc_0/bd_0/ip/ip_28/bd_1939_sbn_1_clocks.xdc] for cell 'als_system_i/axi_smc/inst/s02_nodes/s02_b_node/inst'
+Parsing XDC File [/home/liujiawei/ALS_Silicon_Workspace/als-core/als_sys_project/als_sys_project.gen/sources_1/bd/als_system/ip/als_system_axi_smc_0/bd_0/ip/ip_27/bd_1939_swn_1_clocks.xdc] for cell 'als_system_i/axi_smc/inst/s02_nodes/s02_w_node/inst'
+Finished Parsing XDC File [/home/liujiawei/ALS_Silicon_Workspace/als-core/als_sys_project/als_sys_project.gen/sources_1/bd/als_system/ip/als_system_axi_smc_0/bd_0/ip/ip_27/bd_1939_swn_1_clocks.xdc] for cell 'als_system_i/axi_smc/inst/s02_nodes/s02_w_node/inst'
+Parsing XDC File [/home/liujiawei/ALS_Silicon_Workspace/als-core/als_sys_project/als_sys_project.gen/sources_1/bd/als_system/ip/als_system_axi_smc_0/bd_0/ip/ip_26/bd_1939_sawn_1_clocks.xdc] for cell 'als_system_i/axi_smc/inst/s02_nodes/s02_aw_node/inst'
+Finished Parsing XDC File [/home/liujiawei/ALS_Silicon_Workspace/als-core/als_sys_project/als_sys_project.gen/sources_1/bd/als_system/ip/als_system_axi_smc_0/bd_0/ip/ip_26/bd_1939_sawn_1_clocks.xdc] for cell 'als_system_i/axi_smc/inst/s02_nodes/s02_aw_node/inst'
+Parsing XDC File [/home/liujiawei/ALS_Silicon_Workspace/als-core/als_sys_project/als_sys_project.gen/sources_1/bd/als_system/ip/als_system_axi_smc_0/bd_0/ip/ip_25/bd_1939_srn_1_clocks.xdc] for cell 'als_system_i/axi_smc/inst/s02_nodes/s02_r_node/inst'
+Finished Parsing XDC File [/home/liujiawei/ALS_Silicon_Workspace/als-core/als_sys_project/als_sys_project.gen/sources_1/bd/als_system/ip/als_system_axi_smc_0/bd_0/ip/ip_25/bd_1939_srn_1_clocks.xdc] for cell 'als_system_i/axi_smc/inst/s02_nodes/s02_r_node/inst'
+Parsing XDC File [/home/liujiawei/ALS_Silicon_Workspace/als-core/als_sys_project/als_sys_project.gen/sources_1/bd/als_system/ip/als_system_zynq_ultra_ps_e_0_0/als_system_zynq_ultra_ps_e_0_0.xdc] for cell 'als_system_i/zynq_ultra_ps_e_0/inst'
+create_clock: Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 2473.805 ; gain = 30.688 ; free physical = 3515 ; free virtual = 12739
+Finished Parsing XDC File [/home/liujiawei/ALS_Silicon_Workspace/als-core/als_sys_project/als_sys_project.gen/sources_1/bd/als_system/ip/als_system_zynq_ultra_ps_e_0_0/als_system_zynq_ultra_ps_e_0_0.xdc] for cell 'als_system_i/zynq_ultra_ps_e_0/inst'
+Parsing XDC File [/home/liujiawei/ALS_Silicon_Workspace/als-core/als_sys_project/als_sys_project.gen/sources_1/bd/als_system/ip/als_system_axi_smc_0/bd_0/ip/ip_19/bd_1939_sbn_0_clocks.xdc] for cell 'als_system_i/axi_smc/inst/s01_nodes/s01_b_node/inst'
+Finished Parsing XDC File [/home/liujiawei/ALS_Silicon_Workspace/als-core/als_sys_project/als_sys_project.gen/sources_1/bd/als_system/ip/als_system_axi_smc_0/bd_0/ip/ip_19/bd_1939_sbn_0_clocks.xdc] for cell 'als_system_i/axi_smc/inst/s01_nodes/s01_b_node/inst'
+Parsing XDC File [/home/liujiawei/ALS_Silicon_Workspace/als-core/als_sys_project/als_sys_project.gen/sources_1/bd/als_system/ip/als_system_axi_smc_0/bd_0/ip/ip_18/bd_1939_swn_0_clocks.xdc] for cell 'als_system_i/axi_smc/inst/s01_nodes/s01_w_node/inst'
+Finished Parsing XDC File [/home/liujiawei/ALS_Silicon_Workspace/als-core/als_sys_project/als_sys_project.gen/sources_1/bd/als_system/ip/als_system_axi_smc_0/bd_0/ip/ip_18/bd_1939_swn_0_clocks.xdc] for cell 'als_system_i/axi_smc/inst/s01_nodes/s01_w_node/inst'
+Parsing XDC File [/home/liujiawei/ALS_Silicon_Workspace/als-core/als_sys_project/als_sys_project.gen/sources_1/bd/als_system/ip/als_system_axi_smc_0/bd_0/ip/ip_17/bd_1939_sawn_0_clocks.xdc] for cell 'als_system_i/axi_smc/inst/s01_nodes/s01_aw_node/inst'
+Finished Parsing XDC File [/home/liujiawei/ALS_Silicon_Workspace/als-core/als_sys_project/als_sys_project.gen/sources_1/bd/als_system/ip/als_system_axi_smc_0/bd_0/ip/ip_17/bd_1939_sawn_0_clocks.xdc] for cell 'als_system_i/axi_smc/inst/s01_nodes/s01_aw_node/inst'
+Parsing XDC File [/home/liujiawei/ALS_Silicon_Workspace/als-core/als_sys_project/als_sys_project.gen/sources_1/bd/als_system/ip/als_system_axi_smc_0/bd_0/ip/ip_12/bd_1939_srn_0_clocks.xdc] for cell 'als_system_i/axi_smc/inst/s00_nodes/s00_r_node/inst'
+Finished Parsing XDC File [/home/liujiawei/ALS_Silicon_Workspace/als-core/als_sys_project/als_sys_project.gen/sources_1/bd/als_system/ip/als_system_axi_smc_0/bd_0/ip/ip_12/bd_1939_srn_0_clocks.xdc] for cell 'als_system_i/axi_smc/inst/s00_nodes/s00_r_node/inst'
+Parsing XDC File [/home/liujiawei/ALS_Silicon_Workspace/als-core/als_sys_project/als_sys_project.gen/sources_1/bd/als_system/ip/als_system_axi_smc_0/bd_0/ip/ip_11/bd_1939_sarn_0_clocks.xdc] for cell 'als_system_i/axi_smc/inst/s00_nodes/s00_ar_node/inst'
+Finished Parsing XDC File [/home/liujiawei/ALS_Silicon_Workspace/als-core/als_sys_project/als_sys_project.gen/sources_1/bd/als_system/ip/als_system_axi_smc_0/bd_0/ip/ip_11/bd_1939_sarn_0_clocks.xdc] for cell 'als_system_i/axi_smc/inst/s00_nodes/s00_ar_node/inst'
+Parsing XDC File [/home/liujiawei/ALS_Silicon_Workspace/als-core/als_sys_project/als_sys_project.gen/sources_1/bd/als_system/ip/als_system_axi_smc_0/bd_0/ip/ip_1/bd_1939_psr_aclk_0.xdc] for cell 'als_system_i/axi_smc/inst/clk_map/psr_aclk/U0'
+Finished Parsing XDC File [/home/liujiawei/ALS_Silicon_Workspace/als-core/als_sys_project/als_sys_project.gen/sources_1/bd/als_system/ip/als_system_axi_smc_0/bd_0/ip/ip_1/bd_1939_psr_aclk_0.xdc] for cell 'als_system_i/axi_smc/inst/clk_map/psr_aclk/U0'
+Parsing XDC File [/home/liujiawei/ALS_Silicon_Workspace/als-core/als_sys_project/als_sys_project.gen/sources_1/bd/als_system/ip/als_system_axi_smc_0/bd_0/ip/ip_1/bd_1939_psr_aclk_0_board.xdc] for cell 'als_system_i/axi_smc/inst/clk_map/psr_aclk/U0'
+Finished Parsing XDC File [/home/liujiawei/ALS_Silicon_Workspace/als-core/als_sys_project/als_sys_project.gen/sources_1/bd/als_system/ip/als_system_axi_smc_0/bd_0/ip/ip_1/bd_1939_psr_aclk_0_board.xdc] for cell 'als_system_i/axi_smc/inst/clk_map/psr_aclk/U0'
+Parsing XDC File [/home/liujiawei/ALS_Silicon_Workspace/als-core/als_sys_project/als_sys_project.gen/sources_1/bd/als_system/ip/als_system_rst_ps8_0_99M_0/als_system_rst_ps8_0_99M_0.xdc] for cell 'als_system_i/rst_ps8_0_99M/U0'
+Finished Parsing XDC File [/home/liujiawei/ALS_Silicon_Workspace/als-core/als_sys_project/als_sys_project.gen/sources_1/bd/als_system/ip/als_system_rst_ps8_0_99M_0/als_system_rst_ps8_0_99M_0.xdc] for cell 'als_system_i/rst_ps8_0_99M/U0'
+Parsing XDC File [/home/liujiawei/ALS_Silicon_Workspace/als-core/als_sys_project/als_sys_project.gen/sources_1/bd/als_system/ip/als_system_rst_ps8_0_99M_0/als_system_rst_ps8_0_99M_0_board.xdc] for cell 'als_system_i/rst_ps8_0_99M/U0'
+Finished Parsing XDC File [/home/liujiawei/ALS_Silicon_Workspace/als-core/als_sys_project/als_sys_project.gen/sources_1/bd/als_system/ip/als_system_rst_ps8_0_99M_0/als_system_rst_ps8_0_99M_0_board.xdc] for cell 'als_system_i/rst_ps8_0_99M/U0'
+Parsing XDC File [/home/liujiawei/ALS_Silicon_Workspace/als-core/als_sys_project/als_sys_project.gen/sources_1/bd/als_system/ip/als_system_axi_dma_0_0/als_system_axi_dma_0_0.xdc] for cell 'als_system_i/axi_dma_0/U0'
+WARNING: [Vivado_Tcl 4-919] Waiver ID 'CDC-1' -from list should not be empty. [/home/liujiawei/ALS_Silicon_Workspace/als-core/als_sys_project/als_sys_project.gen/sources_1/bd/als_system/ip/als_system_axi_dma_0_0/als_system_axi_dma_0_0.xdc:61]
+Finished Parsing XDC File [/home/liujiawei/ALS_Silicon_Workspace/als-core/als_sys_project/als_sys_project.gen/sources_1/bd/als_system/ip/als_system_axi_dma_0_0/als_system_axi_dma_0_0.xdc] for cell 'als_system_i/axi_dma_0/U0'
+Parsing XDC File [/home/liujiawei/ALS_Silicon_Workspace/als-core/als_sys_project/als_sys_project.gen/sources_1/bd/als_system/ip/als_system_axi_dma_0_0/als_system_axi_dma_0_0_clocks.xdc] for cell 'als_system_i/axi_dma_0/U0'
+Finished Parsing XDC File [/home/liujiawei/ALS_Silicon_Workspace/als-core/als_sys_project/als_sys_project.gen/sources_1/bd/als_system/ip/als_system_axi_dma_0_0/als_system_axi_dma_0_0_clocks.xdc] for cell 'als_system_i/axi_dma_0/U0'
+INFO: [Project 1-1714] 64 XPM XDC files have been applied to the design.
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+INFO: [Project 1-1687] 681 scoped IP constraints or related sub-commands were skipped due to synthesis logic optimizations usually triggered by constant connectivity or unconnected output pins. To review the skipped constraints and messages, run the command 'set_param netlist.IPMsgFiltering false' before opening the design.
+Netlist sorting complete. Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.01 . Memory (MB): peak = 3360.977 ; gain = 0.000 ; free physical = 2774 ; free virtual = 11997
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 140 instances were transformed.
+  DSP48E2 => DSP48E2 (DSP_ALU, DSP_A_B_DATA, DSP_C_DATA, DSP_MULTIPLIER, DSP_M_DATA, DSP_OUTPUT, DSP_PREADD, DSP_PREADD_DATA): 8 instances
+  RAM16X1D => RAM32X1D (RAMD32(x2)): 2 instances
+  RAM32M => RAM32M (RAMD32(x6), RAMS32(x2)): 6 instances
+  RAM32M16 => RAM32M16 (RAMD32(x14), RAMS32(x2)): 124 instances
+
+22 Infos, 102 Warnings, 0 Critical Warnings and 0 Errors encountered.
+link_design completed successfully
+link_design: Time (s): cpu = 00:00:44 ; elapsed = 00:00:42 . Memory (MB): peak = 3360.977 ; gain = 1943.395 ; free physical = 2774 ; free virtual = 11997
+Command: opt_design
+Attempting to get a license for feature 'Implementation' and/or device 'xczu2cg'
+INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xczu2cg'
+Running DRC as a precondition to command opt_design
+
+Starting DRC Task
+INFO: [DRC 23-27] Running DRC with 4 threads
+INFO: [Project 1-461] DRC finished with 0 Errors
+INFO: [Project 1-462] Please refer to the DRC report (report_drc) for more information.
+
+Time (s): cpu = 00:00:02 ; elapsed = 00:00:00.97 . Memory (MB): peak = 3360.977 ; gain = 0.000 ; free physical = 2769 ; free virtual = 11992
+
+Starting Cache Timing Information Task
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+Ending Cache Timing Information Task | Checksum: 16e27ebbd
+
+Time (s): cpu = 00:00:03 ; elapsed = 00:00:02 . Memory (MB): peak = 3360.977 ; gain = 0.000 ; free physical = 2766 ; free virtual = 11990
+
+Starting Logic Optimization Task
+
+Phase 1 Initialization
+
+Phase 1.1 Core Generation And Design Setup
+Phase 1.1 Core Generation And Design Setup | Checksum: 16e27ebbd
+
+Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.01 . Memory (MB): peak = 3642.867 ; gain = 0.000 ; free physical = 2499 ; free virtual = 11722
+
+Phase 1.2 Setup Constraints And Sort Netlist
+Phase 1.2 Setup Constraints And Sort Netlist | Checksum: 16e27ebbd
+
+Time (s): cpu = 00:00:00.02 ; elapsed = 00:00:00.03 . Memory (MB): peak = 3642.867 ; gain = 0.000 ; free physical = 2499 ; free virtual = 11722
+Phase 1 Initialization | Checksum: 16e27ebbd
+
+Time (s): cpu = 00:00:00.03 ; elapsed = 00:00:00.04 . Memory (MB): peak = 3642.867 ; gain = 0.000 ; free physical = 2499 ; free virtual = 11722
+
+Phase 2 Timer Update And Timing Data Collection
+
+Phase 2.1 Timer Update
+Phase 2.1 Timer Update | Checksum: 16e27ebbd
+
+Time (s): cpu = 00:00:02 ; elapsed = 00:00:00.77 . Memory (MB): peak = 3642.867 ; gain = 0.000 ; free physical = 2488 ; free virtual = 11711
+
+Phase 2.2 Timing Data Collection
+Phase 2.2 Timing Data Collection | Checksum: 16e27ebbd
+
+Time (s): cpu = 00:00:02 ; elapsed = 00:00:00.93 . Memory (MB): peak = 3642.867 ; gain = 0.000 ; free physical = 2480 ; free virtual = 11704
+Phase 2 Timer Update And Timing Data Collection | Checksum: 16e27ebbd
+
+Time (s): cpu = 00:00:02 ; elapsed = 00:00:00.93 . Memory (MB): peak = 3642.867 ; gain = 0.000 ; free physical = 2480 ; free virtual = 11704
+
+Phase 3 Retarget
+INFO: [Opt 31-1834] Total Chains To Be Transformed Were: 0 AND Number of Transformed insts Created are: 0
+INFO: [Opt 31-1566] Pulled 1 inverters resulting in an inversion of 18 pins
+INFO: [Opt 31-138] Pushed 72 inverter(s) to 20874 load pin(s).
+INFO: [Opt 31-49] Retargeted 0 cell(s).
+Phase 3 Retarget | Checksum: 1e0623fa4
+
+Time (s): cpu = 00:00:06 ; elapsed = 00:00:04 . Memory (MB): peak = 3642.867 ; gain = 0.000 ; free physical = 2482 ; free virtual = 11706
+Retarget | Checksum: 1e0623fa4
+INFO: [Opt 31-389] Phase Retarget created 114 cells and removed 526 cells
+INFO: [Opt 31-1021] In phase Retarget, 60 netlist objects are constrained preventing optimization. Please run opt_design with -debug_log to get more detail. 
+
+Phase 4 Constant propagation
+INFO: [Opt 31-138] Pushed 1 inverter(s) to 1 load pin(s).
+Phase 4 Constant propagation | Checksum: 190bd7ea0
+
+Time (s): cpu = 00:00:06 ; elapsed = 00:00:05 . Memory (MB): peak = 3642.867 ; gain = 0.000 ; free physical = 2482 ; free virtual = 11706
+Constant propagation | Checksum: 190bd7ea0
+INFO: [Opt 31-389] Phase Constant propagation created 50 cells and removed 723 cells
+INFO: [Opt 31-1021] In phase Constant propagation, 60 netlist objects are constrained preventing optimization. Please run opt_design with -debug_log to get more detail. 
+
+Phase 5 Sweep
+Phase 5 Sweep | Checksum: 1a8b53e68
+
+Time (s): cpu = 00:00:08 ; elapsed = 00:00:07 . Memory (MB): peak = 3642.867 ; gain = 0.000 ; free physical = 2488 ; free virtual = 11709
+Sweep | Checksum: 1a8b53e68
+INFO: [Opt 31-389] Phase Sweep created 0 cells and removed 470 cells
+INFO: [Opt 31-1021] In phase Sweep, 77 netlist objects are constrained preventing optimization. Please run opt_design with -debug_log to get more detail. 
+
+Phase 6 BUFG optimization
+INFO: [Opt 31-1077] Phase BUFG optimization inserted 0 global clock buffer(s) for CLOCK_LOW_FANOUT.
+Phase 6 BUFG optimization | Checksum: 1a8b53e68
+
+Time (s): cpu = 00:00:09 ; elapsed = 00:00:08 . Memory (MB): peak = 3642.867 ; gain = 0.000 ; free physical = 2489 ; free virtual = 11712
+BUFG optimization | Checksum: 1a8b53e68
+INFO: [Opt 31-662] Phase BUFG optimization created 0 cells of which 0 are BUFGs and removed 0 cells.
+
+Phase 7 Shift Register Optimization
+INFO: [Opt 31-1064] SRL Remap converted 0 SRLs to 0 registers and converted 0 registers of register chains to 0 SRLs
+Phase 7 Shift Register Optimization | Checksum: 1a8b53e68
+
+Time (s): cpu = 00:00:09 ; elapsed = 00:00:08 . Memory (MB): peak = 3642.867 ; gain = 0.000 ; free physical = 2489 ; free virtual = 11712
+Shift Register Optimization | Checksum: 1a8b53e68
+INFO: [Opt 31-389] Phase Shift Register Optimization created 0 cells and removed 0 cells
+
+Phase 8 Post Processing Netlist
+Phase 8 Post Processing Netlist | Checksum: 1b86ac327
+
+Time (s): cpu = 00:00:10 ; elapsed = 00:00:08 . Memory (MB): peak = 3642.867 ; gain = 0.000 ; free physical = 2489 ; free virtual = 11712
+Post Processing Netlist | Checksum: 1b86ac327
+INFO: [Opt 31-389] Phase Post Processing Netlist created 0 cells and removed 0 cells
+INFO: [Opt 31-1021] In phase Post Processing Netlist, 60 netlist objects are constrained preventing optimization. Please run opt_design with -debug_log to get more detail. 
+
+Phase 9 Finalization
+
+Phase 9.1 Finalizing Design Cores and Updating Shapes
+Phase 9.1 Finalizing Design Cores and Updating Shapes | Checksum: 13f4b2e81
+
+Time (s): cpu = 00:00:10 ; elapsed = 00:00:08 . Memory (MB): peak = 3642.867 ; gain = 0.000 ; free physical = 2489 ; free virtual = 11713
+
+Phase 9.2 Verifying Netlist Connectivity
+
+Starting Connectivity Check Task
+
+Time (s): cpu = 00:00:00.06 ; elapsed = 00:00:00.06 . Memory (MB): peak = 3642.867 ; gain = 0.000 ; free physical = 2489 ; free virtual = 11713
+Phase 9.2 Verifying Netlist Connectivity | Checksum: 13f4b2e81
+
+Time (s): cpu = 00:00:10 ; elapsed = 00:00:08 . Memory (MB): peak = 3642.867 ; gain = 0.000 ; free physical = 2489 ; free virtual = 11713
+Phase 9 Finalization | Checksum: 13f4b2e81
+
+Time (s): cpu = 00:00:10 ; elapsed = 00:00:08 . Memory (MB): peak = 3642.867 ; gain = 0.000 ; free physical = 2489 ; free virtual = 11713
+Opt_design Change Summary
+=========================
+
+
+-------------------------------------------------------------------------------------------------------------------------
+|  Phase                        |  #Cells created  |  #Cells Removed  |  #Constrained objects preventing optimizations  |
+-------------------------------------------------------------------------------------------------------------------------
+|  Retarget                     |             114  |             526  |                                             60  |
+|  Constant propagation         |              50  |             723  |                                             60  |
+|  Sweep                        |               0  |             470  |                                             77  |
+|  BUFG optimization            |               0  |               0  |                                              0  |
+|  Shift Register Optimization  |               0  |               0  |                                              0  |
+|  Post Processing Netlist      |               0  |               0  |                                             60  |
+-------------------------------------------------------------------------------------------------------------------------
+
+
+Ending Logic Optimization Task | Checksum: 13f4b2e81
+
+Time (s): cpu = 00:00:10 ; elapsed = 00:00:08 . Memory (MB): peak = 3642.867 ; gain = 0.000 ; free physical = 2489 ; free virtual = 11713
+
+Starting Power Optimization Task
+INFO: [Pwropt 34-132] Skipping clock gating for clocks with a period < 2.00 ns.
+INFO: [Pwropt 34-9] Applying IDT optimizations ...
+INFO: [Pwropt 34-10] Applying ODC optimizations ...
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+Running Vector-less Activity Propagation...
+
+Finished Running Vector-less Activity Propagation
+
+
+Starting PowerOpt Patch Enables Task
+INFO: [Pwropt 34-162] WRITE_MODE attribute of 0 BRAM(s) out of a total of 4 has been updated to save power. Run report_power_opt to get a complete listing of the BRAMs updated.
+INFO: [Pwropt 34-201] Structural ODC has moved 2 WE to EN ports
+Number of BRAM Ports augmented: 4 newly gated: 2 Total Ports: 8
+Ending PowerOpt Patch Enables Task | Checksum: 214ee1f30
+
+Time (s): cpu = 00:00:00.14 ; elapsed = 00:00:00.14 . Memory (MB): peak = 3999.535 ; gain = 0.000 ; free physical = 2223 ; free virtual = 11447
+Ending Power Optimization Task | Checksum: 214ee1f30
+
+Time (s): cpu = 00:00:15 ; elapsed = 00:00:07 . Memory (MB): peak = 3999.535 ; gain = 356.668 ; free physical = 2215 ; free virtual = 11439
+
+Starting Final Cleanup Task
+Ending Final Cleanup Task | Checksum: 214ee1f30
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 3999.535 ; gain = 0.000 ; free physical = 2215 ; free virtual = 11439
+
+Starting Netlist Obfuscation Task
+Netlist sorting complete. Time (s): cpu = 00:00:00.02 ; elapsed = 00:00:00.01 . Memory (MB): peak = 3999.535 ; gain = 0.000 ; free physical = 2215 ; free virtual = 11439
+Ending Netlist Obfuscation Task | Checksum: 1e1ea744c
+
+Time (s): cpu = 00:00:00.02 ; elapsed = 00:00:00.02 . Memory (MB): peak = 3999.535 ; gain = 0.000 ; free physical = 2215 ; free virtual = 11439
+INFO: [Common 17-83] Releasing license: Implementation
+51 Infos, 102 Warnings, 0 Critical Warnings and 0 Errors encountered.
+opt_design completed successfully
+opt_design: Time (s): cpu = 00:00:34 ; elapsed = 00:00:20 . Memory (MB): peak = 3999.535 ; gain = 638.559 ; free physical = 2215 ; free virtual = 11439
+INFO: [Vivado 12-24828] Executing command : report_drc -file als_system_wrapper_drc_opted.rpt -pb als_system_wrapper_drc_opted.pb -rpx als_system_wrapper_drc_opted.rpx
+Command: report_drc -file als_system_wrapper_drc_opted.rpt -pb als_system_wrapper_drc_opted.pb -rpx als_system_wrapper_drc_opted.rpx
+INFO: [IP_Flow 19-1839] IP Catalog is up to date.
+INFO: [DRC 23-27] Running DRC with 4 threads
+INFO: [Vivado_Tcl 2-168] The results of DRC are in file /home/liujiawei/ALS_Silicon_Workspace/als-core/als_sys_project/als_sys_project.runs/impl_1/als_system_wrapper_drc_opted.rpt.
+report_drc completed successfully
+INFO: [Timing 38-480] Writing timing data to binary archive.
+Write ShapeDB Complete: Time (s): cpu = 00:00:00.21 ; elapsed = 00:00:00.06 . Memory (MB): peak = 3999.535 ; gain = 0.000 ; free physical = 2199 ; free virtual = 11426
+INFO: [Common 17-1381] The checkpoint '/home/liujiawei/ALS_Silicon_Workspace/als-core/als_sys_project/als_sys_project.runs/impl_1/als_system_wrapper_opt.dcp' has been generated.
+Command: place_design
+Attempting to get a license for feature 'Implementation' and/or device 'xczu2cg'
+INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xczu2cg'
+INFO: [Common 17-83] Releasing license: Implementation
+INFO: [DRC 23-27] Running DRC with 4 threads
+INFO: [Vivado_Tcl 4-198] DRC finished with 0 Errors
+INFO: [Vivado_Tcl 4-199] Please refer to the DRC report (report_drc) for more information.
+Running DRC as a precondition to command place_design
+INFO: [DRC 23-27] Running DRC with 4 threads
+INFO: [Vivado_Tcl 4-198] DRC finished with 0 Errors
+INFO: [Vivado_Tcl 4-199] Please refer to the DRC report (report_drc) for more information.
+INFO: [Place 30-611] Multithreading enabled for place_design using a maximum of 4 CPUs
+
+Starting Placer Task
+
+Phase 1 Placer Initialization
+
+Phase 1.1 Placer Initialization Netlist Sorting
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.01 . Memory (MB): peak = 3999.535 ; gain = 0.000 ; free physical = 2187 ; free virtual = 11418
+Phase 1.1 Placer Initialization Netlist Sorting | Checksum: 15b34e4a1
+
+Time (s): cpu = 00:00:00.02 ; elapsed = 00:00:00.02 . Memory (MB): peak = 3999.535 ; gain = 0.000 ; free physical = 2187 ; free virtual = 11418
+Netlist sorting complete. Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00 . Memory (MB): peak = 3999.535 ; gain = 0.000 ; free physical = 2187 ; free virtual = 11418
+
+Phase 1.2 IO Placement/ Clock Placement/ Build Placer Device
+WARNING: [Device 21-9073] RSS factor Speedmodel not found for intent code NODE_GLOBAL_VDISTR
+WARNING: [Device 21-9073] RSS factor Speedmodel not found for intent code NODE_GLOBAL_VROUTE
+WARNING: [Device 21-9073] RSS factor Speedmodel not found for intent code NODE_GLOBAL_HDISTR
+WARNING: [Device 21-9073] RSS factor Speedmodel not found for intent code NODE_GLOBAL_HROUTE
+WARNING: [Device 21-9073] RSS factor Speedmodel not found for intent code NODE_GLOBAL_BUFG
+WARNING: [Device 21-9073] RSS factor Speedmodel not found for intent code NODE_GLOBAL_LEAF
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+Phase 1.2 IO Placement/ Clock Placement/ Build Placer Device | Checksum: 1124ffa72
+
+Time (s): cpu = 00:00:24 ; elapsed = 00:00:21 . Memory (MB): peak = 4363.613 ; gain = 364.078 ; free physical = 1785 ; free virtual = 11019
+
+Phase 1.3 Build Placer Netlist Model
+Phase 1.3 Build Placer Netlist Model | Checksum: 1fdb4956f
+
+Time (s): cpu = 00:00:42 ; elapsed = 00:00:30 . Memory (MB): peak = 4395.629 ; gain = 396.094 ; free physical = 1788 ; free virtual = 11022
+
+Phase 1.4 Constrain Clocks/Macros
+Phase 1.4 Constrain Clocks/Macros | Checksum: 1fdb4956f
+
+Time (s): cpu = 00:00:42 ; elapsed = 00:00:30 . Memory (MB): peak = 4395.629 ; gain = 396.094 ; free physical = 1788 ; free virtual = 11022
+Phase 1 Placer Initialization | Checksum: 1fdb4956f
+
+Time (s): cpu = 00:00:42 ; elapsed = 00:00:31 . Memory (MB): peak = 4395.629 ; gain = 396.094 ; free physical = 1788 ; free virtual = 11022
+
+Phase 2 Global Placement
+
+Phase 2.1 Floorplanning
+
+Phase 2.1.1 Partition Driven Placement
+
+Phase 2.1.1.1 PBP: Partition Driven Placement
+Phase 2.1.1.1 PBP: Partition Driven Placement | Checksum: 1c1376aef
+
+Time (s): cpu = 00:01:00 ; elapsed = 00:00:38 . Memory (MB): peak = 4395.629 ; gain = 396.094 ; free physical = 1809 ; free virtual = 11041
+
+Phase 2.1.1.2 PBP: Clock Region Placement
+INFO: [Place 30-3162] Check ILP status : ILP-based clock placer completed successfully.
+Phase 2.1.1.2 PBP: Clock Region Placement | Checksum: 1c1376aef
+
+Time (s): cpu = 00:01:01 ; elapsed = 00:00:39 . Memory (MB): peak = 4395.629 ; gain = 396.094 ; free physical = 1811 ; free virtual = 11043
+
+Phase 2.1.1.3 PBP: Compute Congestion
+Phase 2.1.1.3 PBP: Compute Congestion | Checksum: 1c1376aef
+
+Time (s): cpu = 00:01:13 ; elapsed = 00:00:42 . Memory (MB): peak = 4753.613 ; gain = 754.078 ; free physical = 1325 ; free virtual = 10557
+
+Phase 2.1.1.4 PBP: UpdateTiming
+Phase 2.1.1.4 PBP: UpdateTiming | Checksum: 1ca129b3f
+
+Time (s): cpu = 00:01:16 ; elapsed = 00:00:44 . Memory (MB): peak = 4785.629 ; gain = 786.094 ; free physical = 1310 ; free virtual = 10541
+
+Phase 2.1.1.5 PBP: Add part constraints
+Phase 2.1.1.5 PBP: Add part constraints | Checksum: 1ca129b3f
+
+Time (s): cpu = 00:01:17 ; elapsed = 00:00:44 . Memory (MB): peak = 4785.629 ; gain = 786.094 ; free physical = 1310 ; free virtual = 10541
+Phase 2.1.1 Partition Driven Placement | Checksum: 1ca129b3f
+
+Time (s): cpu = 00:01:17 ; elapsed = 00:00:44 . Memory (MB): peak = 4785.629 ; gain = 786.094 ; free physical = 1310 ; free virtual = 10541
+Phase 2.1 Floorplanning | Checksum: 1ad298842
+
+Time (s): cpu = 00:01:17 ; elapsed = 00:00:44 . Memory (MB): peak = 4785.629 ; gain = 786.094 ; free physical = 1310 ; free virtual = 10541
+
+Phase 2.2 Update Timing before SLR Path Opt
+Phase 2.2 Update Timing before SLR Path Opt | Checksum: 1ad298842
+
+Time (s): cpu = 00:01:17 ; elapsed = 00:00:44 . Memory (MB): peak = 4785.629 ; gain = 786.094 ; free physical = 1310 ; free virtual = 10541
+
+Phase 2.3 Post-Processing in Floorplanning
+Phase 2.3 Post-Processing in Floorplanning | Checksum: 1ad298842
+
+Time (s): cpu = 00:01:17 ; elapsed = 00:00:44 . Memory (MB): peak = 4785.629 ; gain = 786.094 ; free physical = 1310 ; free virtual = 10541
+
+Phase 2.4 Global Placement Core
+
+Phase 2.4.1 UpdateTiming Before Physical Synthesis
+Phase 2.4.1 UpdateTiming Before Physical Synthesis | Checksum: 152fcd4b6
+
+Time (s): cpu = 00:02:18 ; elapsed = 00:01:14 . Memory (MB): peak = 4883.641 ; gain = 884.105 ; free physical = 1232 ; free virtual = 10464
+
+Phase 2.4.2 Physical Synthesis In Placer
+INFO: [Physopt 32-1035] Found 0 LUTNM shape to break, 650 LUT instances to create LUTNM shape
+INFO: [Physopt 32-1044] Break lutnm for timing: one critical 0, two critical 0, total 0, new lutff created 0
+INFO: [Physopt 32-1138] End 1 Pass. Optimized 256 nets or LUTs. Breaked 0 LUT, combined 256 existing LUTs and moved 0 existing LUT
+INFO: [Physopt 32-1030] Pass 1. Identified 17 candidate driver sets for equivalent driver rewiring.
+INFO: [Physopt 32-661] Optimized 12 nets.  Re-placed 118 instances.
+INFO: [Physopt 32-775] End 1 Pass. Optimized 12 nets or cells. Created 0 new cell, deleted 1 existing cell and moved 118 existing cells
+Netlist sorting complete. Time (s): cpu = 00:00:00.08 ; elapsed = 00:00:00.07 . Memory (MB): peak = 4883.641 ; gain = 0.000 ; free physical = 1234 ; free virtual = 10466
+INFO: [Physopt 32-65] No nets found for high-fanout optimization.
+INFO: [Physopt 32-232] Optimized 0 net. Created 0 new instance.
+INFO: [Physopt 32-775] End 1 Pass. Optimized 0 net or cell. Created 0 new cell, deleted 0 existing cell and moved 0 existing cell
+INFO: [Physopt 32-670] No setup violation found.  DSP Register Optimization was not performed.
+INFO: [Physopt 32-670] No setup violation found.  Shift Register to Pipeline Optimization was not performed.
+INFO: [Physopt 32-670] No setup violation found.  Shift Register Optimization was not performed.
+INFO: [Physopt 32-670] No setup violation found.  BRAM Register Optimization was not performed.
+INFO: [Physopt 32-670] No setup violation found.  URAM Register Optimization was not performed.
+INFO: [Physopt 32-949] No candidate nets found for dynamic/static region interface net replication
+INFO: [Physopt 32-775] End 1 Pass. Optimized 0 net or cell. Created 0 new cell, deleted 0 existing cell and moved 0 existing cell
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.01 . Memory (MB): peak = 4883.641 ; gain = 0.000 ; free physical = 1232 ; free virtual = 10464
+
+Summary of Physical Synthesis Optimizations
+============================================
+
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------
+|  Optimization                                     |  Added Cells  |  Removed Cells  |  Optimized Cells/Nets  |  Dont Touch  |  Iterations  |  Elapsed   |
+-----------------------------------------------------------------------------------------------------------------------------------------------------------
+|  LUT Combining                                    |            0  |            256  |                   256  |           0  |           1  |  00:00:01  |
+|  Retime                                           |            0  |              0  |                     0  |           0  |           1  |  00:00:00  |
+|  Equivalent Driver Rewiring                       |            0  |              1  |                    12  |           0  |           1  |  00:00:01  |
+|  Very High Fanout                                 |            0  |              0  |                     0  |           0  |           1  |  00:00:00  |
+|  DSP Register                                     |            0  |              0  |                     0  |           0  |           0  |  00:00:00  |
+|  Shift Register to Pipeline                       |            0  |              0  |                     0  |           0  |           0  |  00:00:00  |
+|  Shift Register                                   |            0  |              0  |                     0  |           0  |           0  |  00:00:00  |
+|  BRAM Register                                    |            0  |              0  |                     0  |           0  |           0  |  00:00:00  |
+|  URAM Register                                    |            0  |              0  |                     0  |           0  |           0  |  00:00:00  |
+|  Dynamic/Static Region Interface Net Replication  |            0  |              0  |                     0  |           0  |           1  |  00:00:00  |
+|  Total                                            |            0  |            257  |                   268  |           0  |           5  |  00:00:03  |
+-----------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+Phase 2.4.2 Physical Synthesis In Placer | Checksum: 1d222619b
+
+Time (s): cpu = 00:02:26 ; elapsed = 00:01:20 . Memory (MB): peak = 4883.641 ; gain = 884.105 ; free physical = 1234 ; free virtual = 10466
+Phase 2.4 Global Placement Core | Checksum: 122bdd8f0
+
+Time (s): cpu = 00:02:40 ; elapsed = 00:01:24 . Memory (MB): peak = 4883.641 ; gain = 884.105 ; free physical = 1228 ; free virtual = 10460
+Phase 2 Global Placement | Checksum: 122bdd8f0
+
+Time (s): cpu = 00:02:41 ; elapsed = 00:01:24 . Memory (MB): peak = 4883.641 ; gain = 884.105 ; free physical = 1228 ; free virtual = 10460
+
+Phase 3 Detail Placement
+
+Phase 3.1 Commit Multi Column Macros
+Phase 3.1 Commit Multi Column Macros | Checksum: 19d0d319f
+
+Time (s): cpu = 00:02:56 ; elapsed = 00:01:29 . Memory (MB): peak = 4915.656 ; gain = 916.121 ; free physical = 1233 ; free virtual = 10461
+
+Phase 3.2 Commit Most Macros & LUTRAMs
+Phase 3.2 Commit Most Macros & LUTRAMs | Checksum: 11c3413d1
+
+Time (s): cpu = 00:03:02 ; elapsed = 00:01:32 . Memory (MB): peak = 4915.656 ; gain = 916.121 ; free physical = 1233 ; free virtual = 10461
+
+Phase 3.3 Small Shape DP
+
+Phase 3.3.1 Small Shape Clustering
+Phase 3.3.1 Small Shape Clustering | Checksum: 1654f15c7
+
+Time (s): cpu = 00:03:16 ; elapsed = 00:01:37 . Memory (MB): peak = 4915.656 ; gain = 916.121 ; free physical = 1230 ; free virtual = 10458
+
+Phase 3.3.2 Slice Area Swap
+
+Phase 3.3.2.1 Slice Area Swap Initial
+Phase 3.3.2.1 Slice Area Swap Initial | Checksum: 2183694b6
+
+Time (s): cpu = 00:03:19 ; elapsed = 00:01:39 . Memory (MB): peak = 4915.656 ; gain = 916.121 ; free physical = 1228 ; free virtual = 10456
+Phase 3.3.2 Slice Area Swap | Checksum: 2183694b6
+
+Time (s): cpu = 00:03:19 ; elapsed = 00:01:40 . Memory (MB): peak = 4915.656 ; gain = 916.121 ; free physical = 1228 ; free virtual = 10456
+Phase 3.3 Small Shape DP | Checksum: 242f41606
+
+Time (s): cpu = 00:03:33 ; elapsed = 00:01:44 . Memory (MB): peak = 4915.656 ; gain = 916.121 ; free physical = 1225 ; free virtual = 10453
+
+Phase 3.4 Re-assign LUT pins
+Phase 3.4 Re-assign LUT pins | Checksum: 288a964eb
+
+Time (s): cpu = 00:03:35 ; elapsed = 00:01:46 . Memory (MB): peak = 4915.656 ; gain = 916.121 ; free physical = 1228 ; free virtual = 10456
+
+Phase 3.5 Pipeline Register Optimization
+Phase 3.5 Pipeline Register Optimization | Checksum: 25c653629
+
+Time (s): cpu = 00:03:36 ; elapsed = 00:01:47 . Memory (MB): peak = 4915.656 ; gain = 916.121 ; free physical = 1228 ; free virtual = 10456
+Phase 3 Detail Placement | Checksum: 25c653629
+
+Time (s): cpu = 00:03:36 ; elapsed = 00:01:47 . Memory (MB): peak = 4915.656 ; gain = 916.121 ; free physical = 1228 ; free virtual = 10456
+
+Phase 4 Post Placement Optimization and Clean-Up
+
+Phase 4.1 Post Commit Optimization
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+
+Phase 4.1.1 Post Placement Optimization
+Post Placement Optimization Initialization | Checksum: 282380f8b
+
+Phase 4.1.1.1 BUFG Insertion
+
+Starting Physical Synthesis Task
+
+Phase 1 Physical Synthesis Initialization
+INFO: [Physopt 32-721] Multithreading enabled for phys_opt_design using a maximum of 4 CPUs
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=2.602 | TNS=0.000 |
+Phase 1 Physical Synthesis Initialization | Checksum: 1d1c0a0a6
+
+Time (s): cpu = 00:00:03 ; elapsed = 00:00:00.83 . Memory (MB): peak = 4915.656 ; gain = 0.000 ; free physical = 1263 ; free virtual = 10492
+INFO: [Place 46-35] Processed net als_system_i/axi_dma_0/U0/I_RST_MODULE/GEN_RESET_FOR_S2MM.RESET_I/SR[0], inserted BUFG to drive 1265 loads.
+INFO: [Place 46-56] BUFG insertion identified 1 candidate nets. Inserted BUFG: 1, Replicated BUFG Driver: 0, Skipped due to Placement/Routing Conflicts: 0, Skipped due to Timing Degradation: 0, Skipped due to netlist editing failed: 0.
+Ending Physical Synthesis Task | Checksum: 1e92c9c72
+
+Time (s): cpu = 00:00:04 ; elapsed = 00:00:02 . Memory (MB): peak = 4915.656 ; gain = 0.000 ; free physical = 1264 ; free virtual = 10492
+Phase 4.1.1.1 BUFG Insertion | Checksum: 29b995abf
+
+Time (s): cpu = 00:04:17 ; elapsed = 00:02:04 . Memory (MB): peak = 4915.656 ; gain = 916.121 ; free physical = 1264 ; free virtual = 10492
+
+Phase 4.1.1.2 Post Placement Timing Optimization
+INFO: [Place 30-746] Post Placement Timing Summary WNS=2.602. For the most accurate timing information please run report_timing.
+Phase 4.1.1.2 Post Placement Timing Optimization | Checksum: 202c3dd1e
+
+Time (s): cpu = 00:04:18 ; elapsed = 00:02:04 . Memory (MB): peak = 4915.656 ; gain = 916.121 ; free physical = 1264 ; free virtual = 10493
+
+Time (s): cpu = 00:04:18 ; elapsed = 00:02:04 . Memory (MB): peak = 4915.656 ; gain = 916.121 ; free physical = 1264 ; free virtual = 10493
+Phase 4.1 Post Commit Optimization | Checksum: 202c3dd1e
+
+Time (s): cpu = 00:04:18 ; elapsed = 00:02:04 . Memory (MB): peak = 4915.656 ; gain = 916.121 ; free physical = 1264 ; free virtual = 10493
+Netlist sorting complete. Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.01 . Memory (MB): peak = 4915.656 ; gain = 0.000 ; free physical = 1200 ; free virtual = 10428
+
+Phase 4.2 Post Placement Cleanup
+Phase 4.2 Post Placement Cleanup | Checksum: 2729ddbe9
+
+Time (s): cpu = 00:04:32 ; elapsed = 00:02:10 . Memory (MB): peak = 4915.656 ; gain = 916.121 ; free physical = 1200 ; free virtual = 10428
+
+Phase 4.3 Placer Reporting
+
+Phase 4.3.1 Print Estimated Congestion
+INFO: [Place 30-612] Post-Placement Estimated Congestion 
+ ________________________________________________________________________
+|           | Global Congestion | Long Congestion   | Short Congestion  |
+| Direction | Region Size       | Region Size       | Region Size       |
+|___________|___________________|___________________|___________________|
+|      North|                1x1|                1x1|                2x2|
+|___________|___________________|___________________|___________________|
+|      South|                1x1|                1x1|                2x2|
+|___________|___________________|___________________|___________________|
+|       East|                1x1|                1x1|                2x2|
+|___________|___________________|___________________|___________________|
+|       West|                1x1|                1x1|                4x4|
+|___________|___________________|___________________|___________________|
+
+Phase 4.3.1 Print Estimated Congestion | Checksum: 2729ddbe9
+
+Time (s): cpu = 00:04:32 ; elapsed = 00:02:10 . Memory (MB): peak = 4915.656 ; gain = 916.121 ; free physical = 1200 ; free virtual = 10428
+Phase 4.3 Placer Reporting | Checksum: 2729ddbe9
+
+Time (s): cpu = 00:04:33 ; elapsed = 00:02:11 . Memory (MB): peak = 4915.656 ; gain = 916.121 ; free physical = 1200 ; free virtual = 10428
+
+Phase 4.4 Final Placement Cleanup
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 4915.656 ; gain = 0.000 ; free physical = 1200 ; free virtual = 10428
+
+Time (s): cpu = 00:04:33 ; elapsed = 00:02:11 . Memory (MB): peak = 4915.656 ; gain = 916.121 ; free physical = 1200 ; free virtual = 10428
+Phase 4 Post Placement Optimization and Clean-Up | Checksum: 245ea9d5d
+
+Time (s): cpu = 00:04:33 ; elapsed = 00:02:11 . Memory (MB): peak = 4915.656 ; gain = 916.121 ; free physical = 1200 ; free virtual = 10428
+Ending Placer Task | Checksum: 202cda054
+
+Time (s): cpu = 00:04:33 ; elapsed = 00:02:11 . Memory (MB): peak = 4915.656 ; gain = 916.121 ; free physical = 1200 ; free virtual = 10428
+91 Infos, 108 Warnings, 0 Critical Warnings and 0 Errors encountered.
+place_design completed successfully
+place_design: Time (s): cpu = 00:04:39 ; elapsed = 00:02:13 . Memory (MB): peak = 4915.656 ; gain = 916.121 ; free physical = 1200 ; free virtual = 10428
+INFO: [Vivado 12-24838] Running report commands "report_control_sets, report_io, report_utilization" in parallel.
+Running report generation with 3 threads.
+INFO: [Vivado 12-24828] Executing command : report_io -file als_system_wrapper_io_placed.rpt
+report_io: Time (s): cpu = 00:00:00.78 ; elapsed = 00:00:00.38 . Memory (MB): peak = 4915.656 ; gain = 0.000 ; free physical = 1175 ; free virtual = 10404
+INFO: [Vivado 12-24828] Executing command : report_control_sets -verbose -file als_system_wrapper_control_sets_placed.rpt
+report_control_sets: Time (s): cpu = 00:00:00.88 ; elapsed = 00:00:00.42 . Memory (MB): peak = 4915.656 ; gain = 0.000 ; free physical = 1175 ; free virtual = 10404
+INFO: [Vivado 12-24828] Executing command : report_utilization -file als_system_wrapper_utilization_placed.rpt -pb als_system_wrapper_utilization_placed.pb
+INFO: [Timing 38-480] Writing timing data to binary archive.
+Write ShapeDB Complete: Time (s): cpu = 00:00:00.42 ; elapsed = 00:00:00.11 . Memory (MB): peak = 4915.656 ; gain = 0.000 ; free physical = 1161 ; free virtual = 10397
+Wrote PlaceDB: Time (s): cpu = 00:00:07 ; elapsed = 00:00:02 . Memory (MB): peak = 4915.656 ; gain = 0.000 ; free physical = 1117 ; free virtual = 10395
+Wrote PulsedLatchDB: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 4915.656 ; gain = 0.000 ; free physical = 1117 ; free virtual = 10395
+Writing XDEF routing.
+Writing XDEF routing logical nets.
+Writing XDEF routing special nets.
+Wrote RouteStorage: Time (s): cpu = 00:00:00.18 ; elapsed = 00:00:00.1 . Memory (MB): peak = 4915.656 ; gain = 0.000 ; free physical = 1116 ; free virtual = 10395
+Wrote Netlist Cache: Time (s): cpu = 00:00:00.04 ; elapsed = 00:00:00.05 . Memory (MB): peak = 4915.656 ; gain = 0.000 ; free physical = 1116 ; free virtual = 10398
+Wrote Device Cache: Time (s): cpu = 00:00:00.02 ; elapsed = 00:00:00.02 . Memory (MB): peak = 4915.656 ; gain = 0.000 ; free physical = 1109 ; free virtual = 10394
+Write Physdb Complete: Time (s): cpu = 00:00:07 ; elapsed = 00:00:03 . Memory (MB): peak = 4915.656 ; gain = 0.000 ; free physical = 1109 ; free virtual = 10394
+INFO: [Common 17-1381] The checkpoint '/home/liujiawei/ALS_Silicon_Workspace/als-core/als_sys_project/als_sys_project.runs/impl_1/als_system_wrapper_placed.dcp' has been generated.
+write_checkpoint: Time (s): cpu = 00:00:14 ; elapsed = 00:00:06 . Memory (MB): peak = 4915.656 ; gain = 0.000 ; free physical = 1182 ; free virtual = 10423
+Command: phys_opt_design
+Attempting to get a license for feature 'Implementation' and/or device 'xczu2cg'
+INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xczu2cg'
+
+Starting Initial Update Timing Task
+
+Time (s): cpu = 00:00:27 ; elapsed = 00:00:10 . Memory (MB): peak = 4915.656 ; gain = 0.000 ; free physical = 1206 ; free virtual = 10448
+INFO: [Vivado_Tcl 4-2279] Estimated Timing Summary | WNS= 2.597 | TNS= 0.000 | 
+INFO: [Vivado_Tcl 4-383] Design worst setup slack (WNS) is greater than or equal to 0.000 ns. All physical synthesis setup optimizations will be skipped.
+INFO: [Vivado_Tcl 4-232] No setup violation found. The netlist was not modified.
+INFO: [Common 17-83] Releasing license: Implementation
+102 Infos, 108 Warnings, 0 Critical Warnings and 0 Errors encountered.
+phys_opt_design completed successfully
+phys_opt_design: Time (s): cpu = 00:00:27 ; elapsed = 00:00:10 . Memory (MB): peak = 4915.656 ; gain = 0.000 ; free physical = 1206 ; free virtual = 10448
+INFO: [Timing 38-480] Writing timing data to binary archive.
+Write ShapeDB Complete: Time (s): cpu = 00:00:00.38 ; elapsed = 00:00:00.1 . Memory (MB): peak = 4915.656 ; gain = 0.000 ; free physical = 1201 ; free virtual = 10450
+Wrote PlaceDB: Time (s): cpu = 00:00:07 ; elapsed = 00:00:02 . Memory (MB): peak = 4915.656 ; gain = 0.000 ; free physical = 1150 ; free virtual = 10440
+Wrote PulsedLatchDB: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 4915.656 ; gain = 0.000 ; free physical = 1150 ; free virtual = 10440
+Writing XDEF routing.
+Writing XDEF routing logical nets.
+Writing XDEF routing special nets.
+Wrote RouteStorage: Time (s): cpu = 00:00:00.15 ; elapsed = 00:00:00.09 . Memory (MB): peak = 4915.656 ; gain = 0.000 ; free physical = 1150 ; free virtual = 10441
+Wrote Netlist Cache: Time (s): cpu = 00:00:00.04 ; elapsed = 00:00:00.05 . Memory (MB): peak = 4915.656 ; gain = 0.000 ; free physical = 1150 ; free virtual = 10444
+Wrote Device Cache: Time (s): cpu = 00:00:00.02 ; elapsed = 00:00:00.02 . Memory (MB): peak = 4915.656 ; gain = 0.000 ; free physical = 1142 ; free virtual = 10440
+Write Physdb Complete: Time (s): cpu = 00:00:07 ; elapsed = 00:00:03 . Memory (MB): peak = 4915.656 ; gain = 0.000 ; free physical = 1142 ; free virtual = 10440
+INFO: [Common 17-1381] The checkpoint '/home/liujiawei/ALS_Silicon_Workspace/als-core/als_sys_project/als_sys_project.runs/impl_1/als_system_wrapper_physopt.dcp' has been generated.
+Command: route_design
+Attempting to get a license for feature 'Implementation' and/or device 'xczu2cg'
+INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xczu2cg'
+Running DRC as a precondition to command route_design
+INFO: [DRC 23-27] Running DRC with 4 threads
+INFO: [Vivado_Tcl 4-198] DRC finished with 0 Errors
+INFO: [Vivado_Tcl 4-199] Please refer to the DRC report (report_drc) for more information.
+
+
+Starting Routing Task
+INFO: [Route 35-254] Multithreading enabled for route_design using a maximum of 4 CPUs
+
+Phase 1 Build RT Design
+Checksum: PlaceDB: 9d4a414f ConstDB: 0 ShapeSum: 96fd785a RouteDB: ce85e6ab
+Nodegraph reading from file.  Time (s): cpu = 00:00:00.5 ; elapsed = 00:00:00.52 . Memory (MB): peak = 4915.656 ; gain = 0.000 ; free physical = 1185 ; free virtual = 10440
+Post Restoration Checksum: NetGraph: d8c22fc1 | NumContArr: 1ad37e0a | Constraints: 3b8868d0 | Timing: c2a8fa9d
+Phase 1 Build RT Design | Checksum: 1f1c71138
+
+Time (s): cpu = 00:00:26 ; elapsed = 00:00:08 . Memory (MB): peak = 4915.656 ; gain = 0.000 ; free physical = 1177 ; free virtual = 10431
+
+Phase 2 Router Initialization
+
+Phase 2.1 Fix Topology Constraints
+Phase 2.1 Fix Topology Constraints | Checksum: 1f1c71138
+
+Time (s): cpu = 00:00:26 ; elapsed = 00:00:08 . Memory (MB): peak = 4915.656 ; gain = 0.000 ; free physical = 1177 ; free virtual = 10431
+
+Phase 2.2 Pre Route Cleanup
+Phase 2.2 Pre Route Cleanup | Checksum: 1f1c71138
+
+Time (s): cpu = 00:00:26 ; elapsed = 00:00:08 . Memory (MB): peak = 4915.656 ; gain = 0.000 ; free physical = 1177 ; free virtual = 10431
+
+Phase 2.3 Global Clock Net Routing
+ Number of Nodes with overlaps = 0
+Phase 2.3 Global Clock Net Routing | Checksum: 22941fc4d
+
+Time (s): cpu = 00:00:29 ; elapsed = 00:00:10 . Memory (MB): peak = 4915.656 ; gain = 0.000 ; free physical = 1179 ; free virtual = 10433
+
+Phase 2.4 Update Timing
+Phase 2.4 Update Timing | Checksum: 15526a138
+
+Time (s): cpu = 00:00:45 ; elapsed = 00:00:16 . Memory (MB): peak = 4915.656 ; gain = 0.000 ; free physical = 1179 ; free virtual = 10434
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=2.884  | TNS=0.000  | WHS=-0.047 | THS=-15.859|
+
+
+Router Utilization Summary
+  Global Vertical Routing Utilization    = 0.000317857 %
+  Global Horizontal Routing Utilization  = 8.20856e-05 %
+  Routable Net Status*
+  *Does not include unroutable nets such as driverless and loadless.
+  Run report_route_status for detailed report.
+  Number of Failed Nets               = 37062
+    (Failed Nets is the sum of unrouted and partially routed nets)
+  Number of Unrouted Nets             = 35076
+  Number of Partially Routed Nets     = 1986
+  Number of Node Overlaps             = 1
+
+Phase 2 Router Initialization | Checksum: 1d843a58b
+
+Time (s): cpu = 00:01:04 ; elapsed = 00:00:23 . Memory (MB): peak = 4915.656 ; gain = 0.000 ; free physical = 1179 ; free virtual = 10434
+
+Phase 3 Global Routing
+Phase 3 Global Routing | Checksum: 1d843a58b
+
+Time (s): cpu = 00:01:04 ; elapsed = 00:00:23 . Memory (MB): peak = 4915.656 ; gain = 0.000 ; free physical = 1179 ; free virtual = 10434
+
+Phase 4 Initial Routing
+
+Phase 4.1 Initial Net Routing Pass
+Phase 4.1 Initial Net Routing Pass | Checksum: 1f9c1207e
+
+Time (s): cpu = 00:01:27 ; elapsed = 00:00:32 . Memory (MB): peak = 4915.656 ; gain = 0.000 ; free physical = 1194 ; free virtual = 10449
+Phase 4 Initial Routing | Checksum: 1b893902b
+
+Time (s): cpu = 00:01:28 ; elapsed = 00:00:32 . Memory (MB): peak = 4915.656 ; gain = 0.000 ; free physical = 1194 ; free virtual = 10449
+
+Phase 5 Rip-up And Reroute
+
+Phase 5.1 Global Iteration 0
+ Number of Nodes with overlaps = 6252
+ Number of Nodes with overlaps = 374
+ Number of Nodes with overlaps = 35
+ Number of Nodes with overlaps = 5
+ Number of Nodes with overlaps = 0
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=2.312  | TNS=0.000  | WHS=-0.039 | THS=-1.918 |
+
+Phase 5.1 Global Iteration 0 | Checksum: 21b5e3ce0
+
+Time (s): cpu = 00:02:58 ; elapsed = 00:01:12 . Memory (MB): peak = 4915.656 ; gain = 0.000 ; free physical = 1201 ; free virtual = 10454
+
+Phase 5.2 Additional Iteration for Hold
+Phase 5.2 Additional Iteration for Hold | Checksum: 2a4b5929d
+
+Time (s): cpu = 00:02:59 ; elapsed = 00:01:12 . Memory (MB): peak = 4915.656 ; gain = 0.000 ; free physical = 1201 ; free virtual = 10454
+Phase 5 Rip-up And Reroute | Checksum: 2a4b5929d
+
+Time (s): cpu = 00:02:59 ; elapsed = 00:01:12 . Memory (MB): peak = 4915.656 ; gain = 0.000 ; free physical = 1201 ; free virtual = 10454
+
+Phase 6 Delay and Skew Optimization
+
+Phase 6.1 Delay CleanUp
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=2.312  | TNS=0.000  | WHS=0.010  | THS=0.000  |
+
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=2.312  | TNS=0.000  | WHS=0.010  | THS=0.000  |
+
+Phase 6.1 Delay CleanUp | Checksum: 1c7be116b
+
+Time (s): cpu = 00:03:13 ; elapsed = 00:01:17 . Memory (MB): peak = 4915.656 ; gain = 0.000 ; free physical = 1194 ; free virtual = 10449
+
+Phase 6.2 Clock Skew Optimization
+Phase 6.2 Clock Skew Optimization | Checksum: 1c7be116b
+
+Time (s): cpu = 00:03:13 ; elapsed = 00:01:17 . Memory (MB): peak = 4915.656 ; gain = 0.000 ; free physical = 1194 ; free virtual = 10449
+Phase 6 Delay and Skew Optimization | Checksum: 1c7be116b
+
+Time (s): cpu = 00:03:13 ; elapsed = 00:01:17 . Memory (MB): peak = 4915.656 ; gain = 0.000 ; free physical = 1194 ; free virtual = 10449
+
+Phase 7 Post Hold Fix
+
+Phase 7.1 Hold Fix Iter
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=2.312  | TNS=0.000  | WHS=0.010  | THS=0.000  |
+
+Phase 7.1 Hold Fix Iter | Checksum: 18821541d
+
+Time (s): cpu = 00:03:24 ; elapsed = 00:01:21 . Memory (MB): peak = 4915.656 ; gain = 0.000 ; free physical = 1189 ; free virtual = 10444
+Phase 7 Post Hold Fix | Checksum: 18821541d
+
+Time (s): cpu = 00:03:24 ; elapsed = 00:01:21 . Memory (MB): peak = 4915.656 ; gain = 0.000 ; free physical = 1189 ; free virtual = 10444
+
+Phase 8 Route finalize
+
+Router Utilization Summary
+  Global Vertical Routing Utilization    = 9.48083 %
+  Global Horizontal Routing Utilization  = 10.6495 %
+  Routable Net Status*
+  *Does not include unroutable nets such as driverless and loadless.
+  Run report_route_status for detailed report.
+  Number of Failed Nets               = 0
+    (Failed Nets is the sum of unrouted and partially routed nets)
+  Number of Unrouted Nets             = 0
+  Number of Partially Routed Nets     = 0
+  Number of Node Overlaps             = 0
+
+Phase 8 Route finalize | Checksum: 18821541d
+
+Time (s): cpu = 00:03:25 ; elapsed = 00:01:21 . Memory (MB): peak = 4915.656 ; gain = 0.000 ; free physical = 1189 ; free virtual = 10444
+
+Phase 9 Verifying routed nets
+
+ Verification completed successfully
+Phase 9 Verifying routed nets | Checksum: 18821541d
+
+Time (s): cpu = 00:03:25 ; elapsed = 00:01:21 . Memory (MB): peak = 4915.656 ; gain = 0.000 ; free physical = 1188 ; free virtual = 10443
+
+Phase 10 Depositing Routes
+Phase 10 Depositing Routes | Checksum: 18821541d
+
+Time (s): cpu = 00:03:29 ; elapsed = 00:01:24 . Memory (MB): peak = 4915.656 ; gain = 0.000 ; free physical = 1177 ; free virtual = 10431
+
+Phase 11 Resolve XTalk
+Phase 11 Resolve XTalk | Checksum: 18821541d
+
+Time (s): cpu = 00:03:29 ; elapsed = 00:01:24 . Memory (MB): peak = 4915.656 ; gain = 0.000 ; free physical = 1177 ; free virtual = 10431
+
+Phase 12 Post Process Routing
+Phase 12 Post Process Routing | Checksum: 18821541d
+
+Time (s): cpu = 00:03:29 ; elapsed = 00:01:24 . Memory (MB): peak = 4915.656 ; gain = 0.000 ; free physical = 1177 ; free virtual = 10431
+
+Phase 13 Post Router Timing
+INFO: [Route 35-57] Estimated Timing Summary | WNS=2.312  | TNS=0.000  | WHS=0.010  | THS=0.000  |
+
+INFO: [Route 35-327] The final timing numbers are based on the router estimated timing analysis. For a complete and accurate timing signoff, please run report_timing_summary.
+Phase 13 Post Router Timing | Checksum: 18821541d
+
+Time (s): cpu = 00:03:30 ; elapsed = 00:01:25 . Memory (MB): peak = 4915.656 ; gain = 0.000 ; free physical = 1177 ; free virtual = 10431
+Total Elapsed time in route_design: 84.49 secs
+
+Phase 14 Post-Route Event Processing
+Phase 14 Post-Route Event Processing | Checksum: 11ff051be
+
+Time (s): cpu = 00:03:30 ; elapsed = 00:01:25 . Memory (MB): peak = 4915.656 ; gain = 0.000 ; free physical = 1177 ; free virtual = 10432
+INFO: [Route 35-16] Router Completed Successfully
+Ending Routing Task | Checksum: 11ff051be
+
+Time (s): cpu = 00:03:30 ; elapsed = 00:01:25 . Memory (MB): peak = 4915.656 ; gain = 0.000 ; free physical = 1178 ; free virtual = 10433
+
+Routing Is Done.
+INFO: [Common 17-83] Releasing license: Implementation
+118 Infos, 108 Warnings, 0 Critical Warnings and 0 Errors encountered.
+route_design completed successfully
+route_design: Time (s): cpu = 00:03:37 ; elapsed = 00:01:28 . Memory (MB): peak = 4915.656 ; gain = 0.000 ; free physical = 1178 ; free virtual = 10433
+INFO: [Vivado 12-24828] Executing command : report_drc -file als_system_wrapper_drc_routed.rpt -pb als_system_wrapper_drc_routed.pb -rpx als_system_wrapper_drc_routed.rpx
+Command: report_drc -file als_system_wrapper_drc_routed.rpt -pb als_system_wrapper_drc_routed.pb -rpx als_system_wrapper_drc_routed.rpx
+INFO: [IP_Flow 19-1839] IP Catalog is up to date.
+INFO: [DRC 23-27] Running DRC with 4 threads
+INFO: [Vivado_Tcl 2-168] The results of DRC are in file /home/liujiawei/ALS_Silicon_Workspace/als-core/als_sys_project/als_sys_project.runs/impl_1/als_system_wrapper_drc_routed.rpt.
+report_drc completed successfully
+INFO: [Vivado 12-24828] Executing command : report_methodology -file als_system_wrapper_methodology_drc_routed.rpt -pb als_system_wrapper_methodology_drc_routed.pb -rpx als_system_wrapper_methodology_drc_routed.rpx
+Command: report_methodology -file als_system_wrapper_methodology_drc_routed.rpt -pb als_system_wrapper_methodology_drc_routed.pb -rpx als_system_wrapper_methodology_drc_routed.rpx
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+INFO: [DRC 23-133] Running Methodology with 4 threads
+INFO: [Vivado_Tcl 2-1520] The results of Report Methodology are in file /home/liujiawei/ALS_Silicon_Workspace/als-core/als_sys_project/als_sys_project.runs/impl_1/als_system_wrapper_methodology_drc_routed.rpt.
+report_methodology completed successfully
+report_methodology: Time (s): cpu = 00:00:51 ; elapsed = 00:00:16 . Memory (MB): peak = 4922.652 ; gain = 0.000 ; free physical = 1174 ; free virtual = 10428
+INFO: [Vivado 12-24828] Executing command : report_timing_summary -max_paths 10 -report_unconstrained -file als_system_wrapper_timing_summary_routed.rpt -pb als_system_wrapper_timing_summary_routed.pb -rpx als_system_wrapper_timing_summary_routed.rpx -warn_on_violation 
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+INFO: [Timing 38-91] UpdateTimingParams: Speed grade: -1, Temperature grade: E, Delay Type: min_max.
+INFO: [Timing 38-191] Multithreading enabled for timing update using a maximum of 4 CPUs
+report_timing_summary: Time (s): cpu = 00:00:15 ; elapsed = 00:00:05 . Memory (MB): peak = 4922.652 ; gain = 0.000 ; free physical = 1165 ; free virtual = 10420
+INFO: [Vivado 12-24838] Running report commands "report_bus_skew, report_incremental_reuse, report_route_status" in parallel.
+Running report generation with 3 threads.
+INFO: [Vivado 12-24828] Executing command : report_incremental_reuse -file als_system_wrapper_incremental_reuse_routed.rpt
+INFO: [Vivado_Tcl 4-1062] Incremental flow is disabled. No incremental reuse Info to report.
+INFO: [Vivado 12-24828] Executing command : report_bus_skew -warn_on_violation -file als_system_wrapper_bus_skew_routed.rpt -pb als_system_wrapper_bus_skew_routed.pb -rpx als_system_wrapper_bus_skew_routed.rpx
+INFO: [Timing 38-91] UpdateTimingParams: Speed grade: -1, Temperature grade: E, Delay Type: min_max.
+INFO: [Timing 38-191] Multithreading enabled for timing update using a maximum of 4 CPUs
+INFO: [Vivado 12-24828] Executing command : report_route_status -file als_system_wrapper_route_status.rpt -pb als_system_wrapper_route_status.pb
+INFO: [Vivado 12-24828] Executing command : report_power -file als_system_wrapper_power_routed.rpt -pb als_system_wrapper_power_summary_routed.pb -rpx als_system_wrapper_power_routed.rpx
+Command: report_power -file als_system_wrapper_power_routed.rpt -pb als_system_wrapper_power_summary_routed.pb -rpx als_system_wrapper_power_routed.rpx
+Running Vector-less Activity Propagation...
+
+Finished Running Vector-less Activity Propagation
+WARNING: [Power 33-332] Found switching activity that implies high-fanout reset nets being asserted for excessive periods of time which may result in inaccurate power analysis.
+Resolution: To review and fix problems, please run Power Constraints Advisor in the GUI from Tools > Power Constraints Advisor or run report_power with the -advisory option to generate a text report.
+138 Infos, 109 Warnings, 0 Critical Warnings and 0 Errors encountered.
+report_power completed successfully
+report_power: Time (s): cpu = 00:00:18 ; elapsed = 00:00:12 . Memory (MB): peak = 4922.652 ; gain = 0.000 ; free physical = 1139 ; free virtual = 10406
+INFO: [Vivado 12-24828] Executing command : report_clock_utilization -file als_system_wrapper_clock_utilization_routed.rpt
+WARNING: [Device 21-9320] Failed to find the Oracle tile group with name 'HSR_BOUNDARY_TOP'. This is required for Clock regions and Virtual grid.
+WARNING: [Device 21-2174] Failed to initialize Virtual grid.
+generate_parallel_reports: Time (s): cpu = 00:01:41 ; elapsed = 00:00:42 . Memory (MB): peak = 4922.652 ; gain = 6.996 ; free physical = 1133 ; free virtual = 10399
+INFO: [Timing 38-480] Writing timing data to binary archive.
+Write ShapeDB Complete: Time (s): cpu = 00:00:00.4 ; elapsed = 00:00:00.11 . Memory (MB): peak = 4922.652 ; gain = 0.000 ; free physical = 1134 ; free virtual = 10409
+Wrote PlaceDB: Time (s): cpu = 00:00:06 ; elapsed = 00:00:02 . Memory (MB): peak = 4922.652 ; gain = 0.000 ; free physical = 1091 ; free virtual = 10407
+Wrote PulsedLatchDB: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 4922.652 ; gain = 0.000 ; free physical = 1091 ; free virtual = 10407
+Writing XDEF routing.
+Writing XDEF routing logical nets.
+Writing XDEF routing special nets.
+Wrote RouteStorage: Time (s): cpu = 00:00:00.75 ; elapsed = 00:00:00.37 . Memory (MB): peak = 4922.652 ; gain = 0.000 ; free physical = 1082 ; free virtual = 10405
+Wrote Netlist Cache: Time (s): cpu = 00:00:00.05 ; elapsed = 00:00:00.06 . Memory (MB): peak = 4922.652 ; gain = 0.000 ; free physical = 1082 ; free virtual = 10409
+Wrote Device Cache: Time (s): cpu = 00:00:00.02 ; elapsed = 00:00:00.02 . Memory (MB): peak = 4922.652 ; gain = 0.000 ; free physical = 1082 ; free virtual = 10412
+Write Physdb Complete: Time (s): cpu = 00:00:07 ; elapsed = 00:00:03 . Memory (MB): peak = 4922.652 ; gain = 0.000 ; free physical = 1082 ; free virtual = 10412
+INFO: [Common 17-1381] The checkpoint '/home/liujiawei/ALS_Silicon_Workspace/als-core/als_sys_project/als_sys_project.runs/impl_1/als_system_wrapper_routed.dcp' has been generated.
+INFO: [Memdata 28-167] Found XPM memory block als_system_i/axi_smc/inst/s02_nodes/s02_w_node/inst/inst_mi_handler/gen_normal_area.inst_fifo_node_payld/gen_xpm_memory_fifo.inst_fifo/gen_mem_rep[0].inst_xpm_memory/xpm_memory_base_inst with a P_MEMORY_PRIMITIVE property set to distributed. A value of block is required. You will not be able to use the updatemem program to update the bitstream with new data for the als_system_i/axi_smc/inst/s02_nodes/s02_w_node/inst/inst_mi_handler/gen_normal_area.inst_fifo_node_payld/gen_xpm_memory_fifo.inst_fifo/gen_mem_rep[0].inst_xpm_memory/xpm_memory_base_inst block.
+INFO: [Memdata 28-167] Found XPM memory block als_system_i/axi_smc/inst/s02_nodes/s02_w_node/inst/inst_mi_handler/gen_normal_area.gen_fifo_req.inst_fifo_req/gen_xpm_memory_fifo.inst_fifo/gen_mem_rep[0].inst_xpm_memory/xpm_memory_base_inst with a P_MEMORY_PRIMITIVE property set to distributed. A value of block is required. You will not be able to use the updatemem program to update the bitstream with new data for the als_system_i/axi_smc/inst/s02_nodes/s02_w_node/inst/inst_mi_handler/gen_normal_area.gen_fifo_req.inst_fifo_req/gen_xpm_memory_fifo.inst_fifo/gen_mem_rep[0].inst_xpm_memory/xpm_memory_base_inst block.
+INFO: [Memdata 28-167] Found XPM memory block als_system_i/axi_smc/inst/s02_nodes/s02_r_node/inst/inst_mi_handler/gen_normal_area.inst_fifo_node_payld/gen_xpm_memory_fifo.inst_fifo/gen_mem_rep[0].inst_xpm_memory/xpm_memory_base_inst with a P_MEMORY_PRIMITIVE property set to distributed. A value of block is required. You will not be able to use the updatemem program to update the bitstream with new data for the als_system_i/axi_smc/inst/s02_nodes/s02_r_node/inst/inst_mi_handler/gen_normal_area.inst_fifo_node_payld/gen_xpm_memory_fifo.inst_fifo/gen_mem_rep[0].inst_xpm_memory/xpm_memory_base_inst block.
+INFO: [Memdata 28-167] Found XPM memory block als_system_i/axi_smc/inst/s02_nodes/s02_b_node/inst/inst_mi_handler/gen_normal_area.inst_fifo_node_payld/gen_xpm_memory_fifo.inst_fifo/gen_mem_rep[0].inst_xpm_memory/xpm_memory_base_inst with a P_MEMORY_PRIMITIVE property set to distributed. A value of block is required. You will not be able to use the updatemem program to update the bitstream with new data for the als_system_i/axi_smc/inst/s02_nodes/s02_b_node/inst/inst_mi_handler/gen_normal_area.inst_fifo_node_payld/gen_xpm_memory_fifo.inst_fifo/gen_mem_rep[0].inst_xpm_memory/xpm_memory_base_inst block.
+INFO: [Memdata 28-167] Found XPM memory block als_system_i/axi_smc/inst/s02_nodes/s02_aw_node/inst/inst_mi_handler/gen_normal_area.inst_fifo_node_payld/gen_xpm_memory_fifo.inst_fifo/gen_mem_rep[0].inst_xpm_memory/xpm_memory_base_inst with a P_MEMORY_PRIMITIVE property set to distributed. A value of block is required. You will not be able to use the updatemem program to update the bitstream with new data for the als_system_i/axi_smc/inst/s02_nodes/s02_aw_node/inst/inst_mi_handler/gen_normal_area.inst_fifo_node_payld/gen_xpm_memory_fifo.inst_fifo/gen_mem_rep[0].inst_xpm_memory/xpm_memory_base_inst block.
+INFO: [Memdata 28-167] Found XPM memory block als_system_i/axi_smc/inst/s02_nodes/s02_ar_node/inst/inst_mi_handler/gen_normal_area.inst_fifo_node_payld/gen_xpm_memory_fifo.inst_fifo/gen_mem_rep[0].inst_xpm_memory/xpm_memory_base_inst with a P_MEMORY_PRIMITIVE property set to distributed. A value of block is required. You will not be able to use the updatemem program to update the bitstream with new data for the als_system_i/axi_smc/inst/s02_nodes/s02_ar_node/inst/inst_mi_handler/gen_normal_area.inst_fifo_node_payld/gen_xpm_memory_fifo.inst_fifo/gen_mem_rep[0].inst_xpm_memory/xpm_memory_base_inst block.
+INFO: [Memdata 28-167] Found XPM memory block als_system_i/axi_smc/inst/s01_nodes/s01_w_node/inst/inst_mi_handler/gen_normal_area.inst_fifo_node_payld/gen_xpm_memory_fifo.inst_fifo/gen_mem_rep[0].inst_xpm_memory/xpm_memory_base_inst with a P_MEMORY_PRIMITIVE property set to distributed. A value of block is required. You will not be able to use the updatemem program to update the bitstream with new data for the als_system_i/axi_smc/inst/s01_nodes/s01_w_node/inst/inst_mi_handler/gen_normal_area.inst_fifo_node_payld/gen_xpm_memory_fifo.inst_fifo/gen_mem_rep[0].inst_xpm_memory/xpm_memory_base_inst block.
+INFO: [Memdata 28-167] Found XPM memory block als_system_i/axi_smc/inst/s01_nodes/s01_w_node/inst/inst_mi_handler/gen_normal_area.gen_fifo_req.inst_fifo_req/gen_xpm_memory_fifo.inst_fifo/gen_mem_rep[0].inst_xpm_memory/xpm_memory_base_inst with a P_MEMORY_PRIMITIVE property set to distributed. A value of block is required. You will not be able to use the updatemem program to update the bitstream with new data for the als_system_i/axi_smc/inst/s01_nodes/s01_w_node/inst/inst_mi_handler/gen_normal_area.gen_fifo_req.inst_fifo_req/gen_xpm_memory_fifo.inst_fifo/gen_mem_rep[0].inst_xpm_memory/xpm_memory_base_inst block.
+INFO: [Memdata 28-167] Found XPM memory block als_system_i/axi_smc/inst/s01_nodes/s01_b_node/inst/inst_mi_handler/gen_normal_area.inst_fifo_node_payld/gen_xpm_memory_fifo.inst_fifo/gen_mem_rep[0].inst_xpm_memory/xpm_memory_base_inst with a P_MEMORY_PRIMITIVE property set to distributed. A value of block is required. You will not be able to use the updatemem program to update the bitstream with new data for the als_system_i/axi_smc/inst/s01_nodes/s01_b_node/inst/inst_mi_handler/gen_normal_area.inst_fifo_node_payld/gen_xpm_memory_fifo.inst_fifo/gen_mem_rep[0].inst_xpm_memory/xpm_memory_base_inst block.
+INFO: [Memdata 28-167] Found XPM memory block als_system_i/axi_smc/inst/s01_nodes/s01_aw_node/inst/inst_mi_handler/gen_normal_area.inst_fifo_node_payld/gen_xpm_memory_fifo.inst_fifo/gen_mem_rep[0].inst_xpm_memory/xpm_memory_base_inst with a P_MEMORY_PRIMITIVE property set to distributed. A value of block is required. You will not be able to use the updatemem program to update the bitstream with new data for the als_system_i/axi_smc/inst/s01_nodes/s01_aw_node/inst/inst_mi_handler/gen_normal_area.inst_fifo_node_payld/gen_xpm_memory_fifo.inst_fifo/gen_mem_rep[0].inst_xpm_memory/xpm_memory_base_inst block.
+INFO: [Memdata 28-167] Found XPM memory block als_system_i/axi_smc/inst/s00_nodes/s00_r_node/inst/inst_mi_handler/gen_normal_area.inst_fifo_node_payld/gen_xpm_memory_fifo.inst_fifo/gen_mem_rep[0].inst_xpm_memory/xpm_memory_base_inst with a P_MEMORY_PRIMITIVE property set to distributed. A value of block is required. You will not be able to use the updatemem program to update the bitstream with new data for the als_system_i/axi_smc/inst/s00_nodes/s00_r_node/inst/inst_mi_handler/gen_normal_area.inst_fifo_node_payld/gen_xpm_memory_fifo.inst_fifo/gen_mem_rep[0].inst_xpm_memory/xpm_memory_base_inst block.
+INFO: [Memdata 28-167] Found XPM memory block als_system_i/axi_smc/inst/s00_nodes/s00_ar_node/inst/inst_mi_handler/gen_normal_area.inst_fifo_node_payld/gen_xpm_memory_fifo.inst_fifo/gen_mem_rep[0].inst_xpm_memory/xpm_memory_base_inst with a P_MEMORY_PRIMITIVE property set to distributed. A value of block is required. You will not be able to use the updatemem program to update the bitstream with new data for the als_system_i/axi_smc/inst/s00_nodes/s00_ar_node/inst/inst_mi_handler/gen_normal_area.inst_fifo_node_payld/gen_xpm_memory_fifo.inst_fifo/gen_mem_rep[0].inst_xpm_memory/xpm_memory_base_inst block.
+INFO: [Memdata 28-167] Found XPM memory block als_system_i/axi_smc/inst/m00_nodes/m00_w_node/inst/inst_si_handler/gen_si_handler.gen_request_fifos.gen_req_fifo[2].inst_req_fifo/gen_xpm_memory_fifo.inst_fifo/gen_mem_rep[0].inst_xpm_memory/xpm_memory_base_inst with a P_MEMORY_PRIMITIVE property set to distributed. A value of block is required. You will not be able to use the updatemem program to update the bitstream with new data for the als_system_i/axi_smc/inst/m00_nodes/m00_w_node/inst/inst_si_handler/gen_si_handler.gen_request_fifos.gen_req_fifo[2].inst_req_fifo/gen_xpm_memory_fifo.inst_fifo/gen_mem_rep[0].inst_xpm_memory/xpm_memory_base_inst block.
+INFO: [Memdata 28-167] Found XPM memory block als_system_i/axi_smc/inst/m00_nodes/m00_w_node/inst/inst_si_handler/gen_si_handler.gen_request_fifos.gen_req_fifo[1].inst_req_fifo/gen_xpm_memory_fifo.inst_fifo/gen_mem_rep[0].inst_xpm_memory/xpm_memory_base_inst with a P_MEMORY_PRIMITIVE property set to distributed. A value of block is required. You will not be able to use the updatemem program to update the bitstream with new data for the als_system_i/axi_smc/inst/m00_nodes/m00_w_node/inst/inst_si_handler/gen_si_handler.gen_request_fifos.gen_req_fifo[1].inst_req_fifo/gen_xpm_memory_fifo.inst_fifo/gen_mem_rep[0].inst_xpm_memory/xpm_memory_base_inst block.
+INFO: [Memdata 28-167] Found XPM memory block als_system_i/axi_smc/inst/m00_nodes/m00_w_node/inst/inst_mi_handler/gen_normal_area.inst_fifo_node_payld/gen_xpm_memory_fifo.inst_fifo/gen_mem_rep[0].inst_xpm_memory/xpm_memory_base_inst with a P_MEMORY_PRIMITIVE property set to distributed. A value of block is required. You will not be able to use the updatemem program to update the bitstream with new data for the als_system_i/axi_smc/inst/m00_nodes/m00_w_node/inst/inst_mi_handler/gen_normal_area.inst_fifo_node_payld/gen_xpm_memory_fifo.inst_fifo/gen_mem_rep[0].inst_xpm_memory/xpm_memory_base_inst block.
+INFO: [Memdata 28-167] Found XPM memory block als_system_i/axi_smc/inst/m00_nodes/m00_r_node/inst/inst_mi_handler/gen_normal_area.inst_fifo_node_payld/gen_xpm_memory_fifo.inst_fifo/gen_mem_rep[0].inst_xpm_memory/xpm_memory_base_inst with a P_MEMORY_PRIMITIVE property set to distributed. A value of block is required. You will not be able to use the updatemem program to update the bitstream with new data for the als_system_i/axi_smc/inst/m00_nodes/m00_r_node/inst/inst_mi_handler/gen_normal_area.inst_fifo_node_payld/gen_xpm_memory_fifo.inst_fifo/gen_mem_rep[0].inst_xpm_memory/xpm_memory_base_inst block.
+INFO: [Memdata 28-167] Found XPM memory block als_system_i/axi_smc/inst/m00_nodes/m00_r_node/inst/inst_mi_handler/gen_normal_area.gen_fifo_req.inst_fifo_req/gen_xpm_memory_fifo.inst_fifo/gen_mem_rep[0].inst_xpm_memory/xpm_memory_base_inst with a P_MEMORY_PRIMITIVE property set to distributed. A value of block is required. You will not be able to use the updatemem program to update the bitstream with new data for the als_system_i/axi_smc/inst/m00_nodes/m00_r_node/inst/inst_mi_handler/gen_normal_area.gen_fifo_req.inst_fifo_req/gen_xpm_memory_fifo.inst_fifo/gen_mem_rep[0].inst_xpm_memory/xpm_memory_base_inst block.
+INFO: [Memdata 28-167] Found XPM memory block als_system_i/axi_smc/inst/m00_nodes/m00_b_node/inst/inst_mi_handler/gen_normal_area.inst_fifo_node_payld/gen_xpm_memory_fifo.inst_fifo/gen_mem_rep[0].inst_xpm_memory/xpm_memory_base_inst with a P_MEMORY_PRIMITIVE property set to distributed. A value of block is required. You will not be able to use the updatemem program to update the bitstream with new data for the als_system_i/axi_smc/inst/m00_nodes/m00_b_node/inst/inst_mi_handler/gen_normal_area.inst_fifo_node_payld/gen_xpm_memory_fifo.inst_fifo/gen_mem_rep[0].inst_xpm_memory/xpm_memory_base_inst block.
+INFO: [Memdata 28-167] Found XPM memory block als_system_i/axi_smc/inst/m00_nodes/m00_b_node/inst/inst_mi_handler/gen_normal_area.gen_fifo_req.inst_fifo_req/gen_xpm_memory_fifo.inst_fifo/gen_mem_rep[0].inst_xpm_memory/xpm_memory_base_inst with a P_MEMORY_PRIMITIVE property set to distributed. A value of block is required. You will not be able to use the updatemem program to update the bitstream with new data for the als_system_i/axi_smc/inst/m00_nodes/m00_b_node/inst/inst_mi_handler/gen_normal_area.gen_fifo_req.inst_fifo_req/gen_xpm_memory_fifo.inst_fifo/gen_mem_rep[0].inst_xpm_memory/xpm_memory_base_inst block.
+INFO: [Memdata 28-167] Found XPM memory block als_system_i/axi_smc/inst/m00_nodes/m00_aw_node/inst/inst_mi_handler/gen_normal_area.inst_fifo_node_payld/gen_xpm_memory_fifo.inst_fifo/gen_mem_rep[0].inst_xpm_memory/xpm_memory_base_inst with a P_MEMORY_PRIMITIVE property set to distributed. A value of block is required. You will not be able to use the updatemem program to update the bitstream with new data for the als_system_i/axi_smc/inst/m00_nodes/m00_aw_node/inst/inst_mi_handler/gen_normal_area.inst_fifo_node_payld/gen_xpm_memory_fifo.inst_fifo/gen_mem_rep[0].inst_xpm_memory/xpm_memory_base_inst block.
+INFO: [Memdata 28-167] Found XPM memory block als_system_i/axi_smc/inst/m00_nodes/m00_ar_node/inst/inst_mi_handler/gen_normal_area.inst_fifo_node_payld/gen_xpm_memory_fifo.inst_fifo/gen_mem_rep[0].inst_xpm_memory/xpm_memory_base_inst with a P_MEMORY_PRIMITIVE property set to distributed. A value of block is required. You will not be able to use the updatemem program to update the bitstream with new data for the als_system_i/axi_smc/inst/m00_nodes/m00_ar_node/inst/inst_mi_handler/gen_normal_area.inst_fifo_node_payld/gen_xpm_memory_fifo.inst_fifo/gen_mem_rep[0].inst_xpm_memory/xpm_memory_base_inst block.
+INFO: [Memdata 28-167] Found XPM memory block als_system_i/axi_dma_0/U0/I_PRMRY_DATAMOVER/GEN_S2MM_FULL.I_S2MM_FULL_WRAPPER/GEN_ENABLE_INDET_BTT_SF.I_INDET_BTT/I_XD_FIFO/NON_BLK_MEM.I_SYNC_FIFOGEN_FIFO/xpm_fifo_instance.xpm_fifo_sync_inst/xpm_fifo_base_inst/gen_sdpram.xpm_memory_base_inst with a P_MEMORY_PRIMITIVE property set to auto. A value of block is required. You will not be able to use the updatemem program to update the bitstream with new data for the als_system_i/axi_dma_0/U0/I_PRMRY_DATAMOVER/GEN_S2MM_FULL.I_S2MM_FULL_WRAPPER/GEN_ENABLE_INDET_BTT_SF.I_INDET_BTT/I_XD_FIFO/NON_BLK_MEM.I_SYNC_FIFOGEN_FIFO/xpm_fifo_instance.xpm_fifo_sync_inst/xpm_fifo_base_inst/gen_sdpram.xpm_memory_base_inst block.
+INFO: [Memdata 28-208] The XPM instance: <als_system_i/axi_dma_0/U0/I_PRMRY_DATAMOVER/GEN_S2MM_FULL.I_S2MM_FULL_WRAPPER/GEN_ENABLE_INDET_BTT_SF.I_INDET_BTT/I_DATA_FIFO/BLK_MEM.I_SYNC_FIFOGEN_FIFO/xpm_fifo_instance.xpm_fifo_sync_inst/xpm_fifo_base_inst/gen_sdpram.xpm_memory_base_inst> is part of IP: <als_system_i/axi_dma_0>. This XPM instance will be excluded from the .mmi because updatemem is prohibited from making changes to an XPM that is part of an IP.
+INFO: [Memdata 28-208] The XPM instance: <als_system_i/axi_dma_0/U0/I_PRMRY_DATAMOVER/GEN_MM2S_FULL.I_MM2S_FULL_WRAPPER/GEN_INCLUDE_MM2S_SF.I_RD_SF/I_DATA_FIFO/BLK_MEM.I_SYNC_FIFOGEN_FIFO/xpm_fifo_instance.xpm_fifo_sync_inst/xpm_fifo_base_inst/gen_sdpram.xpm_memory_base_inst> is part of IP: <als_system_i/axi_dma_0>. This XPM instance will be excluded from the .mmi because updatemem is prohibited from making changes to an XPM that is part of an IP.
+Command: write_bitstream -force als_system_wrapper.bit
+Attempting to get a license for feature 'Implementation' and/or device 'xczu2cg'
+INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xczu2cg'
+Running DRC as a precondition to command write_bitstream
+INFO: [IP_Flow 19-1839] IP Catalog is up to date.
+INFO: [DRC 23-27] Running DRC with 4 threads
+WARNING: [DRC DPIP-2] Input pipelining: DSP als_system_i/als_core_0/inst/u_diffusion/v1 input als_system_i/als_core_0/inst/u_diffusion/v1/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+WARNING: [DRC DPIP-2] Input pipelining: DSP als_system_i/als_core_0/inst/u_membrane/mul_comb_reg0 input als_system_i/als_core_0/inst/u_membrane/mul_comb_reg0/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+WARNING: [DRC DPIP-2] Input pipelining: DSP als_system_i/als_core_0/inst/u_membrane/mul_comb_reg0 input als_system_i/als_core_0/inst/u_membrane/mul_comb_reg0/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+WARNING: [DRC DPIP-2] Input pipelining: DSP als_system_i/als_core_0/inst/u_membrane/mul_comb_reg0__0 input als_system_i/als_core_0/inst/u_membrane/mul_comb_reg0__0/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+WARNING: [DRC DPIP-2] Input pipelining: DSP als_system_i/als_core_0/inst/u_membrane/mul_comb_reg0__0 input als_system_i/als_core_0/inst/u_membrane/mul_comb_reg0__0/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+WARNING: [DRC DPIP-2] Input pipelining: DSP als_system_i/als_core_0/inst/u_membrane/mul_comb_reg_reg input als_system_i/als_core_0/inst/u_membrane/mul_comb_reg_reg/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+WARNING: [DRC DPIP-2] Input pipelining: DSP als_system_i/als_core_0/inst/u_membrane/mul_comb_reg_reg input als_system_i/als_core_0/inst/u_membrane/mul_comb_reg_reg/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+WARNING: [DRC DPIP-2] Input pipelining: DSP als_system_i/als_core_0/inst/u_membrane/mul_comb_reg_reg__0 input als_system_i/als_core_0/inst/u_membrane/mul_comb_reg_reg__0/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+WARNING: [DRC DPIP-2] Input pipelining: DSP als_system_i/als_core_0/inst/u_membrane/mul_s_b_reg_reg input als_system_i/als_core_0/inst/u_membrane/mul_s_b_reg_reg/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+WARNING: [DRC DPIP-2] Input pipelining: DSP als_system_i/als_core_0/inst/u_membrane/mul_sat_nb_reg_reg input als_system_i/als_core_0/inst/u_membrane/mul_sat_nb_reg_reg/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+WARNING: [DRC DPIP-2] Input pipelining: DSP als_system_i/als_core_0/inst/u_membrane/mul_sat_nb_reg_reg input als_system_i/als_core_0/inst/u_membrane/mul_sat_nb_reg_reg/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+WARNING: [DRC DPOP-3] PREG Output pipelining: DSP als_system_i/als_core_0/inst/u_diffusion/v1 output als_system_i/als_core_0/inst/u_diffusion/v1/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+WARNING: [DRC DPOP-3] PREG Output pipelining: DSP als_system_i/als_core_0/inst/u_membrane/mul_comb_reg0 output als_system_i/als_core_0/inst/u_membrane/mul_comb_reg0/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+WARNING: [DRC DPOP-3] PREG Output pipelining: DSP als_system_i/als_core_0/inst/u_membrane/mul_comb_reg0__0 output als_system_i/als_core_0/inst/u_membrane/mul_comb_reg0__0/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+WARNING: [DRC DPOP-4] MREG Output pipelining: DSP als_system_i/als_core_0/inst/u_diffusion/v1 multiplier stage als_system_i/als_core_0/inst/u_diffusion/v1/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+WARNING: [DRC DPOP-4] MREG Output pipelining: DSP als_system_i/als_core_0/inst/u_membrane/decay_q8_8_d11 multiplier stage als_system_i/als_core_0/inst/u_membrane/decay_q8_8_d11/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+WARNING: [DRC DPOP-4] MREG Output pipelining: DSP als_system_i/als_core_0/inst/u_membrane/mul_comb_reg0 multiplier stage als_system_i/als_core_0/inst/u_membrane/mul_comb_reg0/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+WARNING: [DRC DPOP-4] MREG Output pipelining: DSP als_system_i/als_core_0/inst/u_membrane/mul_comb_reg0__0 multiplier stage als_system_i/als_core_0/inst/u_membrane/mul_comb_reg0__0/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+WARNING: [DRC DPOP-4] MREG Output pipelining: DSP als_system_i/als_core_0/inst/u_membrane/mul_comb_reg_reg multiplier stage als_system_i/als_core_0/inst/u_membrane/mul_comb_reg_reg/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+WARNING: [DRC DPOP-4] MREG Output pipelining: DSP als_system_i/als_core_0/inst/u_membrane/mul_comb_reg_reg__0 multiplier stage als_system_i/als_core_0/inst/u_membrane/mul_comb_reg_reg__0/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+WARNING: [DRC DPOP-4] MREG Output pipelining: DSP als_system_i/als_core_0/inst/u_membrane/mul_s_b_reg_reg multiplier stage als_system_i/als_core_0/inst/u_membrane/mul_s_b_reg_reg/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+WARNING: [DRC DPOP-4] MREG Output pipelining: DSP als_system_i/als_core_0/inst/u_membrane/mul_sat_nb_reg_reg multiplier stage als_system_i/als_core_0/inst/u_membrane/mul_sat_nb_reg_reg/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+WARNING: [DRC REQP-1934] RAMB18E2_nochange_collision_advisory: Synchronous clocking is detected for BRAM (als_system_i/axi_dma_0/U0/I_PRMRY_DATAMOVER/GEN_MM2S_FULL.I_MM2S_FULL_WRAPPER/GEN_INCLUDE_MM2S_SF.I_RD_SF/I_DATA_FIFO/BLK_MEM.I_SYNC_FIFOGEN_FIFO/xpm_fifo_instance.xpm_fifo_sync_inst/xpm_fifo_base_inst/gen_sdpram.xpm_memory_base_inst/gen_wr_a.gen_word_narrow.mem_reg_1) in SDP mode with NO_CHANGE write-mode. This is the preferred mode for best power characteristics. However, NO_CHANGE may exhibit address collisions if the same address appears on both read and write ports resulting in unknown or corrupted read data. It is suggested to confirm via simulation that an address collision never occurs and if so it is suggested to try and avoid this situation. If address collisions cannot be avoided, the write-mode may be set to READ_FIRST which guarantees that the read data is the prior contents of the memory at the cost of additional power in the design. See the FPGA Memory Resources User Guide for additional information.
+WARNING: [DRC REQP-1934] RAMB18E2_nochange_collision_advisory: Synchronous clocking is detected for BRAM (als_system_i/axi_dma_0/U0/I_PRMRY_DATAMOVER/GEN_S2MM_FULL.I_S2MM_FULL_WRAPPER/GEN_ENABLE_INDET_BTT_SF.I_INDET_BTT/I_DATA_FIFO/BLK_MEM.I_SYNC_FIFOGEN_FIFO/xpm_fifo_instance.xpm_fifo_sync_inst/xpm_fifo_base_inst/gen_sdpram.xpm_memory_base_inst/gen_wr_a.gen_word_narrow.mem_reg_1) in SDP mode with NO_CHANGE write-mode. This is the preferred mode for best power characteristics. However, NO_CHANGE may exhibit address collisions if the same address appears on both read and write ports resulting in unknown or corrupted read data. It is suggested to confirm via simulation that an address collision never occurs and if so it is suggested to try and avoid this situation. If address collisions cannot be avoided, the write-mode may be set to READ_FIRST which guarantees that the read data is the prior contents of the memory at the cost of additional power in the design. See the FPGA Memory Resources User Guide for additional information.
+WARNING: [DRC REQP-1935] RAMB36E2_nochange_collision_advisory: Synchronous clocking is detected for BRAM (als_system_i/axi_dma_0/U0/I_PRMRY_DATAMOVER/GEN_MM2S_FULL.I_MM2S_FULL_WRAPPER/GEN_INCLUDE_MM2S_SF.I_RD_SF/I_DATA_FIFO/BLK_MEM.I_SYNC_FIFOGEN_FIFO/xpm_fifo_instance.xpm_fifo_sync_inst/xpm_fifo_base_inst/gen_sdpram.xpm_memory_base_inst/gen_wr_a.gen_word_narrow.mem_reg_0) in SDP mode with NO_CHANGE write-mode. This is the preferred mode for best power characteristics. However, NO_CHANGE may exhibit address collisions if the same address appears on both read and write ports resulting in unknown or corrupted read data. It is suggested to confirm via simulation that an address collision never occurs and if so it is suggested to try and avoid this situation. If address collisions cannot be avoided, the write-mode may be set to READ_FIRST which guarantees that the read data is the prior contents of the memory at the cost of additional power in the design. See the FPGA Memory Resources User Guide for additional information.
+WARNING: [DRC REQP-1935] RAMB36E2_nochange_collision_advisory: Synchronous clocking is detected for BRAM (als_system_i/axi_dma_0/U0/I_PRMRY_DATAMOVER/GEN_S2MM_FULL.I_S2MM_FULL_WRAPPER/GEN_ENABLE_INDET_BTT_SF.I_INDET_BTT/I_DATA_FIFO/BLK_MEM.I_SYNC_FIFOGEN_FIFO/xpm_fifo_instance.xpm_fifo_sync_inst/xpm_fifo_base_inst/gen_sdpram.xpm_memory_base_inst/gen_wr_a.gen_word_narrow.mem_reg_0) in SDP mode with NO_CHANGE write-mode. This is the preferred mode for best power characteristics. However, NO_CHANGE may exhibit address collisions if the same address appears on both read and write ports resulting in unknown or corrupted read data. It is suggested to confirm via simulation that an address collision never occurs and if so it is suggested to try and avoid this situation. If address collisions cannot be avoided, the write-mode may be set to READ_FIRST which guarantees that the read data is the prior contents of the memory at the cost of additional power in the design. See the FPGA Memory Resources User Guide for additional information.
+INFO: [Vivado 12-3199] DRC finished with 0 Errors, 26 Warnings
+INFO: [Vivado 12-3200] Please refer to the DRC report (report_drc) for more information.
+INFO: [Designutils 20-2272] Running write_bitstream with 4 threads.
+Loading data files...
+Loading site data...
+Loading route data...
+Processing options...
+Creating bitmap...
+Creating bitstream...
+Writing bitstream ./als_system_wrapper.bit...
+INFO: [Vivado 12-1842] Bitgen Completed Successfully.
+INFO: [Project 1-1876] WebTalk data collection is mandatory when using a ULT device. To see the specific WebTalk data collected for your design, open the usage_statistics_webtalk.html or usage_statistics_webtalk.xml file in the implementation directory.
+INFO: [Common 17-83] Releasing license: Implementation
+174 Infos, 137 Warnings, 0 Critical Warnings and 0 Errors encountered.
+write_bitstream completed successfully
+write_bitstream: Time (s): cpu = 00:00:28 ; elapsed = 00:00:17 . Memory (MB): peak = 4922.652 ; gain = 0.000 ; free physical = 1113 ; free virtual = 10401
+INFO: [Common 17-206] Exiting Vivado at Fri Apr 10 13:17:46 2026...

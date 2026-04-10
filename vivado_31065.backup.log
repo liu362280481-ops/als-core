@@ -1,0 +1,33 @@
+#-----------------------------------------------------------
+# Vivado v2024.1 (64-bit)
+# SW Build 5076996 on Wed May 22 18:36:09 MDT 2024
+# IP Build 5075265 on Wed May 22 21:45:21 MDT 2024
+# SharedData Build 5076995 on Wed May 22 18:29:18 MDT 2024
+# Start of session at: Thu Apr  9 04:37:20 2026
+# Process ID: 31065
+# Current directory: /home/liujiawei/ALS_Silicon_Workspace/als-core
+# Command line: vivado -mode batch -source package_ip.tcl
+# Log file: /home/liujiawei/ALS_Silicon_Workspace/als-core/vivado.log
+# Journal file: /home/liujiawei/ALS_Silicon_Workspace/als-core/vivado.jou
+# Running On        :liujiawei-ubuntu
+# Platform          :Ubuntu
+# Operating System  :Ubuntu 22.04.5 LTS
+# Processor Detail  :Intel(R) Core(TM) i5-3470 CPU @ 3.20GHz
+# CPU Frequency     :2894.717 MHz
+# CPU Physical cores:4
+# CPU Logical cores :4
+# Host memory       :25143 MB
+# Swap memory       :2147 MB
+# Total Virtual     :27291 MB
+# Available Virtual :20533 MB
+#-----------------------------------------------------------
+source package_ip.tcl
+# create_project -in_memory -part xczu2cg-sfvc784-1-e
+create_project: Time (s): cpu = 00:00:10 ; elapsed = 00:00:10 . Memory (MB): peak = 1414.613 ; gain = 0.023 ; free physical = 7939 ; free virtual = 19199
+# read_verilog -sv [glob *.sv]
+# ipx::add_files hill_lut.hex -copy 1
+invalid command name "ipx::add_files"
+    while executing
+"ipx::add_files [glob *.hex] -copy 1"
+    (file "package_ip.tcl" line 6)
+INFO: [Common 17-206] Exiting Vivado at Thu Apr  9 04:37:33 2026...

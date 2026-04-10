@@ -1,0 +1,332 @@
+
+*** Running vivado
+    with args -log als_system_axis_subset_converter_0_0.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source als_system_axis_subset_converter_0_0.tcl
+
+
+****** Vivado v2024.1 (64-bit)
+  **** SW Build 5076996 on Wed May 22 18:36:09 MDT 2024
+  **** IP Build 5075265 on Wed May 22 21:45:21 MDT 2024
+  **** SharedData Build 5076995 on Wed May 22 18:29:18 MDT 2024
+  **** Start of session at: Thu Apr  9 03:43:25 2026
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+    ** Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
+
+source als_system_axis_subset_converter_0_0.tcl -notrace
+create_project: Time (s): cpu = 00:00:10 ; elapsed = 00:00:10 . Memory (MB): peak = 1411.645 ; gain = 0.023 ; free physical = 5498 ; free virtual = 16672
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/liujiawei/ALS_Silicon_Workspace/als-core/als_core_ip'.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/home/liujiawei/fpga_projects/tools/vivado/2024.1/Vivado/2024.1/data/ip'.
+INFO: [IP_Flow 19-6924] IPCACHE: Running cache check for IP inst: als_system_axis_subset_converter_0_0
+Command: synth_design -top als_system_axis_subset_converter_0_0 -part xczu2cg-sfvc784-1-e -incremental_mode off -mode out_of_context
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xczu2cg'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xczu2cg'
+INFO: [Device 21-403] Loading part xczu2cg-sfvc784-1-e
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 4 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 26028
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 2555.430 ; gain = 303.777 ; free physical = 3967 ; free virtual = 15147
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'als_system_axis_subset_converter_0_0' [/home/liujiawei/ALS_Silicon_Workspace/als-core/als_sys_project/als_sys_project.gen/sources_1/bd/als_system/ip/als_system_axis_subset_converter_0_0/synth/als_system_axis_subset_converter_0_0.v:53]
+INFO: [Synth 8-6157] synthesizing module 'top_als_system_axis_subset_converter_0_0' [/home/liujiawei/ALS_Silicon_Workspace/als-core/als_sys_project/als_sys_project.gen/sources_1/bd/als_system/ip/als_system_axis_subset_converter_0_0/hdl/top_als_system_axis_subset_converter_0_0.v:60]
+INFO: [Synth 8-6157] synthesizing module 'axis_subset_converter_v1_1_31_core' [/home/liujiawei/ALS_Silicon_Workspace/als-core/als_sys_project/als_sys_project.gen/sources_1/bd/als_system/ipshared/4bab/hdl/axis_subset_converter_v1_1_vl_rfs.v:61]
+INFO: [Synth 8-6155] done synthesizing module 'axis_subset_converter_v1_1_31_core' (0#1) [/home/liujiawei/ALS_Silicon_Workspace/als-core/als_sys_project/als_sys_project.gen/sources_1/bd/als_system/ipshared/4bab/hdl/axis_subset_converter_v1_1_vl_rfs.v:61]
+INFO: [Synth 8-6157] synthesizing module 'tdata_als_system_axis_subset_converter_0_0' [/home/liujiawei/ALS_Silicon_Workspace/als-core/als_sys_project/als_sys_project.gen/sources_1/bd/als_system/ip/als_system_axis_subset_converter_0_0/hdl/tdata_als_system_axis_subset_converter_0_0.v:48]
+INFO: [Synth 8-6155] done synthesizing module 'tdata_als_system_axis_subset_converter_0_0' (0#1) [/home/liujiawei/ALS_Silicon_Workspace/als-core/als_sys_project/als_sys_project.gen/sources_1/bd/als_system/ip/als_system_axis_subset_converter_0_0/hdl/tdata_als_system_axis_subset_converter_0_0.v:48]
+INFO: [Synth 8-6157] synthesizing module 'tuser_als_system_axis_subset_converter_0_0' [/home/liujiawei/ALS_Silicon_Workspace/als-core/als_sys_project/als_sys_project.gen/sources_1/bd/als_system/ip/als_system_axis_subset_converter_0_0/hdl/tuser_als_system_axis_subset_converter_0_0.v:48]
+INFO: [Synth 8-6155] done synthesizing module 'tuser_als_system_axis_subset_converter_0_0' (0#1) [/home/liujiawei/ALS_Silicon_Workspace/als-core/als_sys_project/als_sys_project.gen/sources_1/bd/als_system/ip/als_system_axis_subset_converter_0_0/hdl/tuser_als_system_axis_subset_converter_0_0.v:48]
+INFO: [Synth 8-6157] synthesizing module 'tid_als_system_axis_subset_converter_0_0' [/home/liujiawei/ALS_Silicon_Workspace/als-core/als_sys_project/als_sys_project.gen/sources_1/bd/als_system/ip/als_system_axis_subset_converter_0_0/hdl/tid_als_system_axis_subset_converter_0_0.v:48]
+INFO: [Synth 8-6155] done synthesizing module 'tid_als_system_axis_subset_converter_0_0' (0#1) [/home/liujiawei/ALS_Silicon_Workspace/als-core/als_sys_project/als_sys_project.gen/sources_1/bd/als_system/ip/als_system_axis_subset_converter_0_0/hdl/tid_als_system_axis_subset_converter_0_0.v:48]
+INFO: [Synth 8-6157] synthesizing module 'tdest_als_system_axis_subset_converter_0_0' [/home/liujiawei/ALS_Silicon_Workspace/als-core/als_sys_project/als_sys_project.gen/sources_1/bd/als_system/ip/als_system_axis_subset_converter_0_0/hdl/tdest_als_system_axis_subset_converter_0_0.v:48]
+INFO: [Synth 8-6155] done synthesizing module 'tdest_als_system_axis_subset_converter_0_0' (0#1) [/home/liujiawei/ALS_Silicon_Workspace/als-core/als_sys_project/als_sys_project.gen/sources_1/bd/als_system/ip/als_system_axis_subset_converter_0_0/hdl/tdest_als_system_axis_subset_converter_0_0.v:48]
+INFO: [Synth 8-6157] synthesizing module 'tstrb_als_system_axis_subset_converter_0_0' [/home/liujiawei/ALS_Silicon_Workspace/als-core/als_sys_project/als_sys_project.gen/sources_1/bd/als_system/ip/als_system_axis_subset_converter_0_0/hdl/tstrb_als_system_axis_subset_converter_0_0.v:48]
+INFO: [Synth 8-6155] done synthesizing module 'tstrb_als_system_axis_subset_converter_0_0' (0#1) [/home/liujiawei/ALS_Silicon_Workspace/als-core/als_sys_project/als_sys_project.gen/sources_1/bd/als_system/ip/als_system_axis_subset_converter_0_0/hdl/tstrb_als_system_axis_subset_converter_0_0.v:48]
+INFO: [Synth 8-6157] synthesizing module 'tkeep_als_system_axis_subset_converter_0_0' [/home/liujiawei/ALS_Silicon_Workspace/als-core/als_sys_project/als_sys_project.gen/sources_1/bd/als_system/ip/als_system_axis_subset_converter_0_0/hdl/tkeep_als_system_axis_subset_converter_0_0.v:48]
+INFO: [Synth 8-6155] done synthesizing module 'tkeep_als_system_axis_subset_converter_0_0' (0#1) [/home/liujiawei/ALS_Silicon_Workspace/als-core/als_sys_project/als_sys_project.gen/sources_1/bd/als_system/ip/als_system_axis_subset_converter_0_0/hdl/tkeep_als_system_axis_subset_converter_0_0.v:48]
+INFO: [Synth 8-6157] synthesizing module 'tlast_als_system_axis_subset_converter_0_0' [/home/liujiawei/ALS_Silicon_Workspace/als-core/als_sys_project/als_sys_project.gen/sources_1/bd/als_system/ip/als_system_axis_subset_converter_0_0/hdl/tlast_als_system_axis_subset_converter_0_0.v:48]
+INFO: [Synth 8-6155] done synthesizing module 'tlast_als_system_axis_subset_converter_0_0' (0#1) [/home/liujiawei/ALS_Silicon_Workspace/als-core/als_sys_project/als_sys_project.gen/sources_1/bd/als_system/ip/als_system_axis_subset_converter_0_0/hdl/tlast_als_system_axis_subset_converter_0_0.v:48]
+INFO: [Synth 8-6155] done synthesizing module 'top_als_system_axis_subset_converter_0_0' (0#1) [/home/liujiawei/ALS_Silicon_Workspace/als-core/als_sys_project/als_sys_project.gen/sources_1/bd/als_system/ip/als_system_axis_subset_converter_0_0/hdl/top_als_system_axis_subset_converter_0_0.v:60]
+INFO: [Synth 8-6155] done synthesizing module 'als_system_axis_subset_converter_0_0' (0#1) [/home/liujiawei/ALS_Silicon_Workspace/als-core/als_sys_project/als_sys_project.gen/sources_1/bd/als_system/ip/als_system_axis_subset_converter_0_0/synth/als_system_axis_subset_converter_0_0.v:53]
+WARNING: [Synth 8-7129] Port tid[0] in module tlast_als_system_axis_subset_converter_0_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port tdata[63] in module tlast_als_system_axis_subset_converter_0_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port tdata[62] in module tlast_als_system_axis_subset_converter_0_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port tdata[61] in module tlast_als_system_axis_subset_converter_0_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port tdata[60] in module tlast_als_system_axis_subset_converter_0_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port tdata[59] in module tlast_als_system_axis_subset_converter_0_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port tdata[58] in module tlast_als_system_axis_subset_converter_0_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port tdata[57] in module tlast_als_system_axis_subset_converter_0_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port tdata[56] in module tlast_als_system_axis_subset_converter_0_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port tdata[55] in module tlast_als_system_axis_subset_converter_0_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port tdata[54] in module tlast_als_system_axis_subset_converter_0_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port tdata[53] in module tlast_als_system_axis_subset_converter_0_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port tdata[52] in module tlast_als_system_axis_subset_converter_0_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port tdata[51] in module tlast_als_system_axis_subset_converter_0_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port tdata[50] in module tlast_als_system_axis_subset_converter_0_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port tdata[49] in module tlast_als_system_axis_subset_converter_0_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port tdata[48] in module tlast_als_system_axis_subset_converter_0_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port tdata[47] in module tlast_als_system_axis_subset_converter_0_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port tdata[46] in module tlast_als_system_axis_subset_converter_0_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port tdata[45] in module tlast_als_system_axis_subset_converter_0_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port tdata[44] in module tlast_als_system_axis_subset_converter_0_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port tdata[43] in module tlast_als_system_axis_subset_converter_0_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port tdata[42] in module tlast_als_system_axis_subset_converter_0_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port tdata[41] in module tlast_als_system_axis_subset_converter_0_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port tdata[40] in module tlast_als_system_axis_subset_converter_0_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port tdata[39] in module tlast_als_system_axis_subset_converter_0_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port tdata[38] in module tlast_als_system_axis_subset_converter_0_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port tdata[37] in module tlast_als_system_axis_subset_converter_0_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port tdata[36] in module tlast_als_system_axis_subset_converter_0_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port tdata[35] in module tlast_als_system_axis_subset_converter_0_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port tdata[34] in module tlast_als_system_axis_subset_converter_0_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port tdata[33] in module tlast_als_system_axis_subset_converter_0_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port tdata[32] in module tlast_als_system_axis_subset_converter_0_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port tdata[31] in module tlast_als_system_axis_subset_converter_0_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port tdata[30] in module tlast_als_system_axis_subset_converter_0_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port tdata[29] in module tlast_als_system_axis_subset_converter_0_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port tdata[28] in module tlast_als_system_axis_subset_converter_0_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port tdata[27] in module tlast_als_system_axis_subset_converter_0_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port tdata[26] in module tlast_als_system_axis_subset_converter_0_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port tdata[25] in module tlast_als_system_axis_subset_converter_0_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port tdata[24] in module tlast_als_system_axis_subset_converter_0_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port tdata[23] in module tlast_als_system_axis_subset_converter_0_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port tdata[22] in module tlast_als_system_axis_subset_converter_0_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port tdata[21] in module tlast_als_system_axis_subset_converter_0_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port tdata[20] in module tlast_als_system_axis_subset_converter_0_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port tdata[19] in module tlast_als_system_axis_subset_converter_0_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port tdata[18] in module tlast_als_system_axis_subset_converter_0_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port tdata[17] in module tlast_als_system_axis_subset_converter_0_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port tdata[16] in module tlast_als_system_axis_subset_converter_0_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port tdata[15] in module tlast_als_system_axis_subset_converter_0_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port tdata[14] in module tlast_als_system_axis_subset_converter_0_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port tdata[13] in module tlast_als_system_axis_subset_converter_0_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port tdata[12] in module tlast_als_system_axis_subset_converter_0_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port tdata[11] in module tlast_als_system_axis_subset_converter_0_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port tdata[10] in module tlast_als_system_axis_subset_converter_0_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port tdata[9] in module tlast_als_system_axis_subset_converter_0_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port tdata[8] in module tlast_als_system_axis_subset_converter_0_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port tdata[7] in module tlast_als_system_axis_subset_converter_0_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port tdata[6] in module tlast_als_system_axis_subset_converter_0_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port tdata[5] in module tlast_als_system_axis_subset_converter_0_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port tdata[4] in module tlast_als_system_axis_subset_converter_0_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port tdata[3] in module tlast_als_system_axis_subset_converter_0_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port tdata[2] in module tlast_als_system_axis_subset_converter_0_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port tdata[1] in module tlast_als_system_axis_subset_converter_0_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port tdata[0] in module tlast_als_system_axis_subset_converter_0_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port tuser[0] in module tlast_als_system_axis_subset_converter_0_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port tdest[0] in module tlast_als_system_axis_subset_converter_0_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port tkeep[7] in module tlast_als_system_axis_subset_converter_0_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port tkeep[6] in module tlast_als_system_axis_subset_converter_0_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port tkeep[5] in module tlast_als_system_axis_subset_converter_0_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port tkeep[4] in module tlast_als_system_axis_subset_converter_0_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port tkeep[3] in module tlast_als_system_axis_subset_converter_0_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port tkeep[2] in module tlast_als_system_axis_subset_converter_0_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port tkeep[1] in module tlast_als_system_axis_subset_converter_0_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port tkeep[0] in module tlast_als_system_axis_subset_converter_0_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port tstrb[7] in module tlast_als_system_axis_subset_converter_0_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port tstrb[6] in module tlast_als_system_axis_subset_converter_0_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port tstrb[5] in module tlast_als_system_axis_subset_converter_0_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port tstrb[4] in module tlast_als_system_axis_subset_converter_0_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port tstrb[3] in module tlast_als_system_axis_subset_converter_0_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port tstrb[2] in module tlast_als_system_axis_subset_converter_0_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port tstrb[1] in module tlast_als_system_axis_subset_converter_0_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port tstrb[0] in module tlast_als_system_axis_subset_converter_0_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port tdata[63] in module tkeep_als_system_axis_subset_converter_0_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port tdata[62] in module tkeep_als_system_axis_subset_converter_0_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port tdata[61] in module tkeep_als_system_axis_subset_converter_0_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port tdata[60] in module tkeep_als_system_axis_subset_converter_0_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port tdata[59] in module tkeep_als_system_axis_subset_converter_0_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port tdata[58] in module tkeep_als_system_axis_subset_converter_0_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port tdata[57] in module tkeep_als_system_axis_subset_converter_0_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port tdata[56] in module tkeep_als_system_axis_subset_converter_0_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port tdata[55] in module tkeep_als_system_axis_subset_converter_0_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port tdata[54] in module tkeep_als_system_axis_subset_converter_0_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port tdata[53] in module tkeep_als_system_axis_subset_converter_0_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port tdata[52] in module tkeep_als_system_axis_subset_converter_0_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port tdata[51] in module tkeep_als_system_axis_subset_converter_0_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port tdata[50] in module tkeep_als_system_axis_subset_converter_0_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port tdata[49] in module tkeep_als_system_axis_subset_converter_0_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port tdata[48] in module tkeep_als_system_axis_subset_converter_0_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port tdata[47] in module tkeep_als_system_axis_subset_converter_0_0 is either unconnected or has no load
+INFO: [Common 17-14] Message 'Synth 8-7129' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 2638.398 ; gain = 386.746 ; free physical = 3867 ; free virtual = 15048
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 2638.398 ; gain = 386.746 ; free physical = 3867 ; free virtual = 15048
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 2638.398 ; gain = 386.746 ; free physical = 3867 ; free virtual = 15048
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2638.398 ; gain = 0.000 ; free physical = 3867 ; free virtual = 15048
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [/home/liujiawei/ALS_Silicon_Workspace/als-core/als_sys_project/als_sys_project.gen/sources_1/bd/als_system/ip/als_system_axis_subset_converter_0_0/als_system_axis_subset_converter_0_0_ooc.xdc] for cell 'inst'
+create_clock: Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 2740.383 ; gain = 0.000 ; free physical = 3854 ; free virtual = 15036
+Finished Parsing XDC File [/home/liujiawei/ALS_Silicon_Workspace/als-core/als_sys_project/als_sys_project.gen/sources_1/bd/als_system/ip/als_system_axis_subset_converter_0_0/als_system_axis_subset_converter_0_0_ooc.xdc] for cell 'inst'
+Parsing XDC File [/home/liujiawei/ALS_Silicon_Workspace/als-core/als_sys_project/als_sys_project.runs/als_system_axis_subset_converter_0_0_synth_1/dont_touch.xdc]
+Finished Parsing XDC File [/home/liujiawei/ALS_Silicon_Workspace/als-core/als_sys_project/als_sys_project.runs/als_system_axis_subset_converter_0_0_synth_1/dont_touch.xdc]
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00 . Memory (MB): peak = 2740.383 ; gain = 0.000 ; free physical = 3854 ; free virtual = 15036
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.02 . Memory (MB): peak = 2740.383 ; gain = 0.000 ; free physical = 3854 ; free virtual = 15036
+INFO: [Designutils 20-5008] Incremental synthesis strategy off
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:21 ; elapsed = 00:00:21 . Memory (MB): peak = 2740.383 ; gain = 488.730 ; free physical = 3850 ; free virtual = 15033
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xczu2cg-sfvc784-1-e
+INFO: [Synth 8-6742] Reading net delay rules and data
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:21 ; elapsed = 00:00:21 . Memory (MB): peak = 2740.383 ; gain = 488.730 ; free physical = 3850 ; free virtual = 15033
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+Applied set_property KEEP_HIERARCHY = SOFT for inst. (constraint file  /home/liujiawei/ALS_Silicon_Workspace/als-core/als_sys_project/als_sys_project.runs/als_system_axis_subset_converter_0_0_synth_1/dont_touch.xdc, line 9).
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:21 ; elapsed = 00:00:21 . Memory (MB): peak = 2740.383 ; gain = 488.730 ; free physical = 3850 ; free virtual = 15033
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:21 ; elapsed = 00:00:21 . Memory (MB): peak = 2740.383 ; gain = 488.730 ; free physical = 3850 ; free virtual = 15034
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 240 (col length:72)
+BRAMs: 300 (col length: RAMB18 72 RAMB36 36)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-7080] Parallel synthesis criteria is not met
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:23 ; elapsed = 00:00:23 . Memory (MB): peak = 2740.383 ; gain = 488.730 ; free physical = 3861 ; free virtual = 15044
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:34 ; elapsed = 00:00:34 . Memory (MB): peak = 3171.844 ; gain = 920.191 ; free physical = 3455 ; free virtual = 14638
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:34 ; elapsed = 00:00:34 . Memory (MB): peak = 3171.844 ; gain = 920.191 ; free physical = 3455 ; free virtual = 14638
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:34 ; elapsed = 00:00:34 . Memory (MB): peak = 3181.859 ; gain = 930.207 ; free physical = 3447 ; free virtual = 14631
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:38 ; elapsed = 00:00:39 . Memory (MB): peak = 3195.734 ; gain = 944.082 ; free physical = 3443 ; free virtual = 14626
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:38 ; elapsed = 00:00:39 . Memory (MB): peak = 3195.734 ; gain = 944.082 ; free physical = 3443 ; free virtual = 14626
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:38 ; elapsed = 00:00:39 . Memory (MB): peak = 3195.734 ; gain = 944.082 ; free physical = 3443 ; free virtual = 14626
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:38 ; elapsed = 00:00:39 . Memory (MB): peak = 3195.734 ; gain = 944.082 ; free physical = 3443 ; free virtual = 14626
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:38 ; elapsed = 00:00:39 . Memory (MB): peak = 3195.734 ; gain = 944.082 ; free physical = 3443 ; free virtual = 14626
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:38 ; elapsed = 00:00:39 . Memory (MB): peak = 3195.734 ; gain = 944.082 ; free physical = 3443 ; free virtual = 14626
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++-+-----+------+
+| |Cell |Count |
++-+-----+------+
++-+-----+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:38 ; elapsed = 00:00:39 . Memory (MB): peak = 3195.734 ; gain = 944.082 ; free physical = 3443 ; free virtual = 14626
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 33 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:31 ; elapsed = 00:00:31 . Memory (MB): peak = 3195.734 ; gain = 842.098 ; free physical = 3441 ; free virtual = 14624
+Synthesis Optimization Complete : Time (s): cpu = 00:00:39 ; elapsed = 00:00:39 . Memory (MB): peak = 3195.734 ; gain = 944.082 ; free physical = 3441 ; free virtual = 14624
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 3195.734 ; gain = 0.000 ; free physical = 3441 ; free virtual = 14624
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 3195.734 ; gain = 0.000 ; free physical = 3827 ; free virtual = 15010
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Synth Design complete | Checksum: 57a1b8ae
+INFO: [Common 17-83] Releasing license: Synthesis
+39 Infos, 101 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:49 ; elapsed = 00:00:47 . Memory (MB): peak = 3195.734 ; gain = 1784.090 ; free physical = 3827 ; free virtual = 15010
+INFO: [Common 17-2834] synth_design peak Physical Memory [PSS] (MB): overall = 2440.598; main = 2229.482; forked = 446.904
+INFO: [Common 17-2834] synth_design peak Virtual Memory [VSS] (MB): overall = 4047.102; main = 3122.035; forked = 1104.691
+INFO: [Common 17-1381] The checkpoint '/home/liujiawei/ALS_Silicon_Workspace/als-core/als_sys_project/als_sys_project.runs/als_system_axis_subset_converter_0_0_synth_1/als_system_axis_subset_converter_0_0.dcp' has been generated.
+INFO: [Coretcl 2-1648] Added synthesis output to IP cache for IP als_system_axis_subset_converter_0_0, cache-ID = 93c0eb0d778fcfaf
+INFO: [Common 17-1381] The checkpoint '/home/liujiawei/ALS_Silicon_Workspace/als-core/als_sys_project/als_sys_project.runs/als_system_axis_subset_converter_0_0_synth_1/als_system_axis_subset_converter_0_0.dcp' has been generated.
+INFO: [Vivado 12-24828] Executing command : report_utilization -file als_system_axis_subset_converter_0_0_utilization_synth.rpt -pb als_system_axis_subset_converter_0_0_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Thu Apr  9 03:44:29 2026...

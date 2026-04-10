@@ -1,0 +1,94 @@
+#-----------------------------------------------------------
+# Vivado v2024.1 (64-bit)
+# SW Build 5076996 on Wed May 22 18:36:09 MDT 2024
+# IP Build 5075265 on Wed May 22 21:45:21 MDT 2024
+# SharedData Build 5076995 on Wed May 22 18:29:18 MDT 2024
+# Start of session at: Thu Apr  9 04:36:45 2026
+# Process ID: 30968
+# Current directory: /home/liujiawei/ALS_Silicon_Workspace/als-core
+# Command line: vivado -mode batch -source package_ip.tcl
+# Log file: /home/liujiawei/ALS_Silicon_Workspace/als-core/vivado.log
+# Journal file: /home/liujiawei/ALS_Silicon_Workspace/als-core/vivado.jou
+# Running On        :liujiawei-ubuntu
+# Platform          :Ubuntu
+# Operating System  :Ubuntu 22.04.5 LTS
+# Processor Detail  :Intel(R) Core(TM) i5-3470 CPU @ 3.20GHz
+# CPU Frequency     :2895.781 MHz
+# CPU Physical cores:4
+# CPU Logical cores :4
+# Host memory       :25143 MB
+# Swap memory       :2147 MB
+# Total Virtual     :27291 MB
+# Available Virtual :20536 MB
+#-----------------------------------------------------------
+source package_ip.tcl
+# create_project -in_memory -part xczu2cg-sfvc784-1-e
+create_project: Time (s): cpu = 00:00:10 ; elapsed = 00:00:10 . Memory (MB): peak = 1411.676 ; gain = 0.023 ; free physical = 7989 ; free virtual = 19248
+# read_verilog -sv [glob *.sv]
+# add_files [glob *.hex]
+# read_xdc ./als_timing.xdc
+# set_property USED_IN {out_of_context} [get_files ./als_timing.xdc]
+# ipx::package_project -root_dir ./als_core_ip -vendor user.org -library user -taxonomy /ALS_Core
+CRITICAL WARNING: [Ipptcl 7-1601] Command ipx::package_project in non project mode is not supported and will be blocked in the future release.
+WARNING: [Ipptcl 7-1467] The compile order has been set manually. This prevents the packager from updating                 it if necessary. If errors related to compile order occur, try enabling automatic                 reordering, or calling package_project with the -force_update_compile_order option
+WARNING: [IP_Flow 19-5226] Project source file '/home/liujiawei/ALS_Silicon_Workspace/als-core/hill_lut.hex' ignored by IP packager.
+CRITICAL WARNING: [IP_Flow 19-459] IP file '/home/liujiawei/ALS_Silicon_Workspace/als-core/als_timing.xdc' appears to be outside of the project area '/home/liujiawei/ALS_Silicon_Workspace/als-core/als_core_ip'. You can use the ipx::package_project -import_files option to copy remote files into the IP directory.
+CRITICAL WARNING: [IP_Flow 19-459] IP file '/home/liujiawei/ALS_Silicon_Workspace/als-core/als_core_top.sv' appears to be outside of the project area '/home/liujiawei/ALS_Silicon_Workspace/als-core/als_core_ip'. You can use the ipx::package_project -import_files option to copy remote files into the IP directory.
+CRITICAL WARNING: [IP_Flow 19-459] IP file '/home/liujiawei/ALS_Silicon_Workspace/als-core/hill_lut.sv' appears to be outside of the project area '/home/liujiawei/ALS_Silicon_Workspace/als-core/als_core_ip'. You can use the ipx::package_project -import_files option to copy remote files into the IP directory.
+CRITICAL WARNING: [IP_Flow 19-459] IP file '/home/liujiawei/ALS_Silicon_Workspace/als-core/axis_skid_buffer.sv' appears to be outside of the project area '/home/liujiawei/ALS_Silicon_Workspace/als-core/als_core_ip'. You can use the ipx::package_project -import_files option to copy remote files into the IP directory.
+CRITICAL WARNING: [IP_Flow 19-459] IP file '/home/liujiawei/ALS_Silicon_Workspace/als-core/diffusion_engine.sv' appears to be outside of the project area '/home/liujiawei/ALS_Silicon_Workspace/als-core/als_core_ip'. You can use the ipx::package_project -import_files option to copy remote files into the IP directory.
+CRITICAL WARNING: [IP_Flow 19-459] IP file '/home/liujiawei/ALS_Silicon_Workspace/als-core/membrane_update.sv' appears to be outside of the project area '/home/liujiawei/ALS_Silicon_Workspace/als-core/als_core_ip'. You can use the ipx::package_project -import_files option to copy remote files into the IP directory.
+CRITICAL WARNING: [IP_Flow 19-459] IP file '/home/liujiawei/ALS_Silicon_Workspace/als-core/reaction_engine.sv' appears to be outside of the project area '/home/liujiawei/ALS_Silicon_Workspace/als-core/als_core_ip'. You can use the ipx::package_project -import_files option to copy remote files into the IP directory.
+CRITICAL WARNING: [IP_Flow 19-459] IP file '/home/liujiawei/ALS_Silicon_Workspace/als-core/als_core_top.sv' appears to be outside of the project area '/home/liujiawei/ALS_Silicon_Workspace/als-core/als_core_ip'. You can use the ipx::package_project -import_files option to copy remote files into the IP directory.
+CRITICAL WARNING: [IP_Flow 19-459] IP file '/home/liujiawei/ALS_Silicon_Workspace/als-core/hill_lut.sv' appears to be outside of the project area '/home/liujiawei/ALS_Silicon_Workspace/als-core/als_core_ip'. You can use the ipx::package_project -import_files option to copy remote files into the IP directory.
+CRITICAL WARNING: [IP_Flow 19-459] IP file '/home/liujiawei/ALS_Silicon_Workspace/als-core/axis_skid_buffer.sv' appears to be outside of the project area '/home/liujiawei/ALS_Silicon_Workspace/als-core/als_core_ip'. You can use the ipx::package_project -import_files option to copy remote files into the IP directory.
+CRITICAL WARNING: [IP_Flow 19-459] IP file '/home/liujiawei/ALS_Silicon_Workspace/als-core/diffusion_engine.sv' appears to be outside of the project area '/home/liujiawei/ALS_Silicon_Workspace/als-core/als_core_ip'. You can use the ipx::package_project -import_files option to copy remote files into the IP directory.
+CRITICAL WARNING: [IP_Flow 19-459] IP file '/home/liujiawei/ALS_Silicon_Workspace/als-core/membrane_update.sv' appears to be outside of the project area '/home/liujiawei/ALS_Silicon_Workspace/als-core/als_core_ip'. You can use the ipx::package_project -import_files option to copy remote files into the IP directory.
+CRITICAL WARNING: [IP_Flow 19-459] IP file '/home/liujiawei/ALS_Silicon_Workspace/als-core/reaction_engine.sv' appears to be outside of the project area '/home/liujiawei/ALS_Silicon_Workspace/als-core/als_core_ip'. You can use the ipx::package_project -import_files option to copy remote files into the IP directory.
+WARNING: [IP_Flow 19-5101] Packaging a component with a SystemVerilog top file is not fully supported. Please refer to UG1118 'Creating and Packaging Custom IP'.
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/home/liujiawei/fpga_projects/tools/vivado/2024.1/Vivado/2024.1/data/ip'.
+INFO: [IP_Flow 19-5107] Inferred bus interface 'm_axis' of definition 'xilinx.com:interface:axis:1.0' (from Xilinx Repository).
+INFO: [IP_Flow 19-5107] Inferred bus interface 's_axis' of definition 'xilinx.com:interface:axis:1.0' (from Xilinx Repository).
+INFO: [IP_Flow 19-5107] Inferred bus interface 'aresetn' of definition 'xilinx.com:signal:reset:1.0' (from Xilinx Repository).
+INFO: [IP_Flow 19-5107] Inferred bus interface 'aclk' of definition 'xilinx.com:signal:clock:1.0' (from Xilinx Repository).
+INFO: [IP_Flow 19-4728] Bus Interface 'aresetn': Added interface parameter 'POLARITY' with value 'ACTIVE_LOW'.
+INFO: [IP_Flow 19-4728] Bus Interface 'aclk': Added interface parameter 'ASSOCIATED_BUSIF' with value 'm_axis'.
+INFO: [IP_Flow 19-4728] Bus Interface 'aclk': Added interface parameter 'ASSOCIATED_RESET' with value 'aresetn'.
+WARNING: [IP_Flow 19-11888] Component Definition 'user.org:user:als_core_top:1.0 (als_core_top_v1_0)': IP description "als_core_top_v1_0" is not meaningful: same as name or display name
+WARNING: [IP_Flow 19-5905] All packaged files should be located below the IP definition file (xml)
+WARNING: [IP_Flow 19-5905] All packaged files should be located below the IP definition file (xml)
+WARNING: [IP_Flow 19-5905] All packaged files should be located below the IP definition file (xml)
+WARNING: [IP_Flow 19-5905] All packaged files should be located below the IP definition file (xml)
+WARNING: [IP_Flow 19-5905] All packaged files should be located below the IP definition file (xml)
+WARNING: [IP_Flow 19-5905] All packaged files should be located below the IP definition file (xml)
+WARNING: [IP_Flow 19-5905] All packaged files should be located below the IP definition file (xml)
+WARNING: [IP_Flow 19-5905] All packaged files should be located below the IP definition file (xml)
+WARNING: [IP_Flow 19-5905] All packaged files should be located below the IP definition file (xml)
+WARNING: [IP_Flow 19-5905] All packaged files should be located below the IP definition file (xml)
+WARNING: [IP_Flow 19-5905] All packaged files should be located below the IP definition file (xml)
+WARNING: [IP_Flow 19-5905] All packaged files should be located below the IP definition file (xml)
+WARNING: [IP_Flow 19-5905] All packaged files should be located below the IP definition file (xml)
+WARNING: [IP_Flow 19-11770] Clock interface 'aclk' has no FREQ_HZ parameter.
+INFO: [IP_Flow 19-2181] Payment is not required for this core.
+WARNING: [IP_Flow 19-2187] The Product Guide file is missing.
+# set core [ipx::current_core]
+# set_property name als_core_v1 $core
+# set_property display_name {ALS Autopoietic Core v1.0} $core
+# set_property description {ALS V2 Hardware Accelerator Engine} $core
+# set_property core_revision 1 $core
+# ipx::add_bus_parameter ASSOCIATED_BUSIF [ipx::get_bus_interfaces aclk -of_objects $core]
+# set_property value s_axis:m_axis [ipx::get_bus_parameters ASSOCIATED_BUSIF -of_objects [ipx::get_bus_interfaces aclk -of_objects $core]]
+# ipx::add_bus_parameter ASSOCIATED_RESET [ipx::get_bus_interfaces aclk -of_objects $core]
+# set_property value aresetn [ipx::get_bus_parameters ASSOCIATED_RESET -of_objects [ipx::get_bus_interfaces aclk -of_objects $core]]
+# ipx::create_xgui_files $core
+# ipx::update_checksums $core
+# ipx::save_core $core
+# puts "================================================="
+=================================================
+# puts "IP PACKAGING COMPLETE. SILICON ORGAN IS READY."
+IP PACKAGING COMPLETE. SILICON ORGAN IS READY.
+# puts "================================================="
+=================================================
+INFO: [Common 17-206] Exiting Vivado at Thu Apr  9 04:37:01 2026...

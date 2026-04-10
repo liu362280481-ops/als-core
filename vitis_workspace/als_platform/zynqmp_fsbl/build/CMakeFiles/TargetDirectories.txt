@@ -1,0 +1,3 @@
+/home/liujiawei/ALS_Silicon_Workspace/als-core/vitis_workspace/als_platform/zynqmp_fsbl/build/CMakeFiles/fsbl.elf.dir
+/home/liujiawei/ALS_Silicon_Workspace/als-core/vitis_workspace/als_platform/zynqmp_fsbl/build/CMakeFiles/edit_cache.dir
+/home/liujiawei/ALS_Silicon_Workspace/als-core/vitis_workspace/als_platform/zynqmp_fsbl/build/CMakeFiles/rebuild_cache.dir

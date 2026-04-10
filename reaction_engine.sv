@@ -47,6 +47,7 @@ module reaction_engine (
   logic [15:0] p_cur_u_d1;
   logic [15:0] m_cur_u_d1;
   logic        s_axis_tlast_d1;
+  logic        s_axis_tlast_d2;
   logic        stage1_valid;
 
   logic fire_in;
@@ -102,6 +103,7 @@ module reaction_engine (
       p_cur_u_d1     <= '0;
       m_cur_u_d1     <= '0;
       s_axis_tlast_d1<= 1'b0;
+      s_axis_tlast_d2<= 1'b0;
       stage1_valid   <= 1'b0;
       m_axis_tdata  <= '0;
       m_axis_tvalid <= 1'b0;
@@ -117,13 +119,14 @@ module reaction_engine (
         p_cur_u_d1      <= p_cur_u;
         m_cur_u_d1      <= m_cur_u;
         s_axis_tlast_d1 <= s_axis_tlast;
+        s_axis_tlast_d2 <= s_axis_tlast_d1;  // 2-cycle delay to match data pipeline
         stage1_valid    <= 1'b1;
       end
 
       if (stage1_valid && ((~m_axis_tvalid) || m_axis_tready)) begin
         m_axis_tdata  <= {s_next_u, p_next_u, m_cur_u_d1};
         m_axis_tvalid <= 1'b1;
-        m_axis_tlast  <= s_axis_tlast_d1;
+        m_axis_tlast  <= s_axis_tlast_d2;   // TLAST aligned to 2nd pipeline stage
         stage1_valid  <= 1'b0;
       end
     end

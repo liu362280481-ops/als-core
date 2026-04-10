@@ -1,0 +1,494 @@
+#-----------------------------------------------------------
+# Vivado v2024.1 (64-bit)
+# SW Build 5076996 on Wed May 22 18:36:09 MDT 2024
+# IP Build 5075265 on Wed May 22 21:45:21 MDT 2024
+# SharedData Build 5076995 on Wed May 22 18:29:18 MDT 2024
+# Start of session at: Thu Apr  9 04:49:03 2026
+# Process ID: 32228
+# Current directory: /home/liujiawei/ALS_Silicon_Workspace/als-core/als_sys_project/als_sys_project.runs/als_system_als_core_0_0_synth_1
+# Command line: vivado -log als_system_als_core_0_0.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source als_system_als_core_0_0.tcl
+# Log file: /home/liujiawei/ALS_Silicon_Workspace/als-core/als_sys_project/als_sys_project.runs/als_system_als_core_0_0_synth_1/als_system_als_core_0_0.vds
+# Journal file: /home/liujiawei/ALS_Silicon_Workspace/als-core/als_sys_project/als_sys_project.runs/als_system_als_core_0_0_synth_1/vivado.jou
+# Running On        :liujiawei-ubuntu
+# Platform          :Ubuntu
+# Operating System  :Ubuntu 22.04.5 LTS
+# Processor Detail  :Intel(R) Core(TM) i5-3470 CPU @ 3.20GHz
+# CPU Frequency     :3600.000 MHz
+# CPU Physical cores:4
+# CPU Logical cores :4
+# Host memory       :25143 MB
+# Swap memory       :2147 MB
+# Total Virtual     :27291 MB
+# Available Virtual :20413 MB
+#-----------------------------------------------------------
+source als_system_als_core_0_0.tcl -notrace
+create_project: Time (s): cpu = 00:00:10 ; elapsed = 00:00:10 . Memory (MB): peak = 1357.262 ; gain = 5.961 ; free physical = 7909 ; free virtual = 19133
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/liujiawei/ALS_Silicon_Workspace/als-core/als_core_ip'.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/home/liujiawei/fpga_projects/tools/vivado/2024.1/Vivado/2024.1/data/ip'.
+INFO: [IP_Flow 19-6924] IPCACHE: Running cache check for IP inst: als_system_als_core_0_0
+Command: synth_design -top als_system_als_core_0_0 -part xczu2cg-sfvc784-1-e -incremental_mode off -mode out_of_context
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xczu2cg'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xczu2cg'
+INFO: [Device 21-403] Loading part xczu2cg-sfvc784-1-e
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 4 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 32295
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 2555.773 ; gain = 304.691 ; free physical = 6282 ; free virtual = 17506
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'als_system_als_core_0_0' [/home/liujiawei/ALS_Silicon_Workspace/als-core/als_sys_project/als_sys_project.gen/sources_1/bd/als_system/ip/als_system_als_core_0_0/synth/als_system_als_core_0_0.sv:53]
+INFO: [Synth 8-6157] synthesizing module 'als_core_top' [/home/liujiawei/ALS_Silicon_Workspace/als-core/als_sys_project/als_sys_project.gen/sources_1/bd/als_system/ipshared/3aff/bc9d/als_core_top.sv:7]
+INFO: [Synth 8-6157] synthesizing module 'diffusion_engine' [/home/liujiawei/ALS_Silicon_Workspace/als-core/als_sys_project/als_sys_project.gen/sources_1/bd/als_system/ipshared/3aff/bc9d/diffusion_engine.sv:3]
+INFO: [Synth 8-6155] done synthesizing module 'diffusion_engine' (0#1) [/home/liujiawei/ALS_Silicon_Workspace/als-core/als_sys_project/als_sys_project.gen/sources_1/bd/als_system/ipshared/3aff/bc9d/diffusion_engine.sv:3]
+INFO: [Synth 8-6157] synthesizing module 'axis_skid_buffer' [/home/liujiawei/ALS_Silicon_Workspace/als-core/als_sys_project/als_sys_project.gen/sources_1/bd/als_system/ipshared/3aff/bc9d/axis_skid_buffer.sv:3]
+INFO: [Synth 8-6155] done synthesizing module 'axis_skid_buffer' (0#1) [/home/liujiawei/ALS_Silicon_Workspace/als-core/als_sys_project/als_sys_project.gen/sources_1/bd/als_system/ipshared/3aff/bc9d/axis_skid_buffer.sv:3]
+INFO: [Synth 8-6157] synthesizing module 'reaction_engine' [/home/liujiawei/ALS_Silicon_Workspace/als-core/als_sys_project/als_sys_project.gen/sources_1/bd/als_system/ipshared/3aff/bc9d/reaction_engine.sv:3]
+INFO: [Synth 8-6157] synthesizing module 'hill_lut' [/home/liujiawei/ALS_Silicon_Workspace/als-core/als_sys_project/als_sys_project.gen/sources_1/bd/als_system/ipshared/3aff/bc9d/hill_lut.sv:3]
+CRITICAL WARNING: [Synth 8-4445] could not open $readmem data file 'hill_lut.hex'; please make sure the file is added to project and has read permission, ignoring [/home/liujiawei/ALS_Silicon_Workspace/als-core/als_sys_project/als_sys_project.gen/sources_1/bd/als_system/ipshared/3aff/bc9d/hill_lut.sv:17]
+INFO: [Synth 8-6155] done synthesizing module 'hill_lut' (0#1) [/home/liujiawei/ALS_Silicon_Workspace/als-core/als_sys_project/als_sys_project.gen/sources_1/bd/als_system/ipshared/3aff/bc9d/hill_lut.sv:3]
+INFO: [Synth 8-6155] done synthesizing module 'reaction_engine' (0#1) [/home/liujiawei/ALS_Silicon_Workspace/als-core/als_sys_project/als_sys_project.gen/sources_1/bd/als_system/ipshared/3aff/bc9d/reaction_engine.sv:3]
+INFO: [Synth 8-6157] synthesizing module 'membrane_update' [/home/liujiawei/ALS_Silicon_Workspace/als-core/als_sys_project/als_sys_project.gen/sources_1/bd/als_system/ipshared/3aff/bc9d/membrane_update.sv:3]
+INFO: [Synth 8-6155] done synthesizing module 'membrane_update' (0#1) [/home/liujiawei/ALS_Silicon_Workspace/als-core/als_sys_project/als_sys_project.gen/sources_1/bd/als_system/ipshared/3aff/bc9d/membrane_update.sv:3]
+INFO: [Synth 8-6155] done synthesizing module 'als_core_top' (0#1) [/home/liujiawei/ALS_Silicon_Workspace/als-core/als_sys_project/als_sys_project.gen/sources_1/bd/als_system/ipshared/3aff/bc9d/als_core_top.sv:7]
+INFO: [Synth 8-6155] done synthesizing module 'als_system_als_core_0_0' (0#1) [/home/liujiawei/ALS_Silicon_Workspace/als-core/als_sys_project/als_sys_project.gen/sources_1/bd/als_system/ip/als_system_als_core_0_0/synth/als_system_als_core_0_0.sv:53]
+WARNING: [Synth 8-6014] Unused sequential element top_l_reg was removed.  [/home/liujiawei/ALS_Silicon_Workspace/als-core/als_sys_project/als_sys_project.gen/sources_1/bd/als_system/ipshared/3aff/bc9d/diffusion_engine.sv:107]
+WARNING: [Synth 8-6014] Unused sequential element bot_l_reg was removed.  [/home/liujiawei/ALS_Silicon_Workspace/als-core/als_sys_project/als_sys_project.gen/sources_1/bd/als_system/ipshared/3aff/bc9d/diffusion_engine.sv:109]
+WARNING: [Synth 8-6014] Unused sequential element tap_top_reg was removed.  [/home/liujiawei/ALS_Silicon_Workspace/als-core/als_sys_project/als_sys_project.gen/sources_1/bd/als_system/ipshared/3aff/bc9d/diffusion_engine.sv:123]
+WARNING: [Synth 8-6014] Unused sequential element tap_mid_reg was removed.  [/home/liujiawei/ALS_Silicon_Workspace/als-core/als_sys_project/als_sys_project.gen/sources_1/bd/als_system/ipshared/3aff/bc9d/diffusion_engine.sv:124]
+WARNING: [Synth 8-6014] Unused sequential element tap_bot_reg was removed.  [/home/liujiawei/ALS_Silicon_Workspace/als-core/als_sys_project/als_sys_project.gen/sources_1/bd/als_system/ipshared/3aff/bc9d/diffusion_engine.sv:125]
+WARNING: [Synth 8-6014] Unused sequential element out_col_valid_reg was removed.  [/home/liujiawei/ALS_Silicon_Workspace/als-core/als_sys_project/als_sys_project.gen/sources_1/bd/als_system/ipshared/3aff/bc9d/diffusion_engine.sv:142]
+WARNING: [Synth 8-6014] Unused sequential element out_row_valid_reg was removed.  [/home/liujiawei/ALS_Silicon_Workspace/als-core/als_sys_project/als_sys_project.gen/sources_1/bd/als_system/ipshared/3aff/bc9d/diffusion_engine.sv:143]
+WARNING: [Synth 8-6014] Unused sequential element out_col_reg was removed.  [/home/liujiawei/ALS_Silicon_Workspace/als-core/als_sys_project/als_sys_project.gen/sources_1/bd/als_system/ipshared/3aff/bc9d/diffusion_engine.sv:145]
+WARNING: [Synth 8-6014] Unused sequential element out_row_reg was removed.  [/home/liujiawei/ALS_Silicon_Workspace/als-core/als_sys_project/als_sys_project.gen/sources_1/bd/als_system/ipshared/3aff/bc9d/diffusion_engine.sv:146]
+WARNING: [Synth 8-6014] Unused sequential element s_ce_reg was removed.  [/home/liujiawei/ALS_Silicon_Workspace/als-core/als_sys_project/als_sys_project.gen/sources_1/bd/als_system/ipshared/3aff/bc9d/diffusion_engine.sv:149]
+WARNING: [Synth 8-6014] Unused sequential element s_up_reg was removed.  [/home/liujiawei/ALS_Silicon_Workspace/als-core/als_sys_project/als_sys_project.gen/sources_1/bd/als_system/ipshared/3aff/bc9d/diffusion_engine.sv:150]
+WARNING: [Synth 8-6014] Unused sequential element s_dn_reg was removed.  [/home/liujiawei/ALS_Silicon_Workspace/als-core/als_sys_project/als_sys_project.gen/sources_1/bd/als_system/ipshared/3aff/bc9d/diffusion_engine.sv:151]
+WARNING: [Synth 8-6014] Unused sequential element s_lt_reg was removed.  [/home/liujiawei/ALS_Silicon_Workspace/als-core/als_sys_project/als_sys_project.gen/sources_1/bd/als_system/ipshared/3aff/bc9d/diffusion_engine.sv:152]
+WARNING: [Synth 8-6014] Unused sequential element s_rt_reg was removed.  [/home/liujiawei/ALS_Silicon_Workspace/als-core/als_sys_project/als_sys_project.gen/sources_1/bd/als_system/ipshared/3aff/bc9d/diffusion_engine.sv:153]
+WARNING: [Synth 8-6014] Unused sequential element p_ce_reg was removed.  [/home/liujiawei/ALS_Silicon_Workspace/als-core/als_sys_project/als_sys_project.gen/sources_1/bd/als_system/ipshared/3aff/bc9d/diffusion_engine.sv:156]
+WARNING: [Synth 8-6014] Unused sequential element p_up_reg was removed.  [/home/liujiawei/ALS_Silicon_Workspace/als-core/als_sys_project/als_sys_project.gen/sources_1/bd/als_system/ipshared/3aff/bc9d/diffusion_engine.sv:157]
+WARNING: [Synth 8-6014] Unused sequential element p_dn_reg was removed.  [/home/liujiawei/ALS_Silicon_Workspace/als-core/als_sys_project/als_sys_project.gen/sources_1/bd/als_system/ipshared/3aff/bc9d/diffusion_engine.sv:158]
+WARNING: [Synth 8-6014] Unused sequential element p_lt_reg was removed.  [/home/liujiawei/ALS_Silicon_Workspace/als-core/als_sys_project/als_sys_project.gen/sources_1/bd/als_system/ipshared/3aff/bc9d/diffusion_engine.sv:159]
+WARNING: [Synth 8-6014] Unused sequential element p_rt_reg was removed.  [/home/liujiawei/ALS_Silicon_Workspace/als-core/als_sys_project/als_sys_project.gen/sources_1/bd/als_system/ipshared/3aff/bc9d/diffusion_engine.sv:160]
+WARNING: [Synth 8-6014] Unused sequential element m_ce_reg was removed.  [/home/liujiawei/ALS_Silicon_Workspace/als-core/als_sys_project/als_sys_project.gen/sources_1/bd/als_system/ipshared/3aff/bc9d/diffusion_engine.sv:163]
+WARNING: [Synth 8-6014] Unused sequential element m_up_reg was removed.  [/home/liujiawei/ALS_Silicon_Workspace/als-core/als_sys_project/als_sys_project.gen/sources_1/bd/als_system/ipshared/3aff/bc9d/diffusion_engine.sv:164]
+WARNING: [Synth 8-6014] Unused sequential element m_dn_reg was removed.  [/home/liujiawei/ALS_Silicon_Workspace/als-core/als_sys_project/als_sys_project.gen/sources_1/bd/als_system/ipshared/3aff/bc9d/diffusion_engine.sv:165]
+WARNING: [Synth 8-6014] Unused sequential element m_lt_reg was removed.  [/home/liujiawei/ALS_Silicon_Workspace/als-core/als_sys_project/als_sys_project.gen/sources_1/bd/als_system/ipshared/3aff/bc9d/diffusion_engine.sv:166]
+WARNING: [Synth 8-6014] Unused sequential element m_rt_reg was removed.  [/home/liujiawei/ALS_Silicon_Workspace/als-core/als_sys_project/als_sys_project.gen/sources_1/bd/als_system/ipshared/3aff/bc9d/diffusion_engine.sv:167]
+WARNING: [Synth 8-6014] Unused sequential element lap_s_reg was removed.  [/home/liujiawei/ALS_Silicon_Workspace/als-core/als_sys_project/als_sys_project.gen/sources_1/bd/als_system/ipshared/3aff/bc9d/diffusion_engine.sv:169]
+WARNING: [Synth 8-6014] Unused sequential element lap_p_reg was removed.  [/home/liujiawei/ALS_Silicon_Workspace/als-core/als_sys_project/als_sys_project.gen/sources_1/bd/als_system/ipshared/3aff/bc9d/diffusion_engine.sv:170]
+WARNING: [Synth 8-6014] Unused sequential element lap_m_reg was removed.  [/home/liujiawei/ALS_Silicon_Workspace/als-core/als_sys_project/als_sys_project.gen/sources_1/bd/als_system/ipshared/3aff/bc9d/diffusion_engine.sv:171]
+WARNING: [Synth 8-6014] Unused sequential element mul_s_reg was removed.  [/home/liujiawei/ALS_Silicon_Workspace/als-core/als_sys_project/als_sys_project.gen/sources_1/bd/als_system/ipshared/3aff/bc9d/diffusion_engine.sv:173]
+WARNING: [Synth 8-6014] Unused sequential element mul_p_reg was removed.  [/home/liujiawei/ALS_Silicon_Workspace/als-core/als_sys_project/als_sys_project.gen/sources_1/bd/als_system/ipshared/3aff/bc9d/diffusion_engine.sv:174]
+WARNING: [Synth 8-6014] Unused sequential element mul_m_reg was removed.  [/home/liujiawei/ALS_Silicon_Workspace/als-core/als_sys_project/als_sys_project.gen/sources_1/bd/als_system/ipshared/3aff/bc9d/diffusion_engine.sv:175]
+WARNING: [Synth 8-6014] Unused sequential element nxt_s_wide_reg was removed.  [/home/liujiawei/ALS_Silicon_Workspace/als-core/als_sys_project/als_sys_project.gen/sources_1/bd/als_system/ipshared/3aff/bc9d/diffusion_engine.sv:177]
+WARNING: [Synth 8-6014] Unused sequential element nxt_p_wide_reg was removed.  [/home/liujiawei/ALS_Silicon_Workspace/als-core/als_sys_project/als_sys_project.gen/sources_1/bd/als_system/ipshared/3aff/bc9d/diffusion_engine.sv:178]
+WARNING: [Synth 8-6014] Unused sequential element nxt_m_wide_reg was removed.  [/home/liujiawei/ALS_Silicon_Workspace/als-core/als_sys_project/als_sys_project.gen/sources_1/bd/als_system/ipshared/3aff/bc9d/diffusion_engine.sv:179]
+WARNING: [Synth 8-6014] Unused sequential element s_next_reg was removed.  [/home/liujiawei/ALS_Silicon_Workspace/als-core/als_sys_project/als_sys_project.gen/sources_1/bd/als_system/ipshared/3aff/bc9d/diffusion_engine.sv:181]
+WARNING: [Synth 8-6014] Unused sequential element p_next_reg was removed.  [/home/liujiawei/ALS_Silicon_Workspace/als-core/als_sys_project/als_sys_project.gen/sources_1/bd/als_system/ipshared/3aff/bc9d/diffusion_engine.sv:182]
+WARNING: [Synth 8-6014] Unused sequential element m_next_reg was removed.  [/home/liujiawei/ALS_Silicon_Workspace/als-core/als_sys_project/als_sys_project.gen/sources_1/bd/als_system/ipshared/3aff/bc9d/diffusion_engine.sv:183]
+WARNING: [Synth 8-6014] Unused sequential element top_l_reg was removed.  [/home/liujiawei/ALS_Silicon_Workspace/als-core/als_sys_project/als_sys_project.gen/sources_1/bd/als_system/ipshared/3aff/bc9d/membrane_update.sv:115]
+WARNING: [Synth 8-6014] Unused sequential element bot_l_reg was removed.  [/home/liujiawei/ALS_Silicon_Workspace/als-core/als_sys_project/als_sys_project.gen/sources_1/bd/als_system/ipshared/3aff/bc9d/membrane_update.sv:117]
+WARNING: [Synth 8-6014] Unused sequential element decay_mul_reg was removed.  [/home/liujiawei/ALS_Silicon_Workspace/als-core/als_sys_project/als_sys_project.gen/sources_1/bd/als_system/ipshared/3aff/bc9d/membrane_update.sv:127]
+WARNING: [Synth 8-6014] Unused sequential element decay_q8_8_reg was removed.  [/home/liujiawei/ALS_Silicon_Workspace/als-core/als_sys_project/als_sys_project.gen/sources_1/bd/als_system/ipshared/3aff/bc9d/membrane_update.sv:128]
+WARNING: [Synth 8-6014] Unused sequential element m_next_wide_reg was removed.  [/home/liujiawei/ALS_Silicon_Workspace/als-core/als_sys_project/als_sys_project.gen/sources_1/bd/als_system/ipshared/3aff/bc9d/membrane_update.sv:162]
+WARNING: [Synth 8-6014] Unused sequential element m_next_q8_8_reg was removed.  [/home/liujiawei/ALS_Silicon_Workspace/als-core/als_sys_project/als_sys_project.gen/sources_1/bd/als_system/ipshared/3aff/bc9d/membrane_update.sv:163]
+WARNING: [Synth 8-6014] Unused sequential element tap_top_reg was removed.  [/home/liujiawei/ALS_Silicon_Workspace/als-core/als_sys_project/als_sys_project.gen/sources_1/bd/als_system/ipshared/3aff/bc9d/membrane_update.sv:173]
+WARNING: [Synth 8-6014] Unused sequential element tap_mid_reg was removed.  [/home/liujiawei/ALS_Silicon_Workspace/als-core/als_sys_project/als_sys_project.gen/sources_1/bd/als_system/ipshared/3aff/bc9d/membrane_update.sv:174]
+WARNING: [Synth 8-6014] Unused sequential element tap_bot_reg was removed.  [/home/liujiawei/ALS_Silicon_Workspace/als-core/als_sys_project/als_sys_project.gen/sources_1/bd/als_system/ipshared/3aff/bc9d/membrane_update.sv:175]
+WARNING: [Synth 8-6014] Unused sequential element out_col_valid_reg was removed.  [/home/liujiawei/ALS_Silicon_Workspace/als-core/als_sys_project/als_sys_project.gen/sources_1/bd/als_system/ipshared/3aff/bc9d/membrane_update.sv:192]
+WARNING: [Synth 8-6014] Unused sequential element out_row_valid_reg was removed.  [/home/liujiawei/ALS_Silicon_Workspace/als-core/als_sys_project/als_sys_project.gen/sources_1/bd/als_system/ipshared/3aff/bc9d/membrane_update.sv:193]
+WARNING: [Synth 8-6014] Unused sequential element out_col_reg was removed.  [/home/liujiawei/ALS_Silicon_Workspace/als-core/als_sys_project/als_sys_project.gen/sources_1/bd/als_system/ipshared/3aff/bc9d/membrane_update.sv:195]
+WARNING: [Synth 8-6014] Unused sequential element out_row_reg was removed.  [/home/liujiawei/ALS_Silicon_Workspace/als-core/als_sys_project/als_sys_project.gen/sources_1/bd/als_system/ipshared/3aff/bc9d/membrane_update.sv:196]
+WARNING: [Synth 8-6014] Unused sequential element s_center_reg was removed.  [/home/liujiawei/ALS_Silicon_Workspace/als-core/als_sys_project/als_sys_project.gen/sources_1/bd/als_system/ipshared/3aff/bc9d/membrane_update.sv:198]
+WARNING: [Synth 8-6014] Unused sequential element p_center_reg was removed.  [/home/liujiawei/ALS_Silicon_Workspace/als-core/als_sys_project/als_sys_project.gen/sources_1/bd/als_system/ipshared/3aff/bc9d/membrane_update.sv:199]
+WARNING: [Synth 8-6014] Unused sequential element m_center_reg was removed.  [/home/liujiawei/ALS_Silicon_Workspace/als-core/als_sys_project/als_sys_project.gen/sources_1/bd/als_system/ipshared/3aff/bc9d/membrane_update.sv:200]
+WARNING: [Synth 8-6014] Unused sequential element p_up_reg was removed.  [/home/liujiawei/ALS_Silicon_Workspace/als-core/als_sys_project/als_sys_project.gen/sources_1/bd/als_system/ipshared/3aff/bc9d/membrane_update.sv:202]
+WARNING: [Synth 8-6014] Unused sequential element p_dn_reg was removed.  [/home/liujiawei/ALS_Silicon_Workspace/als-core/als_sys_project/als_sys_project.gen/sources_1/bd/als_system/ipshared/3aff/bc9d/membrane_update.sv:203]
+WARNING: [Synth 8-6014] Unused sequential element p_lt_reg was removed.  [/home/liujiawei/ALS_Silicon_Workspace/als-core/als_sys_project/als_sys_project.gen/sources_1/bd/als_system/ipshared/3aff/bc9d/membrane_update.sv:204]
+WARNING: [Synth 8-6014] Unused sequential element p_rt_reg was removed.  [/home/liujiawei/ALS_Silicon_Workspace/als-core/als_sys_project/als_sys_project.gen/sources_1/bd/als_system/ipshared/3aff/bc9d/membrane_update.sv:205]
+WARNING: [Synth 8-6014] Unused sequential element m_up_reg was removed.  [/home/liujiawei/ALS_Silicon_Workspace/als-core/als_sys_project/als_sys_project.gen/sources_1/bd/als_system/ipshared/3aff/bc9d/membrane_update.sv:207]
+WARNING: [Synth 8-6014] Unused sequential element m_dn_reg was removed.  [/home/liujiawei/ALS_Silicon_Workspace/als-core/als_sys_project/als_sys_project.gen/sources_1/bd/als_system/ipshared/3aff/bc9d/membrane_update.sv:208]
+WARNING: [Synth 8-6014] Unused sequential element m_lt_reg was removed.  [/home/liujiawei/ALS_Silicon_Workspace/als-core/als_sys_project/als_sys_project.gen/sources_1/bd/als_system/ipshared/3aff/bc9d/membrane_update.sv:209]
+WARNING: [Synth 8-6014] Unused sequential element m_rt_reg was removed.  [/home/liujiawei/ALS_Silicon_Workspace/als-core/als_sys_project/als_sys_project.gen/sources_1/bd/als_system/ipshared/3aff/bc9d/membrane_update.sv:210]
+WARNING: [Synth 8-6014] Unused sequential element p_nb_sum4_reg was removed.  [/home/liujiawei/ALS_Silicon_Workspace/als-core/als_sys_project/als_sys_project.gen/sources_1/bd/als_system/ipshared/3aff/bc9d/membrane_update.sv:213]
+WARNING: [Synth 8-6014] Unused sequential element p_nb_avg_reg was removed.  [/home/liujiawei/ALS_Silicon_Workspace/als-core/als_sys_project/als_sys_project.gen/sources_1/bd/als_system/ipshared/3aff/bc9d/membrane_update.sv:214]
+WARNING: [Synth 8-6014] Unused sequential element boundary_raw_reg was removed.  [/home/liujiawei/ALS_Silicon_Workspace/als-core/als_sys_project/als_sys_project.gen/sources_1/bd/als_system/ipshared/3aff/bc9d/membrane_update.sv:215]
+WARNING: [Synth 8-6014] Unused sequential element boundary_q8_8_reg was removed.  [/home/liujiawei/ALS_Silicon_Workspace/als-core/als_sys_project/als_sys_project.gen/sources_1/bd/als_system/ipshared/3aff/bc9d/membrane_update.sv:217]
+WARNING: [Synth 8-6014] Unused sequential element sat_raw_reg was removed.  [/home/liujiawei/ALS_Silicon_Workspace/als-core/als_sys_project/als_sys_project.gen/sources_1/bd/als_system/ipshared/3aff/bc9d/membrane_update.sv:223]
+WARNING: [Synth 8-6014] Unused sequential element sat_inhibit_q8_8_reg was removed.  [/home/liujiawei/ALS_Silicon_Workspace/als-core/als_sys_project/als_sys_project.gen/sources_1/bd/als_system/ipshared/3aff/bc9d/membrane_update.sv:225]
+WARNING: [Synth 8-6014] Unused sequential element m_nb_sum4_reg was removed.  [/home/liujiawei/ALS_Silicon_Workspace/als-core/als_sys_project/als_sys_project.gen/sources_1/bd/als_system/ipshared/3aff/bc9d/membrane_update.sv:231]
+WARNING: [Synth 8-6014] Unused sequential element m_nb_avg_reg was removed.  [/home/liujiawei/ALS_Silicon_Workspace/als-core/als_sys_project/als_sys_project.gen/sources_1/bd/als_system/ipshared/3aff/bc9d/membrane_update.sv:232]
+WARNING: [Synth 8-6014] Unused sequential element nb_raw_reg was removed.  [/home/liujiawei/ALS_Silicon_Workspace/als-core/als_sys_project/als_sys_project.gen/sources_1/bd/als_system/ipshared/3aff/bc9d/membrane_update.sv:233]
+WARNING: [Synth 8-6014] Unused sequential element nb_inhibit_q8_8_reg was removed.  [/home/liujiawei/ALS_Silicon_Workspace/als-core/als_sys_project/als_sys_project.gen/sources_1/bd/als_system/ipshared/3aff/bc9d/membrane_update.sv:235]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 2694.742 ; gain = 443.660 ; free physical = 6015 ; free virtual = 17241
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 2694.742 ; gain = 443.660 ; free physical = 6063 ; free virtual = 17289
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 2694.742 ; gain = 443.660 ; free physical = 6063 ; free virtual = 17289
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:00.22 ; elapsed = 00:00:00.22 . Memory (MB): peak = 2694.742 ; gain = 0.000 ; free physical = 6047 ; free virtual = 17272
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [/home/liujiawei/ALS_Silicon_Workspace/als-core/als_sys_project/als_sys_project.gen/sources_1/bd/als_system/ip/als_system_als_core_0_0/bc9d/als_timing.xdc] for cell 'inst'
+create_clock: Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 2826.555 ; gain = 0.000 ; free physical = 6101 ; free virtual = 17330
+Finished Parsing XDC File [/home/liujiawei/ALS_Silicon_Workspace/als-core/als_sys_project/als_sys_project.gen/sources_1/bd/als_system/ip/als_system_als_core_0_0/bc9d/als_timing.xdc] for cell 'inst'
+Parsing XDC File [/home/liujiawei/ALS_Silicon_Workspace/als-core/als_sys_project/als_sys_project.runs/als_system_als_core_0_0_synth_1/dont_touch.xdc]
+Finished Parsing XDC File [/home/liujiawei/ALS_Silicon_Workspace/als-core/als_sys_project/als_sys_project.runs/als_system_als_core_0_0_synth_1/dont_touch.xdc]
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2826.555 ; gain = 0.000 ; free physical = 6101 ; free virtual = 17330
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00.61 ; elapsed = 00:00:00.36 . Memory (MB): peak = 2826.555 ; gain = 0.000 ; free physical = 6109 ; free virtual = 17342
+INFO: [Designutils 20-5008] Incremental synthesis strategy off
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:26 ; elapsed = 00:00:26 . Memory (MB): peak = 2826.555 ; gain = 575.473 ; free physical = 6241 ; free virtual = 17490
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xczu2cg-sfvc784-1-e
+INFO: [Synth 8-6742] Reading net delay rules and data
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:26 ; elapsed = 00:00:26 . Memory (MB): peak = 2826.555 ; gain = 575.473 ; free physical = 6241 ; free virtual = 17490
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+Applied set_property KEEP_HIERARCHY = SOFT for inst. (constraint file  /home/liujiawei/ALS_Silicon_Workspace/als-core/als_sys_project/als_sys_project.runs/als_system_als_core_0_0_synth_1/dont_touch.xdc, line 9).
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:26 ; elapsed = 00:00:26 . Memory (MB): peak = 2826.555 ; gain = 575.473 ; free physical = 6241 ; free virtual = 17490
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:29 ; elapsed = 00:00:29 . Memory (MB): peak = 2826.555 ; gain = 575.473 ; free physical = 6245 ; free virtual = 17496
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input   36 Bit       Adders := 1     
+	   4 Input   32 Bit       Adders := 2     
+	   3 Input   32 Bit       Adders := 1     
+	   2 Input   20 Bit       Adders := 1     
+	   4 Input   20 Bit       Adders := 2     
+	   3 Input   20 Bit       Adders := 1     
+	   6 Input   20 Bit       Adders := 1     
+	   2 Input   17 Bit       Adders := 1     
+	   2 Input    7 Bit       Adders := 8     
++---Registers : 
+	               64 Bit    Registers := 2     
+	               48 Bit    Registers := 532   
+	               32 Bit    Registers := 4     
+	               16 Bit    Registers := 13    
+	                7 Bit    Registers := 2     
+	                1 Bit    Registers := 20    
++---Multipliers : 
+	              32x32  Multipliers := 1     
+	              10x64  Multipliers := 1     
++---Muxes : 
+	   2 Input   48 Bit        Muxes := 7     
+	   2 Input   16 Bit        Muxes := 20    
+	   6 Input   16 Bit        Muxes := 1     
+	 257 Input   16 Bit        Muxes := 1     
+	   3 Input   16 Bit        Muxes := 5     
+	   2 Input   15 Bit        Muxes := 2     
+	   2 Input    8 Bit        Muxes := 2     
+	   2 Input    1 Bit        Muxes := 5     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 240 (col length:72)
+BRAMs: 300 (col length: RAMB18 72 RAMB36 36)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-7080] Parallel synthesis criteria is not met
+DSP Report: Generating DSP mul_s_b_reg_reg, operation Mode is: (A''*B)'.
+DSP Report: register mul_s_b_reg_reg is absorbed into DSP mul_s_b_reg_reg.
+DSP Report: register mul_s_b_reg_reg is absorbed into DSP mul_s_b_reg_reg.
+DSP Report: register mul_s_b_reg_reg is absorbed into DSP mul_s_b_reg_reg.
+DSP Report: operator mul_s_b_reg0 is absorbed into DSP mul_s_b_reg_reg.
+DSP Report: Generating DSP mul_sat_nb_reg_reg, operation Mode is: (A*B)'.
+DSP Report: register mul_sat_nb_reg_reg is absorbed into DSP mul_sat_nb_reg_reg.
+DSP Report: operator mul_sat_nb_reg0 is absorbed into DSP mul_sat_nb_reg_reg.
+DSP Report: Generating DSP mul_comb_reg0, operation Mode is: A*B.
+DSP Report: operator mul_comb_reg0 is absorbed into DSP mul_comb_reg0.
+DSP Report: operator mul_comb_reg0 is absorbed into DSP mul_comb_reg0.
+DSP Report: Generating DSP mul_comb_reg_reg, operation Mode is: (PCIN>>17)+A*B.
+DSP Report: register mul_comb_reg_reg is absorbed into DSP mul_comb_reg_reg.
+DSP Report: operator mul_comb_reg0 is absorbed into DSP mul_comb_reg_reg.
+DSP Report: operator mul_comb_reg0 is absorbed into DSP mul_comb_reg_reg.
+DSP Report: Generating DSP mul_comb_reg0, operation Mode is: A*B.
+DSP Report: operator mul_comb_reg0 is absorbed into DSP mul_comb_reg0.
+DSP Report: operator mul_comb_reg0 is absorbed into DSP mul_comb_reg0.
+DSP Report: Generating DSP mul_comb_reg_reg, operation Mode is: (PCIN>>17)+A*B.
+DSP Report: register mul_comb_reg_reg is absorbed into DSP mul_comb_reg_reg.
+DSP Report: operator mul_comb_reg0 is absorbed into DSP mul_comb_reg_reg.
+DSP Report: operator mul_comb_reg0 is absorbed into DSP mul_comb_reg_reg.
+DSP Report: Generating DSP decay_q8_8_d11, operation Mode is: A''*(B:0x1a).
+DSP Report: register mid_r_reg is absorbed into DSP decay_q8_8_d11.
+DSP Report: register mid_c_reg is absorbed into DSP decay_q8_8_d11.
+DSP Report: operator decay_q8_8_d11 is absorbed into DSP decay_q8_8_d11.
+DSP Report: Generating DSP v1, operation Mode is: A*(B:0x33).
+DSP Report: operator v1 is absorbed into DSP v1.
+WARNING: [Synth 8-3332] Sequential element (mul_comb_reg_reg[47]) is unused and will be removed from module membrane_update.
+WARNING: [Synth 8-3332] Sequential element (mul_comb_reg_reg[46]) is unused and will be removed from module membrane_update.
+WARNING: [Synth 8-3332] Sequential element (mul_comb_reg_reg[45]) is unused and will be removed from module membrane_update.
+WARNING: [Synth 8-3332] Sequential element (mul_comb_reg_reg[44]) is unused and will be removed from module membrane_update.
+WARNING: [Synth 8-3332] Sequential element (mul_comb_reg_reg[43]) is unused and will be removed from module membrane_update.
+WARNING: [Synth 8-3332] Sequential element (mul_comb_reg_reg[42]) is unused and will be removed from module membrane_update.
+WARNING: [Synth 8-3332] Sequential element (mul_comb_reg_reg[41]) is unused and will be removed from module membrane_update.
+WARNING: [Synth 8-3332] Sequential element (mul_comb_reg_reg[40]) is unused and will be removed from module membrane_update.
+WARNING: [Synth 8-3332] Sequential element (mul_comb_reg_reg[39]) is unused and will be removed from module membrane_update.
+WARNING: [Synth 8-3332] Sequential element (mul_comb_reg_reg[38]) is unused and will be removed from module membrane_update.
+WARNING: [Synth 8-3332] Sequential element (mul_comb_reg_reg[37]) is unused and will be removed from module membrane_update.
+WARNING: [Synth 8-3332] Sequential element (mul_comb_reg_reg[36]) is unused and will be removed from module membrane_update.
+WARNING: [Synth 8-3332] Sequential element (mul_comb_reg_reg[35]) is unused and will be removed from module membrane_update.
+WARNING: [Synth 8-3332] Sequential element (mul_comb_reg_reg[34]) is unused and will be removed from module membrane_update.
+WARNING: [Synth 8-3332] Sequential element (mul_comb_reg_reg[33]) is unused and will be removed from module membrane_update.
+WARNING: [Synth 8-3332] Sequential element (mul_comb_reg_reg[32]) is unused and will be removed from module membrane_update.
+WARNING: [Synth 8-3332] Sequential element (mul_comb_reg_reg[31]) is unused and will be removed from module membrane_update.
+WARNING: [Synth 8-3332] Sequential element (mul_comb_reg_reg[30]) is unused and will be removed from module membrane_update.
+WARNING: [Synth 8-3332] Sequential element (mul_comb_reg_reg[29]) is unused and will be removed from module membrane_update.
+WARNING: [Synth 8-3332] Sequential element (mul_comb_reg_reg[28]) is unused and will be removed from module membrane_update.
+WARNING: [Synth 8-3332] Sequential element (mul_comb_reg_reg[27]) is unused and will be removed from module membrane_update.
+WARNING: [Synth 8-3332] Sequential element (mul_comb_reg_reg[26]) is unused and will be removed from module membrane_update.
+WARNING: [Synth 8-3332] Sequential element (mul_comb_reg_reg[25]) is unused and will be removed from module membrane_update.
+WARNING: [Synth 8-3332] Sequential element (mul_comb_reg_reg[24]) is unused and will be removed from module membrane_update.
+WARNING: [Synth 8-3332] Sequential element (mul_comb_reg_reg[23]) is unused and will be removed from module membrane_update.
+WARNING: [Synth 8-3332] Sequential element (mul_comb_reg_reg[22]) is unused and will be removed from module membrane_update.
+WARNING: [Synth 8-3332] Sequential element (mul_comb_reg_reg[21]) is unused and will be removed from module membrane_update.
+WARNING: [Synth 8-3332] Sequential element (mul_comb_reg_reg[20]) is unused and will be removed from module membrane_update.
+WARNING: [Synth 8-3332] Sequential element (mul_comb_reg_reg[19]) is unused and will be removed from module membrane_update.
+WARNING: [Synth 8-3332] Sequential element (mul_comb_reg_reg[18]) is unused and will be removed from module membrane_update.
+WARNING: [Synth 8-3332] Sequential element (mul_comb_reg_reg[17]) is unused and will be removed from module membrane_update.
+WARNING: [Synth 8-3332] Sequential element (mul_comb_reg_reg[47]__0) is unused and will be removed from module membrane_update.
+WARNING: [Synth 8-3332] Sequential element (mul_comb_reg_reg[46]__0) is unused and will be removed from module membrane_update.
+WARNING: [Synth 8-3332] Sequential element (mul_comb_reg_reg[45]__0) is unused and will be removed from module membrane_update.
+WARNING: [Synth 8-3332] Sequential element (mul_comb_reg_reg[44]__0) is unused and will be removed from module membrane_update.
+WARNING: [Synth 8-3332] Sequential element (mul_comb_reg_reg[43]__0) is unused and will be removed from module membrane_update.
+WARNING: [Synth 8-3332] Sequential element (mul_comb_reg_reg[42]__0) is unused and will be removed from module membrane_update.
+WARNING: [Synth 8-3332] Sequential element (mul_comb_reg_reg[41]__0) is unused and will be removed from module membrane_update.
+WARNING: [Synth 8-3332] Sequential element (mul_comb_reg_reg[40]__0) is unused and will be removed from module membrane_update.
+WARNING: [Synth 8-3332] Sequential element (mul_comb_reg_reg[39]__0) is unused and will be removed from module membrane_update.
+WARNING: [Synth 8-3332] Sequential element (mul_comb_reg_reg[38]__0) is unused and will be removed from module membrane_update.
+WARNING: [Synth 8-3332] Sequential element (mul_comb_reg_reg[37]__0) is unused and will be removed from module membrane_update.
+WARNING: [Synth 8-3332] Sequential element (mul_comb_reg_reg[36]__0) is unused and will be removed from module membrane_update.
+WARNING: [Synth 8-3332] Sequential element (mul_comb_reg_reg[35]__0) is unused and will be removed from module membrane_update.
+WARNING: [Synth 8-3332] Sequential element (mul_comb_reg_reg[34]__0) is unused and will be removed from module membrane_update.
+WARNING: [Synth 8-3332] Sequential element (mul_comb_reg_reg[33]__0) is unused and will be removed from module membrane_update.
+WARNING: [Synth 8-3332] Sequential element (mul_comb_reg_reg[32]__0) is unused and will be removed from module membrane_update.
+WARNING: [Synth 8-3332] Sequential element (mul_comb_reg_reg[31]__0) is unused and will be removed from module membrane_update.
+WARNING: [Synth 8-3332] Sequential element (mul_comb_reg_reg[30]__0) is unused and will be removed from module membrane_update.
+WARNING: [Synth 8-3332] Sequential element (mul_comb_reg_reg[29]__0) is unused and will be removed from module membrane_update.
+WARNING: [Synth 8-3332] Sequential element (mul_comb_reg_reg[28]__0) is unused and will be removed from module membrane_update.
+WARNING: [Synth 8-3332] Sequential element (mul_comb_reg_reg[27]__0) is unused and will be removed from module membrane_update.
+WARNING: [Synth 8-3332] Sequential element (mul_comb_reg_reg[26]__0) is unused and will be removed from module membrane_update.
+WARNING: [Synth 8-3332] Sequential element (mul_comb_reg_reg[25]__0) is unused and will be removed from module membrane_update.
+WARNING: [Synth 8-3332] Sequential element (mul_comb_reg_reg[24]__0) is unused and will be removed from module membrane_update.
+WARNING: [Synth 8-3332] Sequential element (mul_comb_reg_reg[23]__0) is unused and will be removed from module membrane_update.
+WARNING: [Synth 8-3332] Sequential element (mul_comb_reg_reg[22]__0) is unused and will be removed from module membrane_update.
+WARNING: [Synth 8-3332] Sequential element (mul_comb_reg_reg[21]__0) is unused and will be removed from module membrane_update.
+WARNING: [Synth 8-3332] Sequential element (mul_comb_reg_reg[20]__0) is unused and will be removed from module membrane_update.
+WARNING: [Synth 8-3332] Sequential element (mul_comb_reg_reg[19]__0) is unused and will be removed from module membrane_update.
+WARNING: [Synth 8-3332] Sequential element (mul_comb_reg_reg[18]__0) is unused and will be removed from module membrane_update.
+WARNING: [Synth 8-3332] Sequential element (mul_comb_reg_reg[17]__0) is unused and will be removed from module membrane_update.
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:52 ; elapsed = 00:00:53 . Memory (MB): peak = 2826.555 ; gain = 575.473 ; free physical = 6235 ; free virtual = 17485
+---------------------------------------------------------------------------------
+ Sort Area is membrane_update mul_comb_reg0_6 : 0 0 : 3101 5802 : Used 1 time 0
+ Sort Area is membrane_update mul_comb_reg0_6 : 0 1 : 2701 5802 : Used 1 time 0
+ Sort Area is membrane_update mul_comb_reg0_9 : 0 0 : 2634 5167 : Used 1 time 0
+ Sort Area is membrane_update mul_comb_reg0_9 : 0 1 : 2533 5167 : Used 1 time 0
+ Sort Area is membrane_update mul_s_b_reg_reg_4 : 0 0 : 2001 2001 : Used 1 time 0
+ Sort Area is membrane_update mul_sat_nb_reg_reg_2 : 0 0 : 1969 1969 : Used 1 time 0
+ Sort Area is membrane_update decay_q8_8_d11_0 : 0 0 : 302 302 : Used 1 time 0
+ Sort Area is als_core_top__GB1 v1_c : 0 0 : 281 281 : Used 1 time 0
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+
+DSP: Preliminary Mapping Report (see note below. The ' indicates corresponding REG is set)
++-----------------+----------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|Module Name      | DSP Mapping    | A Size | B Size | C Size | D Size | P Size | AREG | BREG | CREG | DREG | ADREG | MREG | PREG | 
++-----------------+----------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|membrane_update  | (A''*B)'       | 16     | 16     | -      | -      | 32     | 2    | 0    | -    | -    | -     | 1    | 0    | 
+|membrane_update  | (A*B)'         | 16     | 16     | -      | -      | 32     | 0    | 0    | -    | -    | -     | 1    | 0    | 
+|membrane_update  | A*B            | 18     | 15     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|membrane_update  | (PCIN>>17)+A*B | 15     | 15     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 1    | 
+|membrane_update  | A*B            | 18     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|membrane_update  | (PCIN>>17)+A*B | 18     | 15     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 1    | 
+|membrane_update  | A''*(B:0x1a)   | 16     | 6      | -      | -      | 22     | 2    | 0    | -    | -    | -     | 0    | 0    | 
+|diffusion_engine | A*(B:0x33)     | 20     | 7      | -      | -      | 27     | 0    | 0    | -    | -    | -     | 0    | 0    | 
++-----------------+----------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+
+Note: The table above is a preliminary report that shows the DSPs inferred at the current stage of the synthesis flow. Some DSP may be reimplemented as non DSP primitives later in the synthesis flow. Multiple instantiated DSPs are reported only once.
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:01:04 ; elapsed = 00:01:05 . Memory (MB): peak = 3270.547 ; gain = 1019.465 ; free physical = 5866 ; free virtual = 17117
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:01:11 ; elapsed = 00:01:11 . Memory (MB): peak = 3346.266 ; gain = 1095.184 ; free physical = 5773 ; free virtual = 17024
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:01:21 ; elapsed = 00:01:22 . Memory (MB): peak = 3388.836 ; gain = 1137.754 ; free physical = 5739 ; free virtual = 16990
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:01:27 ; elapsed = 00:01:28 . Memory (MB): peak = 3388.836 ; gain = 1137.754 ; free physical = 5738 ; free virtual = 16989
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:01:27 ; elapsed = 00:01:28 . Memory (MB): peak = 3388.836 ; gain = 1137.754 ; free physical = 5738 ; free virtual = 16989
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:01:29 ; elapsed = 00:01:30 . Memory (MB): peak = 3388.836 ; gain = 1137.754 ; free physical = 5740 ; free virtual = 16991
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:01:29 ; elapsed = 00:01:30 . Memory (MB): peak = 3388.836 ; gain = 1137.754 ; free physical = 5740 ; free virtual = 16991
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:01:29 ; elapsed = 00:01:30 . Memory (MB): peak = 3388.836 ; gain = 1137.754 ; free physical = 5740 ; free virtual = 16991
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:01:29 ; elapsed = 00:01:30 . Memory (MB): peak = 3388.836 ; gain = 1137.754 ; free physical = 5740 ; free virtual = 16991
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+DSP Final Report (the ' indicates corresponding REG is set)
++-----------------+-----------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|Module Name      | DSP Mapping     | A Size | B Size | C Size | D Size | P Size | AREG | BREG | CREG | DREG | ADREG | MREG | PREG | 
++-----------------+-----------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|diffusion_engine | A*B             | 30     | 6      | -      | -      | 27     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|membrane_update  | (A''*B)'        | 30     | 18     | -      | -      | 32     | 2    | 0    | -    | -    | -     | 0    | 1    | 
+|membrane_update  | (A*B)'          | 30     | 18     | -      | -      | 32     | 0    | 0    | -    | -    | -     | 0    | 1    | 
+|membrane_update  | A*B             | 17     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|membrane_update  | (PCIN>>17+A*B)' | 30     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 1    | 
+|membrane_update  | A*B             | 17     | 17     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|membrane_update  | (PCIN>>17+A*B)' | 0      | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 1    | 
+|membrane_update  | (A''*B)'        | 30     | 5      | -      | -      | 22     | 2    | 0    | -    | -    | -     | 0    | 1    | 
++-----------------+-----------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+----------------+------+
+|      |Cell            |Count |
++------+----------------+------+
+|1     |CARRY8          |    58|
+|2     |DSP_ALU         |     8|
+|3     |DSP_A_B_DATA    |     8|
+|6     |DSP_C_DATA      |     8|
+|8     |DSP_MULTIPLIER  |     8|
+|9     |DSP_M_DATA      |     8|
+|10    |DSP_OUTPUT      |     8|
+|12    |DSP_PREADD      |     8|
+|13    |DSP_PREADD_DATA |     8|
+|14    |LUT1            |    74|
+|15    |LUT2            |   394|
+|16    |LUT3            |   125|
+|17    |LUT4            |   139|
+|18    |LUT5            |   143|
+|19    |LUT6            |  5301|
+|20    |MUXF7           |  2448|
+|21    |MUXF8           |  1152|
+|22    |FDRE            | 19552|
++------+----------------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:01:29 ; elapsed = 00:01:31 . Memory (MB): peak = 3388.836 ; gain = 1137.754 ; free physical = 5740 ; free virtual = 16991
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 63 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:01:19 ; elapsed = 00:01:20 . Memory (MB): peak = 3388.836 ; gain = 1005.941 ; free physical = 5740 ; free virtual = 16991
+Synthesis Optimization Complete : Time (s): cpu = 00:01:30 ; elapsed = 00:01:31 . Memory (MB): peak = 3388.836 ; gain = 1137.754 ; free physical = 5740 ; free virtual = 16991
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00.21 ; elapsed = 00:00:00.21 . Memory (MB): peak = 3388.836 ; gain = 0.000 ; free physical = 6023 ; free virtual = 17272
+INFO: [Netlist 29-17] Analyzing 3666 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 3388.836 ; gain = 0.000 ; free physical = 6023 ; free virtual = 17272
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 8 instances were transformed.
+  DSP48E2 => DSP48E2 (DSP_ALU, DSP_A_B_DATA, DSP_C_DATA, DSP_MULTIPLIER, DSP_M_DATA, DSP_OUTPUT, DSP_PREADD, DSP_PREADD_DATA): 8 instances
+
+Synth Design complete | Checksum: 1ebc4932
+INFO: [Common 17-83] Releasing license: Synthesis
+34 Infos, 133 Warnings, 1 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:01:46 ; elapsed = 00:01:44 . Memory (MB): peak = 3388.836 ; gain = 1980.762 ; free physical = 6023 ; free virtual = 17272
+INFO: [Common 17-2834] synth_design peak Physical Memory [PSS] (MB): overall = 2923.591; main = 2559.529; forked = 395.866
+INFO: [Common 17-2834] synth_design peak Virtual Memory [VSS] (MB): overall = 4434.152; main = 3388.840; forked = 1045.312
+Write ShapeDB Complete: Time (s): cpu = 00:00:00.09 ; elapsed = 00:00:00.03 . Memory (MB): peak = 3388.836 ; gain = 0.000 ; free physical = 6023 ; free virtual = 17273
+INFO: [Common 17-1381] The checkpoint '/home/liujiawei/ALS_Silicon_Workspace/als-core/als_sys_project/als_sys_project.runs/als_system_als_core_0_0_synth_1/als_system_als_core_0_0.dcp' has been generated.
+INFO: [runtcl-6] Synthesis results are not added to the cache due to CRITICAL_WARNING
+INFO: [Coretcl 2-1174] Renamed 6 cell refs.
+Write ShapeDB Complete: Time (s): cpu = 00:00:00.09 ; elapsed = 00:00:00.03 . Memory (MB): peak = 3388.836 ; gain = 0.000 ; free physical = 6006 ; free virtual = 17272
+INFO: [Common 17-1381] The checkpoint '/home/liujiawei/ALS_Silicon_Workspace/als-core/als_sys_project/als_sys_project.runs/als_system_als_core_0_0_synth_1/als_system_als_core_0_0.dcp' has been generated.
+INFO: [Vivado 12-24828] Executing command : report_utilization -file als_system_als_core_0_0_utilization_synth.rpt -pb als_system_als_core_0_0_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Thu Apr  9 04:51:09 2026...
