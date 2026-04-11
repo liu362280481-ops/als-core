@@ -180,7 +180,7 @@ module diffusion_engine (
 
         m_axis_tdata  <= {s_next, p_next, m_next};
         m_axis_tvalid <= 1'b1;
-        m_axis_tlast  <= (out_row == (GRID_H-1)) && (out_col == (GRID_W-1));
+        m_axis_tlast  <= s_axis_tlast;
 
         if (col_cnt == (GRID_W-1)) begin
           col_cnt <= 7'd0;

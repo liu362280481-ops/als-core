@@ -111,6 +111,13 @@ module reaction_engine (
         m_axis_tvalid <= 1'b0;
       end
 
+      if (stage1_valid && ((~m_axis_tvalid) || m_axis_tready)) begin
+        m_axis_tdata  <= {s_next_u, p_next_u, m_cur_u_d1};
+        m_axis_tvalid <= 1'b1;
+        m_axis_tlast  <= s_axis_tlast_d1;
+        stage1_valid  <= 1'b0;
+      end
+
       if (fire_in) begin
         mul_s_hill_reg  <= mul_s_hill_comb;
         s_cur_u_d1      <= s_cur_u;
@@ -118,13 +125,6 @@ module reaction_engine (
         m_cur_u_d1      <= m_cur_u;
         s_axis_tlast_d1 <= s_axis_tlast;
         stage1_valid    <= 1'b1;
-      end
-
-      if (stage1_valid && ((~m_axis_tvalid) || m_axis_tready)) begin
-        m_axis_tdata  <= {s_next_u, p_next_u, m_cur_u_d1};
-        m_axis_tvalid <= 1'b1;
-        m_axis_tlast  <= s_axis_tlast_d1;   // TLAST aligned to D1 stage
-        stage1_valid  <= 1'b0;
       end
     end
   end
