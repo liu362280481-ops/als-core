@@ -22,11 +22,10 @@ module axis_skid_buffer #(
   logic   beat_last;
   logic   has_beat;
 
-  logic   m_axis_tready_q;
   logic   pop_out;
   logic   fire_in;
 
-  assign pop_out = has_beat & m_axis_tready_q;
+  assign pop_out = has_beat & m_axis_tready;
   assign fire_in = s_axis_tvalid & s_axis_tready;
 
   // Backpressure: stop accepting when we already have a beat stored
@@ -37,10 +36,7 @@ module axis_skid_buffer #(
       beat_data  <= '0;
       beat_last  <= 1'b0;
       has_beat   <= 1'b0;
-      m_axis_tready_q <= 1'b0;
     end else begin
-      m_axis_tready_q <= m_axis_tready;
-
       if (pop_out) begin
         // Downstream consumed the beat — clear storage
         has_beat   <= 1'b0;

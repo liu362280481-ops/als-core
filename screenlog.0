@@ -54,3 +54,19 @@ PMU-FW is not running, certain applications may not be supported.
 
 [DIAGNOSIS] 内存死寂。RX 未收到任何数据。
 -> 结论：ALS-Core 的输出通道未吐出数据，或者 ap_start 没有被唤醒。
+Zynq MP First Stage Boot Loader 
+Release 2024.1   Apr 10 2026  -  19:13:58
+PMU-FW is not running, certain applications may not be supported.
+
+=======================================================
+=== ALS Genesis: Phase 3 - Deep Memory Radar ===
+=======================================================
+[IGNITION] Activating RX (S2MM) black hole extraction...
+[IGNITION] Opening TX (MM2S) Valve to unleash the substrate...
+
+[SYS] Final State -> TX_DMASR: 0x00001002 | RX_DMASR: 0x00000000
+[SCAN] Sweeping the 128KB RX Memory Zone...
+[VERIFY] Total active (non-zero) particles found: 0 / 16384
+
+[DIAGNOSIS] 内存死寂。RX 未收到任何数据。
+-> 结论：ALS-Core 的输出通道未吐出数据，或者 ap_start 没有被唤醒。
