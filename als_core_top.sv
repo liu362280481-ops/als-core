@@ -19,6 +19,10 @@ module als_core_top (
   output logic        m_axis_tlast
 );
 
+  // Step 1 — 无离散 ap_start：子模块仅由 AXI-Stream 握手推进。以下信号焊死为常 1，
+  // 标明顶层从不做软件门控；行为上仍以 s_axis_tvalid/tready 为实际“油门”。
+  wire internal_start = 1'b1;
+
   // ===== Diffusion → Reaction 中间互联 =====
   logic [47:0] diff_m_axis_tdata;
   logic        diff_m_axis_tvalid;
@@ -104,7 +108,21 @@ module als_core_top (
     .m_axis_tdata   (m_axis_tdata),
     .m_axis_tvalid  (m_axis_tvalid),
     .m_axis_tready  (m_axis_tready),
-    .m_axis_tlast   (m_axis_tlast)
+    .m_axis_tlast   ()  // 断开，改为顶层生成
   );
+
+  // ===== 因果律句号：TLAST 帧结束脉冲发生器 (128x128=16384) =====
+  reg [13:0] pixel_cnt;
+  always @(posedge aclk or negedge aresetn) begin
+    if (!aresetn) begin
+      pixel_cnt <= 14'd0;
+    end else if (m_axis_tvalid && m_axis_tready) begin
+      if (pixel_cnt == 14'd16383)
+        pixel_cnt <= 14'd0;
+      else
+        pixel_cnt <= pixel_cnt + 1'b1;
+    end
+  end
+  assign m_axis_tlast = (pixel_cnt == 14'd16383);
 
 endmodule
