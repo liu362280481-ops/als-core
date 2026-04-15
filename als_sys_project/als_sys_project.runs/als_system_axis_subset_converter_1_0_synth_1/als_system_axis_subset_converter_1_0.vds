@@ -1,0 +1,37 @@
+#-----------------------------------------------------------
+# Vivado v2024.1 (64-bit)
+# SW Build 5076996 on Wed May 22 18:36:09 MDT 2024
+# IP Build 5075265 on Wed May 22 21:45:21 MDT 2024
+# SharedData Build 5076995 on Wed May 22 18:29:18 MDT 2024
+# Start of session at: Thu Apr 16 01:29:42 2026
+# Process ID: 23440
+# Current directory: /home/liujiawei/ALS_Silicon_Workspace/als-core/als_sys_project/als_sys_project.runs/als_system_axis_subset_converter_1_0_synth_1
+# Command line: vivado -log als_system_axis_subset_converter_1_0.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source als_system_axis_subset_converter_1_0.tcl
+# Log file: /home/liujiawei/ALS_Silicon_Workspace/als-core/als_sys_project/als_sys_project.runs/als_system_axis_subset_converter_1_0_synth_1/als_system_axis_subset_converter_1_0.vds
+# Journal file: /home/liujiawei/ALS_Silicon_Workspace/als-core/als_sys_project/als_sys_project.runs/als_system_axis_subset_converter_1_0_synth_1/vivado.jou
+# Running On        :liujiawei-ubuntu
+# Platform          :Ubuntu
+# Operating System  :Ubuntu 22.04.5 LTS
+# Processor Detail  :Intel(R) Core(TM) i5-3470 CPU @ 3.20GHz
+# CPU Frequency     :3456.308 MHz
+# CPU Physical cores:4
+# CPU Logical cores :4
+# Host memory       :25143 MB
+# Swap memory       :2147 MB
+# Total Virtual     :27291 MB
+# Available Virtual :18098 MB
+#-----------------------------------------------------------
+source als_system_axis_subset_converter_1_0.tcl -notrace
+create_project: Time (s): cpu = 00:00:10 ; elapsed = 00:00:10 . Memory (MB): peak = 1410.711 ; gain = 0.023 ; free physical = 7921 ; free virtual = 16540
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/liujiawei/ALS_Silicon_Workspace/als-core/als_core_ip'.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/home/liujiawei/fpga_projects/tools/vivado/2024.1/Vivado/2024.1/data/ip'.
+INFO: [IP_Flow 19-6924] IPCACHE: Running cache check for IP inst: als_system_axis_subset_converter_1_0
+INFO: [IP_Flow 19-6922] IPCACHE: Exporting cached entry a334b536bf0da0f3 to dir: /home/liujiawei/ALS_Silicon_Workspace/als-core/als_sys_project/als_sys_project.runs/als_system_axis_subset_converter_1_0_synth_1
+INFO: [IP_Flow 19-6928] IPCACHE: copied cached file /home/liujiawei/ALS_Silicon_Workspace/als-core/als_sys_project/als_sys_project.cache/ip/2024.1/a/3/a334b536bf0da0f3/als_system_axis_subset_converter_1_0_stub.vhdl to /home/liujiawei/ALS_Silicon_Workspace/als-core/als_sys_project/als_sys_project.runs/als_system_axis_subset_converter_1_0_synth_1/als_system_axis_subset_converter_1_0_stub.vhdl.
+INFO: [IP_Flow 19-6928] IPCACHE: copied cached file /home/liujiawei/ALS_Silicon_Workspace/als-core/als_sys_project/als_sys_project.cache/ip/2024.1/a/3/a334b536bf0da0f3/als_system_axis_subset_converter_1_0.dcp to /home/liujiawei/ALS_Silicon_Workspace/als-core/als_sys_project/als_sys_project.runs/als_system_axis_subset_converter_1_0_synth_1/als_system_axis_subset_converter_1_0.dcp.
+INFO: [IP_Flow 19-6928] IPCACHE: copied cached file /home/liujiawei/ALS_Silicon_Workspace/als-core/als_sys_project/als_sys_project.cache/ip/2024.1/a/3/a334b536bf0da0f3/als_system_axis_subset_converter_1_0_stub.v to /home/liujiawei/ALS_Silicon_Workspace/als-core/als_sys_project/als_sys_project.runs/als_system_axis_subset_converter_1_0_synth_1/als_system_axis_subset_converter_1_0_stub.v.
+INFO: [IP_Flow 19-6928] IPCACHE: copied cached file /home/liujiawei/ALS_Silicon_Workspace/als-core/als_sys_project/als_sys_project.cache/ip/2024.1/a/3/a334b536bf0da0f3/als_system_axis_subset_converter_1_0_sim_netlist.v to /home/liujiawei/ALS_Silicon_Workspace/als-core/als_sys_project/als_sys_project.runs/als_system_axis_subset_converter_1_0_synth_1/als_system_axis_subset_converter_1_0_sim_netlist.v.
+INFO: [IP_Flow 19-6928] IPCACHE: copied cached file /home/liujiawei/ALS_Silicon_Workspace/als-core/als_sys_project/als_sys_project.cache/ip/2024.1/a/3/a334b536bf0da0f3/als_system_axis_subset_converter_1_0_sim_netlist.vhdl to /home/liujiawei/ALS_Silicon_Workspace/als-core/als_sys_project/als_sys_project.runs/als_system_axis_subset_converter_1_0_synth_1/als_system_axis_subset_converter_1_0_sim_netlist.vhdl.
+INFO: [IP_Flow 19-4838] Using cached IP synthesis design for IP als_system_axis_subset_converter_1_0, cache-ID = a334b536bf0da0f3.
+INFO: [Common 17-206] Exiting Vivado at Thu Apr 16 01:29:58 2026...
