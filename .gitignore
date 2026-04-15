@@ -34,3 +34,77 @@ results/*.png
 # ---- 临时上传下载目录（漂移废料）----
 .tmp.drivedownload/
 .tmp.driveupload/
+
+# ---- Vivado 编译产物（巨量垃圾）----
+*.dcp
+*.bit
+*.ltx
+*.jou
+*.log
+*.rpt
+*.pb
+*.rpx
+*.str
+*.wdb
+*.backup.*
+
+# ---- Vivado 工程目录（全垃圾）----
+.runs/
+.gen/
+.cache/
+.hw/
+.ip_user_files/
+.sim/
+.Xil/
+
+# ---- IP 仿真网表（每个IP重复6份）----
+*_sim_netlist.v
+*_sim_netlist.vhdl
+*_stub.v
+*_stub.vhdl
+
+# ---- Vivado IP 生成文件 ----
+*.xci.backup
+*.xci.remap
+*.xci.bak
+
+# ---- 静态库 & 目标文件 ----
+*.a
+*.o
+*.elf
+*.elf.size
+*.map
+
+# ---- Vitis 构建产物 ----
+vitis_workspace/*/build/
+vitis_workspace/*/_ide/
+vitis_workspace/*/Debug/
+vitis_workspace/*/compile_commands.json
+vitis_workspace/*/*.bif
+vitis_workspace/*/logs/
+vitis_workspace/als_platform/*/bsp/lib*
+vitis_workspace/als_platform/*/libsrc/*/src/*.o
+
+# ---- BOOT & XSA ----
+BOOT.BIN
+*.xsa
+*.mio
+*.ppr
+
+# ---- 大型数值数据（按需）----
+logs/*.npz
+logs/*.csv
+
+# ---- JTAG & hw_server 产物 ----
+vivado_*.log
+vivado_*.jou
+vivado.jou
+vivado.log
+
+# ---- Backup 文件 ----
+*.bak
+*~
+
+# ---- 调试临时目录 ----
+fsbl_debug_ws/
+pmu_isolated_ws2/

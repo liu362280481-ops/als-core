@@ -20,6 +20,8 @@ module membrane_update #(
   output logic         m_axis_tlast
 );
 
+  localparam int NUM_CELLS = GRID_W * GRID_H; // 16384
+
   localparam logic signed [15:0] Q8_8_ONE = 16'sd256;
 
   // === LINE BUFFERS ===
@@ -71,6 +73,14 @@ module membrane_update #(
 
   logic               pipe_ce;
   logic               fire_in;
+
+  // === FLUSH STATE MACHINE (NEW) ===
+  logic               flush_mode;
+  logic [13:0]       out_pixel_cnt;  // 0..16383
+
+  // === INTERMEDIATE CORE OUTPUTS ===
+  logic               core_valid_out;
+  logic [47:0]       core_data_out;
 
   // === FUNCTIONS ===
   function automatic logic signed [15:0] clip_nonneg_q8_8(input logic signed [31:0] v);
@@ -141,6 +151,45 @@ module membrane_update #(
     m_next_q8_8 = clip_nonneg_q8_8(m_next_wide);
   end
 
+  // === INTERMEDIATE CORE OUTPUT (captured at pipe_ce) ===
+  always_ff @(posedge aclk) begin
+    if (!aresetn) begin
+      core_valid_out <= 1'b0;
+      core_data_out  <= '0;
+    end else if (pipe_ce) begin
+      if (vld_d3) begin
+        core_valid_out <= 1'b1;
+        core_data_out  <= {s_center_d3[15:0], p_center_d3[15:0], m_next_q8_8[15:0]};
+      end else begin
+        core_valid_out <= 1'b0;
+        core_data_out  <= '0;
+      end
+    end
+  end
+
+  // === FLUSH STATE MACHINE ===
+  always_ff @(posedge aclk) begin
+    if (!aresetn) begin
+      flush_mode     <= 1'b0;
+      out_pixel_cnt  <= 14'd0;
+    end else begin
+      // Catch the last input beat: input tvalid + tready + tlast
+      if (s_axis_tvalid && s_axis_tready && s_axis_tlast) begin
+        flush_mode <= 1'b1;
+      end
+
+      // On successful output handshake
+      if (m_axis_tvalid && m_axis_tready) begin
+        if (out_pixel_cnt == 14'd16383) begin
+          out_pixel_cnt  <= 14'd0;
+          flush_mode     <= 1'b0;  // Drain complete, loop closed
+        end else begin
+          out_pixel_cnt <= out_pixel_cnt + 1'b1;
+        end
+      end
+    end
+  end
+
   // Generate-based async reset for line buffers (Verilator-compatible)
   for (genvar ii = 0; ii < GRID_W; ii++) begin : GEN_LB_RESET0
     always_ff @(posedge aclk) begin
@@ -174,9 +223,8 @@ module membrane_update #(
       vld_d1 <= 1'b0; vld_d2 <= 1'b0; vld_d3 <= 1'b0;
       tlast_d1 <= 1'b0; tlast_d2 <= 1'b0; tlast_d3 <= 1'b0;
 
-      m_axis_tdata  <= '0;
-      m_axis_tvalid <= 1'b0;
-      m_axis_tlast  <= 1'b0;
+      // NOTE: m_axis_tdata/tvalid/tlast are NO LONGER driven here.
+      // They are now driven by module-level assign statements (see below).
 
     end else begin
       // ---- Line buffer updates (on fire_in) ----
@@ -224,15 +272,20 @@ module membrane_update #(
         mul_final_reg <= $signed(mul_comb_reg) * $signed(K_GROWTH_Q8_8);
         growth_q8_8   <= mul_final_reg[63:32];
 
-        if (vld_d3) begin
-          m_axis_tdata  <= {s_center_d3[15:0], p_center_d3[15:0], m_next_q8_8[15:0]};
-          m_axis_tvalid <= 1'b1;
-          m_axis_tlast  <= tlast_d3;
-        end else begin
-          m_axis_tvalid <= 1'b0;
-        end
+        // NOTE: Output driving has been MOVED to module-level assign statements.
+        // The always_ff block no longer drives m_axis_* signals.
       end
     end
   end
+
+  //=== ABSOLUTE LAW: Output binding (replaces procedural assignments) ===
+  // TLAST: asserted on the very last pixel of the drain sequence
+  assign m_axis_tlast  = (out_pixel_cnt == 14'd16383);
+
+  // TVALID: asserted when either core has data OR flush mode is active
+  assign m_axis_tvalid = core_valid_out | flush_mode;
+
+  // TDATA: core data when available, otherwise zero-padding during flush
+  assign m_axis_tdata  = (flush_mode && !core_valid_out) ? 48'd0 : core_data_out;
 
 endmodule

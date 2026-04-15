@@ -9,14 +9,14 @@ module als_core_top (
   input  logic        aresetn,
 
   input  logic [47:0] s_axis_tdata,
-  input  logic        s_axis_tvalid,
-  output logic        s_axis_tready,
-  input  logic        s_axis_tlast,
+  (* MARK_DEBUG = "true" *) input  logic        s_axis_tvalid,
+  (* MARK_DEBUG = "true" *) output logic        s_axis_tready,
+  (* MARK_DEBUG = "true" *) input  logic        s_axis_tlast,
 
-  output logic [47:0] m_axis_tdata,
-  output logic        m_axis_tvalid,
-  input  logic        m_axis_tready,
-  output logic        m_axis_tlast
+  (* MARK_DEBUG = "true" *) output logic [47:0] m_axis_tdata,
+  (* MARK_DEBUG = "true" *) output logic        m_axis_tvalid,
+  (* MARK_DEBUG = "true" *) input  logic        m_axis_tready,
+  (* MARK_DEBUG = "true" *) output logic        m_axis_tlast
 );
 
   // Step 1 — 无离散 ap_start：子模块仅由 AXI-Stream 握手推进。以下信号焊死为常 1，

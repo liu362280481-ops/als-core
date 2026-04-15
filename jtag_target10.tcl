@@ -1,0 +1,23 @@
+connect
+after 2000
+
+fpga ./vitis_workspace/als_platform/hw/sdt/als_system_wrapper.bit
+after 2000
+
+puts "Targets:"
+puts [targets]
+
+puts "Select target 10 (Cortex-A53 #0)..."
+targets -set 10
+
+puts "Stop..."
+stop
+after 500
+
+puts "Read registers..."
+set regs [rrd]
+puts "$regs"
+
+con
+
+exit

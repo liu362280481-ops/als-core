@@ -1,0 +1,7 @@
+the_ROM_image:
+{
+    [bootloader, destination_cpu=a53-0] /home/liujiawei/ALS_Silicon_Workspace/als-core/vitis_workspace/als_platform/export/als_platform/sw/boot/fsbl.elf
+    [pmufw_image] /home/liujiawei/ALS_Silicon_Workspace/als-core/vitis_workspace/als_platform/export/als_platform/sw/qemu/pmufw.elf
+    [destination_device=pl] /home/liujiawei/ALS_Silicon_Workspace/als-core/als_sys_project/als_sys_project.runs/impl_1/als_system_wrapper.bit
+    [destination_cpu=a53-0, exception_level=el-3] /home/liujiawei/ALS_Silicon_Workspace/als-core/vitis_workspace/als_app/build/als_app.elf
+}

@@ -22,7 +22,9 @@
       },
       "axi_smc": "",
       "axis_subset_converter_0": "",
-      "axis_subset_converter_1": ""
+      "axis_subset_converter_1": "",
+      "axi_smc_1": "",
+      "system_ila_0": ""
     },
     "components": {
       "zynq_ultra_ps_e_0": {
@@ -243,7 +245,7 @@
             "value": "1"
           },
           "PSU__PROTECTION__MASTERS": {
-            "value": "USB1:NonSecure;0|USB0:NonSecure;0|S_AXI_LPD:NA;0|S_AXI_HPC1_FPD:NA;0|S_AXI_HPC0_FPD:NA;0|S_AXI_HP3_FPD:NA;0|S_AXI_HP2_FPD:NA;0|S_AXI_HP1_FPD:NA;0|S_AXI_HP0_FPD:NA;1|S_AXI_ACP:NA;0|S_AXI_ACE:NA;0|SD1:NonSecure;1|SD0:NonSecure;0|SATA1:NonSecure;0|SATA0:NonSecure;0|RPU1:Secure;1|RPU0:Secure;1|QSPI:NonSecure;0|PMU:NA;1|PCIe:NonSecure;0|NAND:NonSecure;0|LDMA:NonSecure;1|GPU:NonSecure;1|GEM3:NonSecure;0|GEM2:NonSecure;0|GEM1:NonSecure;0|GEM0:NonSecure;0|FDMA:NonSecure;1|DP:NonSecure;0|DAP:NA;1|Coresight:NA;1|CSU:NA;1|APU:NA;1"
+            "value": "USB1:NonSecure;0|USB0:NonSecure;0|S_AXI_LPD:NA;0|S_AXI_HPC1_FPD:NA;0|S_AXI_HPC0_FPD:NA;0|S_AXI_HP3_FPD:NA;0|S_AXI_HP2_FPD:NA;0|S_AXI_HP1_FPD:NA;1|S_AXI_HP0_FPD:NA;1|S_AXI_ACP:NA;0|S_AXI_ACE:NA;0|SD1:NonSecure;1|SD0:NonSecure;0|SATA1:NonSecure;0|SATA0:NonSecure;0|RPU1:Secure;1|RPU0:Secure;1|QSPI:NonSecure;0|PMU:NA;1|PCIe:NonSecure;0|NAND:NonSecure;0|LDMA:NonSecure;1|GPU:NonSecure;1|GEM3:NonSecure;0|GEM2:NonSecure;0|GEM1:NonSecure;0|GEM0:NonSecure;0|FDMA:NonSecure;1|DP:NonSecure;0|DAP:NA;1|Coresight:NA;1|CSU:NA;1|APU:NA;1"
           },
           "PSU__PROTECTION__SLAVES": {
             "value": [
@@ -252,6 +254,9 @@
             ]
           },
           "PSU__SAXIGP2__DATA_WIDTH": {
+            "value": "128"
+          },
+          "PSU__SAXIGP3__DATA_WIDTH": {
             "value": "128"
           },
           "PSU__SD1_COHERENCY": {
@@ -305,6 +310,9 @@
           "PSU__USE__S_AXI_GP2": {
             "value": "1"
           },
+          "PSU__USE__S_AXI_GP3": {
+            "value": "1"
+          },
           "SUBPRESET1": {
             "value": "DDR4_MICRON_MT40A256M16GE_083E"
           }
@@ -324,6 +332,11 @@
             "vlnv": "xilinx.com:interface:aximm_rtl:1.0",
             "mode": "Slave",
             "memory_map_ref": "SAXIGP2"
+          },
+          "S_AXI_HP1_FPD": {
+            "vlnv": "xilinx.com:interface:aximm_rtl:1.0",
+            "mode": "Slave",
+            "memory_map_ref": "SAXIGP3"
           }
         },
         "addressing": {
@@ -411,7 +424,7 @@
             "value": "1"
           },
           "c_include_sg": {
-            "value": "1"
+            "value": "0"
           },
           "c_m_axis_mm2s_tdata_width": {
             "value": "64"
@@ -424,21 +437,6 @@
           }
         },
         "interface_ports": {
-          "M_AXI_SG": {
-            "vlnv": "xilinx.com:interface:aximm_rtl:1.0",
-            "mode": "Master",
-            "address_space_ref": "Data_SG",
-            "base_address": {
-              "minimum": "0x00000000",
-              "maximum": "0xFFFFFFFFFFFFFFFF",
-              "width": "64"
-            },
-            "parameters": {
-              "master_id": {
-                "value": "3"
-              }
-            }
-          },
           "M_AXI_MM2S": {
             "vlnv": "xilinx.com:interface:aximm_rtl:1.0",
             "mode": "Master",
@@ -465,7 +463,7 @@
             },
             "parameters": {
               "master_id": {
-                "value": "2"
+                "value": "3"
               }
             }
           }
@@ -781,7 +779,7 @@
             "vlnv": "xilinx.com:interface:aximm_rtl:1.0",
             "parameters": {
               "MAX_BURST_LENGTH": {
-                "value": "8"
+                "value": "4"
               },
               "NUM_READ_OUTSTANDING": {
                 "value": "16"
@@ -790,7 +788,7 @@
                 "value": "1"
               },
               "NUM_WRITE_OUTSTANDING": {
-                "value": "16"
+                "value": "2"
               },
               "NUM_WRITE_THREADS": {
                 "value": "1"
@@ -849,6 +847,92 @@
             ]
           }
         }
+      },
+      "axi_smc_1": {
+        "vlnv": "xilinx.com:ip:smartconnect:1.0",
+        "ip_revision": "23",
+        "xci_name": "als_system_axi_smc_1_0",
+        "xci_path": "ip/als_system_axi_smc_1_0_7/als_system_axi_smc_1_0.xci",
+        "inst_hier_path": "axi_smc_1",
+        "parameters": {
+          "NUM_MI": {
+            "value": "1"
+          },
+          "NUM_SI": {
+            "value": "1"
+          }
+        },
+        "interface_ports": {
+          "S00_AXI": {
+            "mode": "Slave",
+            "vlnv_bus_definition": "xilinx.com:interface:aximm:1.0",
+            "vlnv": "xilinx.com:interface:aximm_rtl:1.0",
+            "parameters": {
+              "NUM_READ_OUTSTANDING": {
+                "value": "2"
+              },
+              "NUM_WRITE_OUTSTANDING": {
+                "value": "16"
+              }
+            },
+            "bridges": [
+              "M00_AXI"
+            ]
+          },
+          "M00_AXI": {
+            "mode": "Master",
+            "vlnv_bus_definition": "xilinx.com:interface:aximm:1.0",
+            "vlnv": "xilinx.com:interface:aximm_rtl:1.0",
+            "parameters": {
+              "MAX_BURST_LENGTH": {
+                "value": "8"
+              },
+              "NUM_READ_OUTSTANDING": {
+                "value": "2"
+              },
+              "NUM_READ_THREADS": {
+                "value": "1"
+              },
+              "NUM_WRITE_OUTSTANDING": {
+                "value": "16"
+              },
+              "NUM_WRITE_THREADS": {
+                "value": "1"
+              },
+              "RUSER_BITS_PER_BYTE": {
+                "value": "0"
+              },
+              "SUPPORTS_NARROW_BURST": {
+                "value": "0"
+              },
+              "WUSER_BITS_PER_BYTE": {
+                "value": "0"
+              }
+            }
+          }
+        }
+      },
+      "system_ila_0": {
+        "vlnv": "xilinx.com:ip:system_ila:1.1",
+        "ip_revision": "17",
+        "xci_name": "als_system_system_ila_0_0",
+        "xci_path": "ip/als_system_system_ila_0_0/als_system_system_ila_0_0.xci",
+        "inst_hier_path": "system_ila_0",
+        "parameters": {
+          "C_MON_TYPE": {
+            "value": "INTERFACE"
+          },
+          "C_NUM_MONITOR_SLOTS": {
+            "value": "1"
+          }
+        },
+        "interface_ports": {
+          "SLOT_0_AXI": {
+            "mode": "Monitor",
+            "vlnv_bus_definition": "xilinx.com:interface:aximm:1.0",
+            "vlnv": "xilinx.com:interface:aximm_rtl:1.0"
+          }
+        }
       }
     },
     "interface_nets": {
@@ -870,16 +954,16 @@
           "axi_smc/S00_AXI"
         ]
       },
-      "axi_dma_0_M_AXI_S2MM": {
+      "axi_dma_0_M_AXI_S2MM1": {
         "interface_ports": [
           "axi_dma_0/M_AXI_S2MM",
-          "axi_smc/S01_AXI"
+          "axi_smc_1/S00_AXI"
         ]
       },
-      "axi_dma_0_M_AXI_SG": {
+      "axi_smc_1_M00_AXI": {
         "interface_ports": [
-          "axi_dma_0/M_AXI_SG",
-          "axi_smc/S02_AXI"
+          "axi_smc_1/M00_AXI",
+          "zynq_ultra_ps_e_0/S_AXI_HP1_FPD"
         ]
       },
       "axi_smc_M00_AXI": {
@@ -943,13 +1027,16 @@
           "axis_subset_converter_0/aclk",
           "axis_subset_converter_1/aclk",
           "als_core_0/aclk",
-          "axi_dma_0/m_axi_sg_aclk"
+          "axi_smc_1/aclk",
+          "zynq_ultra_ps_e_0/saxihp1_fpd_aclk",
+          "system_ila_0/clk"
         ]
       },
       "zynq_ultra_ps_e_0_pl_resetn0": {
         "ports": [
           "zynq_ultra_ps_e_0/pl_resetn0",
-          "rst_ps8_0_99M/ext_reset_in"
+          "rst_ps8_0_99M/ext_reset_in",
+          "axi_smc_1/aresetn"
         ]
       }
     },
@@ -986,14 +1073,20 @@
           },
           "Data_S2MM": {
             "segments": {
-              "SEG_zynq_ultra_ps_e_0_HP0_DDR_LOW": {
-                "address_block": "/zynq_ultra_ps_e_0/SAXIGP2/HP0_DDR_LOW",
-                "offset": "0x0000000000000000",
-                "range": "2G"
-              },
               "SEG_zynq_ultra_ps_e_0_HP0_LPS_OCM": {
                 "address_block": "/zynq_ultra_ps_e_0/SAXIGP2/HP0_LPS_OCM",
                 "offset": "0x00000000FF000000",
+                "range": "16M",
+                "is_excluded": "TRUE"
+              },
+              "SEG_zynq_ultra_ps_e_0_HP1_DDR_LOW": {
+                "address_block": "/zynq_ultra_ps_e_0/SAXIGP3/HP1_DDR_LOW",
+                "offset": "0x0000000000000000",
+                "range": "2G"
+              },
+              "SEG_zynq_ultra_ps_e_0_HP1_LPS_OCM": {
+                "address_block": "/zynq_ultra_ps_e_0/SAXIGP3/HP1_LPS_OCM",
+                "offset": "0x00000001FF000000",
                 "range": "16M",
                 "is_excluded": "TRUE"
               }

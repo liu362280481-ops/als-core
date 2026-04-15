@@ -1,0 +1,7 @@
+the_ROM_image:
+{
+    [bootloader, destination_cpu=a53-0] ./vitis_workspace/als_platform/export/als_platform/sw/boot/fsbl.elf
+    [pmufw_image] ./pmu_isolated_ws2/pmu_plat2/zynqmp_pmufw/build/pmufw.elf
+    [destination_device=pl] ./vitis_workspace/als_platform/hw/sdt/als_system_wrapper.bit
+    [destination_cpu=a53-0, exception_level=el-3] ./vitis_workspace/als_app/build/als_app.elf
+}
